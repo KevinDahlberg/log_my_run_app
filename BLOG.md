@@ -17,3 +17,6 @@ Time to access the DB.  The DB that I will be working with is on MLab.
 App now connects to the DB.  I also set up the GET, POST, and Delete routes on the server side.
 
 I think all the back end stuff for right now is finished.  Time to tackle the MVP on the front end.
+
+Set up the DOM to insert a run and send it as an object.  At this point it's only logging in a console.log, but it's a start.
+One thing that needs to be done is set up the POST route now.  Also need to source the DB factory in the RunService Factory.

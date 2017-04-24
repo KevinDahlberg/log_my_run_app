@@ -22,6 +22,7 @@
 
     <!-- controllers -->
     <script type="text/javascript" src="scripts/controllers/enter_run_controller.js"></script>
+    <script type="text/javascript" src="scripts/controllers/show_runs_controller.js"></script>
 
   </head>
   <body>
@@ -31,7 +32,18 @@
       <input type="text" ng-model="newRun.date" placeholder="Date">
       <input type="text" ng-model="newRun.distance" placeholder="Distance">
       <input type="text" ng-model="newRun.time" placeholder="Time">
-      <button ng-click="enterRun.enterNewRun(newRun)">Submit</button>
+      <button ng-click="enterRun.addRun(newRun)">Submit</button>
+    </div>
+
+    <p>Run History</p>
+    <div ng-controller="ShowRunsController as showRun">
+      <div ng-repeat="array in showRun.runArray">
+        <div ng-repeat="run in array">
+        <p>Date: {{run.date}}</p>
+        <p>Distance: {{run.distance}}</p>
+        <p>Time: {{run.time}}</p>
+      </div>
+      </div>
     </div>
 
   </body>

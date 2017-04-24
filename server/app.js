@@ -6,8 +6,8 @@ var bodyParser = require('body-parser');
 
 //Route Modules
 var index = require('./routes/index.js');
-//route and module variables
 var db = require('./modules/db.js');
+var runlog = require('./routes/runlog.js');
 
 //app config
 app.set('port', (process.env.PORT || 4000));
@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('server/public'));
 
 //Routes
+app.use('/runlog', runlog);
 app.use('/', index);
 
 //listen

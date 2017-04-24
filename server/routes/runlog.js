@@ -13,7 +13,7 @@ var runSchema = mongoose.Schema({
 var Run = mongoose.model('run', runSchema, 'runs');
 
 router.get('/', function(req,res){
-  Favorite.find({}, function (err, allFavorites){
+  Run.find({}, function (err, allRuns){
     if (err){
       console.log('Mongo Error: ', err);
     }
@@ -21,14 +21,14 @@ router.get('/', function(req,res){
   });
 });
 
-router.post('/', function(req,res){
+router.post('/addRun', function(req,res){
   var run = new Run({
     date : req.body.date,
     distance : req.body.distance,
     time : req.body.time,
     notes : req.body.notes,
   });
-  favorite.save(function(err, saveRun){
+  run.save(function(err, saveRun){
     if(err){
       console.log("mongo error: ", err);
       sendStatus(500);
@@ -39,7 +39,7 @@ router.post('/', function(req,res){
 
 router.delete('/:date', function (req,res){
   console.log(req.params);
-  Favorite.findByIdAndRemove((req.params.date), function (err, allFavorites){
+  Run.findByIdAndRemove((req.params.date), function (err, allRuns){
     if (err) {
       console.log("mongo error: ", err);
       sendStatus(500);
