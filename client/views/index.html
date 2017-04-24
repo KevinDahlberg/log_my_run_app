@@ -17,34 +17,20 @@
     <!-- classes -->
 
     <!-- factories -->
+    <script type="text/javascript" src="scripts/factories/UserService.js"></script>
     <script type="text/javascript" src="scripts/factories/db_routes.js"></script>
     <script type="text/javascript" src="scripts/factories/runservice.js"></script>
 
     <!-- controllers -->
+    <script type="text/javascript" src="scripts/controllers/LoginController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/userController.js"></script>
     <script type="text/javascript" src="scripts/controllers/enter_run_controller.js"></script>
     <script type="text/javascript" src="scripts/controllers/show_runs_controller.js"></script>
 
   </head>
   <body>
     <h1>Log My Run App</h1>
-    <p>Enter New Run</p>
-    <div ng-controller="EnterRunController as enterRun">
-      <input type="text" ng-model="newRun.date" placeholder="Date">
-      <input type="text" ng-model="newRun.distance" placeholder="Distance">
-      <input type="text" ng-model="newRun.time" placeholder="Time">
-      <button ng-click="enterRun.addRun(newRun)">Submit</button>
-    </div>
-
-    <p>Run History</p>
-    <div ng-controller="ShowRunsController as showRun">
-      <div ng-repeat="array in showRun.runArray">
-        <div ng-repeat="run in array">
-        <p>Date: {{run.date}}</p>
-        <p>Distance: {{run.distance}}</p>
-        <p>Time: {{run.time}}</p>
-      </div>
-      </div>
-    </div>
+    <main ng-view></main>
 
   </body>
 </html>

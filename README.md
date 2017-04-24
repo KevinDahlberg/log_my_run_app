@@ -70,6 +70,18 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
     - [x] Display runs to DOM
 
   * User Login and register new user
+    - [x] Set up backend routes
+    - [x] put together routes in utility
+    - [x] Put together login view for homepage
+    - [x] Connect login view to JS files
+    - [x] connect JS files to Server Side
+    - [ ] Set up login failed
+    - [x] set up register view
+    - [x] connect register to JS
+    - [x] connect JS to Server side
+    - [ ] Set up session to work with current material.
+    - [ ] debug and make sure user authentication works.
+
   * Homepage that displays the information from the Database and shows the weekly, monthly, and yearly summary
   * Dropdown menus, calendar, and notes for inputting a run
   * View of all the week’s runs on homepage with the ability to select a different week from a calendar

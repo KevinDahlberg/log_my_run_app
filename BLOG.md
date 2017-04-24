@@ -25,3 +25,24 @@ One thing that needs to be done is set up the POST route now.  Also need to sour
 
 2 hours into the project and I've already completed the MVP, which is awesome.  I need to take everything from the MVP and put it
 into it's own view and compartmentalize things a little bit before moving on, then take a quick break to reset before taking on the login view.
+
+* 3:13 - First break.  "class meeting"
+
+* 3:33 - Back to work.
+
+Login Time - First I need to go through the material that is available on setting up a login.  Then I need to write up the to-do
+list on setting up the login and the views.  Last step is applying it (duh?).
+
+looks like a lot of the logging in will be copy-pasting stuff that I know works.  The trick will probably be hooking it all up,
+but it seems pretty straight forward (he says before digging into it).
+
+The backend stuff was confusing.  I don't know how much of it I need to understand to make this work.  It wasn't covered for more
+than a 3 hour lecture in class.  Definitely going to focus on making the front end version work.
+
+ok... imposter syndrome is raising it's dirty head.  And it took all of my control to go through and hammer through
+this whole login and register thing.  I still don't have a 100% clue on what I'm doing, but I feel better about
+manipulating what I'm doing.  I got a register to work, and the login works, the redirect is the only thing that's a
+mess right now.
+
+well, I got the user thing to work on both the front and back end.  now I just have to figure out how to manipulate
+it to my own devices.  mini freakout averted.  for now.
