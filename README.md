@@ -61,9 +61,9 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
 ## Tasks
 
   * MVP - Create a new run with text inputs for the run, time and date and connect it from the DB to the front end.
-    - [ ] Set up file structure, grunt, package.json, readme
-    - [ ] Spin up server
-    - [ ] Connect server to mongo DB
+    - [x] Set up file structure, grunt, package.json, readme
+    - [x] Spin up server
+    - [x] Connect server to mongo DB
     - [ ] Create POST route to DB that inputs distance, time, and date.
     - [ ] set up input fields on front end
     - [ ] Create GET route to DB that gets all of the runs

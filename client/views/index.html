@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-App="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Log My Run APP</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <!-- angular -->
+    <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
+    <script type="text/javascript" src="vendors/angular-route/angular-route.min.js"></script>
+
+    <!-- client -->
+    <script type="text/javascript" src="scripts/client.js"></script>
+
+    <!-- classes -->
+
+    <!-- factories -->
+    <script type="text/javascript" src="scripts/factories/db_routes.js"></script>
+    <script type="text/javascript" src="scripts/factories/runservice.js"></script>
+
+    <!-- controllers -->
+    <script type="text/javascript" src="scripts/controllers/enter_run_controller.js"></script>
+
+  </head>
+  <body>
+    <h1>Log My Run App</h1>
+    <p>Enter New Run</p>
+    <div ng-controller="EnterRunController as enterRun">
+      <input type="text" ng-model="newRun.date" placeholder="Date">
+      <input type="text" ng-model="newRun.distance" placeholder="Distance">
+      <input type="text" ng-model="newRun.time" placeholder="Time">
+      <button ng-click="enterRun.enterNewRun(newRun)">Submit</button>
+    </div>
+
+  </body>
+</html>
