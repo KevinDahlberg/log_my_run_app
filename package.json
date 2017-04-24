@@ -1,0 +1,19 @@
+{
+  "name": "log_my_run_app",
+  "version": "1.0.0",
+  "description": "Prime Solo Project",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinDahlberg/log_my_run_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinDahlberg/log_my_run_app/issues"
+  },
+  "homepage": "https://github.com/KevinDahlberg/log_my_run_app#readme"
+}
