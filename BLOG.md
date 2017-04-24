@@ -20,3 +20,8 @@ I think all the back end stuff for right now is finished.  Time to tackle the MV
 
 Set up the DOM to insert a run and send it as an object.  At this point it's only logging in a console.log, but it's a start.
 One thing that needs to be done is set up the POST route now.  Also need to source the DB factory in the RunService Factory.
+
+3:08 and MVP finished
+
+2 hours into the project and I've already completed the MVP, which is awesome.  I need to take everything from the MVP and put it
+into it's own view and compartmentalize things a little bit before moving on, then take a quick break to reset before taking on the login view.
