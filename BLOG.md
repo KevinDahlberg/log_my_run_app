@@ -6,3 +6,14 @@
 to do grunt, install dependencies, fire up the server, and put together the README.
 
 Installed grunt, dependencies, and got the JSON package updated
+README file finished.  Tasks listed for the MVP.  Goal for today is to get as much of the MVP finished as possible.
+
+First things first, time to spin up the Server.
+
+Server spun up.  I was very fortunate to have that information already created in my sandbox.
+
+Time to access the DB.  The DB that I will be working with is on MLab.
+
+App now connects to the DB.  I also set up the GET, POST, and Delete routes on the server side.
+
+I think all the back end stuff for right now is finished.  Time to tackle the MVP on the front end.
