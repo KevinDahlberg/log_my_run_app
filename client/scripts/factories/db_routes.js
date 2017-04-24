@@ -11,10 +11,14 @@ myApp.factory('dbRoutes', ['$http', function($http){
 
 
   let getRun = () => {
+    runArray.length = 0;
     $http.get('/runlog').then(function(response){
       console.log(response);
-      runArray.length = 0;
-      runArray.push(response.data);
+      for (item of response.data){
+        let runObj = new Run (item.date, item.distance, item.time);
+        runArray.push(runObj);
+      }
+
       console.log(runArray);
     });
   };

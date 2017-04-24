@@ -46,3 +46,17 @@ mess right now.
 
 well, I got the user thing to work on both the front and back end.  now I just have to figure out how to manipulate
 it to my own devices.  mini freakout averted.  for now.
+
+Looks like login and register are working ok.  I'm going to need to wait until I style things to get the alerts working
+for the login errors and such.
+
+Logging in fine.  Next step is to make sure the website "flow" is there and that I have all the views I need before
+moving forward.
+
+I need to put together the run_view view... and I might need to create a few classes to make this work well.  Which is
+probably a good thing.  Better to be organized at this point than try to get it done quick and messy.
+
+Created a Run class that creates runs as they come from the DB.  Next step is to have a button/function that allows
+the user to view each run individually.
+
+* 5:49 done for the day. ~4 hours of coding at Prime.

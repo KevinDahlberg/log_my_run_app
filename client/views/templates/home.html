@@ -1,0 +1,11 @@
+<p>Run History</p>
+<div>
+  <h1 id="welcome" class="lead">Welcome, {{userObject.userName}}!</h1>
+  <a href="#enterRun">Enter Run</a>
+  <button class="btn btn-default" ng-click="showRun.logout()">Log Out</button>
+  <div ng-repeat="run in showRun.runArray">
+    <p>Date: {{run.date}}</p>
+    <p>Distance: {{run.distance}}</p>
+    <p>Time: {{run.time}}</p>
+  </div>
+</div>

@@ -1,7 +1,8 @@
 <p>Enter New Run</p>
 <div>
+  <a href="#home">Back</a>
   <input type="text" ng-model="newRun.date" placeholder="Date">
   <input type="text" ng-model="newRun.distance" placeholder="Distance">
   <input type="text" ng-model="newRun.time" placeholder="Time">
-  <button ng-click="enterRun.addRun(newRun)">Submit</button>
+  <button ng-click="enterRun.addRun(newRun)" ng-href="/#/user">Submit</button>
 </div>

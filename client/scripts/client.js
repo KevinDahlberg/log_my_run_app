@@ -15,9 +15,9 @@ myApp.config(['$routeProvider', '$locationProvider',
       templateUrl: '/views/templates/register.html',
       controller: 'LoginController as register'
     })
-    .when('/user', {
-      templateUrl: '/views/templates/user.html',
-      controller: 'UserController',
+    .when('/home', {
+      templateUrl: '/views/templates/home.html',
+      controller: 'ShowRunsController as showRun',
       resolve: {
         getuser : ['UserService', function(UserService){
           return UserService.getuser();
@@ -41,6 +41,15 @@ myApp.config(['$routeProvider', '$locationProvider',
           return UserService.getuser();
         }]
       }
+    })
+    .when('/runView', {
+      templateUrl: '/views/templates/run_view.html',
+      controller: 'RunViewController as runView',
+      resolve: {
+        getuser : ['UserService', function(UserService){
+          return UserService.getuser();
+      }]
+    }
     })
 
     .otherwise({
