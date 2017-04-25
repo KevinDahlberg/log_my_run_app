@@ -74,3 +74,5 @@ Login Problem - Staying logged in when the login button is pressed.  It's loggin
 Login problem fixed.  There was a problem with the routes after login and logout.
 
 ng-click needs to be set up on the new items.
+
+able to go throug the views just fine.  it's not elegant, but it works.  The current problem is that the run data isn't restricted to the user.

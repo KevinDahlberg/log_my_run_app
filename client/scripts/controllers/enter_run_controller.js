@@ -2,4 +2,5 @@ myApp.controller('EnterRunController', ['RunService', 'dbRoutes', function(RunSe
   let enterRun = this;
 
   enterRun.addRun = dbRoutes.addRun;
+  enterRun.runSubmit = RunService.runSubmit;
 }]);
