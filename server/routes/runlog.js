@@ -23,12 +23,13 @@ router.get('/', function(req,res){
 });
 
 router.post('/addRun', function(req,res){
+  console.log(req.body.user);
   var run = new Run({
     user: req.body.user,
-    date : req.body.date,
-    distance : req.body.distance,
-    time : req.body.time,
-    notes : req.body.notes,
+    date : req.body.run.date,
+    distance : req.body.run.distance,
+    time : req.body.run.time,
+    notes : req.body.run.notes,
   });
   run.save(function(err, saveRun){
     if(err){

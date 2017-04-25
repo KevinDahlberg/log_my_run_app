@@ -90,3 +90,14 @@ Login will bring back the user.  With that user we are going to create a new Use
 
 Trying to decide whether to do a PUT statement for each run or if I do a post statement with the User's name...
 I'm thinking that the best thing to do right now is to do a post statement with each user's name, and then filter them out on the GET statement.
+
+started creating user class.  
+* 2:51 end
+
+* 4:09 pm back at it
+
+so now I have a new user that I create whenever the session is authenticated. The next few steps involve doing something with that user.  Another thing that I know that I've done in a different project (marketplace?), was avoid putting the user into an array, and angular still watched things.
+
+able to get an item created in the DB now with the user name and run information attached to it.  Next up is pulling up the information based on the user.  What I would like is to have server side logic handle all of this, just so someone else's data isn't being sent.
+
+* 5:26 stop time

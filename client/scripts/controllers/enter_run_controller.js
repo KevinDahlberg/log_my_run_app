@@ -1,6 +1,6 @@
-myApp.controller('EnterRunController', ['RunService', 'dbRoutes', function(RunService, dbRoutes){
+myApp.controller('EnterRunController', ['RunService', 'dbRoutes', 'UserService', function(RunService, dbRoutes, UserService){
   let enterRun = this;
-
-  enterRun.addRun = dbRoutes.addRun;
+  this.runArray = UserService.runArray
+  enterRun.addRun = UserService.addRun;
   enterRun.runSubmit = RunService.runSubmit;
 }]);
