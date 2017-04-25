@@ -60,3 +60,17 @@ Created a Run class that creates runs as they come from the DB.  Next step is to
 the user to view each run individually.
 
 * 5:49 done for the day. ~4 hours of coding at Prime.
+
+## 4/25/2017
+
+* 1:10 pm start
+
+Going to fix that bug on login, set up ng-click on each new item.  Also need to set up a function that sends
+the user to the history screen after submit, and sends the user to a "runView" when the item in the history
+is clicked.
+
+Login Problem - Staying logged in when the login button is pressed.  It's logging me in and out on the server side.
+
+Login problem fixed.  There was a problem with the routes after login and logout.
+
+ng-click needs to be set up on the new items.

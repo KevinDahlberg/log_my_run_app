@@ -4,8 +4,10 @@
   <a href="#enterRun">Enter Run</a>
   <button class="btn btn-default" ng-click="showRun.logout()">Log Out</button>
   <div ng-repeat="run in showRun.runArray">
+    <div ng-click="showRun.runView(run)">
     <p>Date: {{run.date}}</p>
     <p>Distance: {{run.distance}}</p>
     <p>Time: {{run.time}}</p>
+  </div>
   </div>
 </div>
