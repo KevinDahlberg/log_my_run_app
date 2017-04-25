@@ -75,4 +75,18 @@ Login problem fixed.  There was a problem with the routes after login and logout
 
 ng-click needs to be set up on the new items.
 
-able to go throug the views just fine.  it's not elegant, but it works.  The current problem is that the run data isn't restricted to the user.
+able to go through the views just fine.  it's not elegant, but it works.  The current problem is that the run data isn't restricted to the user.
+
+Looks like I need to add the user name to, or create, a new class that takes the user name into consideration.
+I also need to add a username portion to the mongo db
+
+There is certain Data that I need access to across the app - namely the runs for each user.
+
+I need to start the app (after login) creating a new User with what I in the Run Class.
+
+I also need to change the DB Schema to have the User and an Array of runs.  
+
+Login will bring back the user.  With that user we are going to create a new User Class that gets the run info for that user, and then brings it back to the front end.
+
+Trying to decide whether to do a PUT statement for each run or if I do a post statement with the User's name...
+I'm thinking that the best thing to do right now is to do a post statement with each user's name, and then filter them out on the GET statement.

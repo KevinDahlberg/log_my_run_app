@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 
 
 var runSchema = mongoose.Schema({
+  user : String,
   date : String,
   distance : String,
   time : String,
@@ -23,6 +24,7 @@ router.get('/', function(req,res){
 
 router.post('/addRun', function(req,res){
   var run = new Run({
+    user: req.body.user,
     date : req.body.date,
     distance : req.body.distance,
     time : req.body.time,

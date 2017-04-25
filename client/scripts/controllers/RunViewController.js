@@ -3,5 +3,6 @@ myApp.controller('RunViewController', ['dbRoutes','UserService', 'RunService', f
   viewRun.thisRun = RunService.thisRun;
   console.log(viewRun.thisRun);
   viewRun.viewRun = RunService.viewRun;
+  
 
 }]);

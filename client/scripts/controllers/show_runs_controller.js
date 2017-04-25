@@ -5,5 +5,8 @@ myApp.controller('ShowRunsController', ['dbRoutes','UserService', 'RunService', 
   showRun.getRun();
   showRun.logout = UserService.logout;
   showRun.runView = RunService.runView;
+  showRun.userObject = UserService.userObject;
+
+  console.log(showRun.userObject);
 
 }]);

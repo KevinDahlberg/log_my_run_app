@@ -1,6 +1,9 @@
-myApp.factory('dbRoutes', ['$http', function($http){
+myApp.factory('dbRoutes', ['$http', 'UserService.js', function($http, UserService){
   console.log('dbRoutes sourced');
   let runArray = [];
+
+  let userObject = UserService.userObject;
+
 
   let addRun = (object) => {
     console.log(object);
@@ -12,10 +15,10 @@ myApp.factory('dbRoutes', ['$http', function($http){
 
   let getRun = () => {
     runArray.length = 0;
-    $http.get('/runlog').then(function(response){
+    $http.get('/runlog/').then(function(response){
       console.log(response);
       for (item of response.data){
-        let runObj = new Run (item.date, item.distance, item.time);
+        let runObj = new Run (userObject.userName, item.date, item.distance, item.time);
         runArray.push(runObj);
       }
 
