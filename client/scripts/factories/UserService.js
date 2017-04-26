@@ -80,6 +80,13 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   });
 };
 
+  let editRun = (object) => {
+    $http.put('/runlog/editRun', object).then(function(response){
+      getRun();
+      runSubmit();
+    })
+  }
+
 
   return {
 

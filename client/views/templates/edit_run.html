@@ -1,0 +1,8 @@
+<p>Edit Run</p>
+<div>
+  <a href="#home">Back</a>
+  <input type="text" ng-model="editRun.thisRun.date" placeholder="{{editRun.thisRun.date}}">
+  <input type="text" ng-model="editRun.thisRun.distance" placeholder="{{editRun.thisRun.distance}}">
+  <input type="text" ng-model="editRun.thisRun.time" placeholder="{{editRun.thisRun.time}}">
+  <button ng-click="editRun.editRun(thisRun); enterRun.runSubmit()">Submit</button>
+</div>
