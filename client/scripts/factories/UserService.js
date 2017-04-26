@@ -2,6 +2,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   console.log('User Service Loaded');
   let runArray = [];
   let userName= [];
+  let thisRun = [];
 
   /*
   Checks to see if there is a user logged in.  If there is, then it runs the
@@ -64,6 +65,14 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     $location.path('/home');
   };
 
+  let runView = (object) => {
+    thisRun.length = 0;
+    let viewRun = object;
+    thisRun.push(viewRun);
+    $location.path('/runView');
+  };
+
+
   return {
 
     getuser,
@@ -72,7 +81,9 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     userName,
     addRun,
     runSubmit,
-    getRun
+    getRun,
+    thisRun,
+    runView
 
   }
 
