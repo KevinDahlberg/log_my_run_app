@@ -146,3 +146,7 @@ I can get the PUT statement to work.
 set up dropdown menus.  I'm sure there's an easier way to do it with angular.  just need to take a few minute break to refresh my head.  ng-repeat option in options?
 
 * 3:38 break - 1:38 / 3:53 / 11:07
+
+* 4:00 back at it
+
+setting up constant variables, then going to loop through them for dropdown menus.

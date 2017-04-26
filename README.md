@@ -80,6 +80,13 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
     - [x] connect JS to Server side
     - [x] Set up session to work with current material.
     - [x] debug and make sure user authentication works.
+    - [x] Delete and Update Statements.
+
+    * Dropdown menus, calendar, and notes for inputting a run
+      - [ ] Way to select date
+      - [ ] Dropdown menu to select distances
+      - [ ] dropdown menu for time
+      - [ ] Add notes functionality
 
   * Homepage that displays the information from the Database and shows the weekly, monthly, and yearly summary
     - [ ] Make sure flow is set up correctly, and that all the views are set up with ways to navigate
@@ -89,12 +96,6 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
     - [ ] Logic to figure out monthly summary
     - [ ] Logic to figure out yearly summary
 
-  * Dropdown menus, calendar, and notes for inputting a run
-    - [ ] Way to select date
-    - [ ] Dropdown menu to select distances
-    - [ ] dropdown menu for time
-    - [ ] Add notes functionality
-    
   * View of all the week’s runs on homepage with the ability to select a different week from a calendar
   * View/Edit/Delete run view with all of the dropdown and select date features of the add run screen
   * Style CSS
