@@ -35,17 +35,19 @@ class Distance {
   constructor (miles, partialMiles) {
     this.miles = [];
     this.partialMiles = [];
+    this.milesPopulate(miles);
+    this.partialMilesPopulate(partialMiles);
   }
 
-  milesPopulate (miles) {
-    for (let i = 0; i <= miles; i++){
+  milesPopulate (mi) {
+    for (let i = 0; i <= mi; i++){
       this.miles.push(i);
     }
   }
 
-  partialMilesPopulate (partialMiles) {
-    for (let i = 0; i <= partialMiles; i++){
-      this.partialMiles.push(i);
+  partialMilesPopulate (partial) {
+    for (let i = 0; i <= partial.length-1; i++){
+      this.partialMiles.push(partial[i]);
     }
   }
 }
