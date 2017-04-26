@@ -72,8 +72,11 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     $location.path('/runView');
   };
 
-  let deleteRun = () => {
-   $http.delete('/favorites/' + runtoDelete.date).then(function(response){
+  let deleteRun = (object) => {
+    console.log(object._id);
+   $http.delete('/runlog/' + object._id).then(function(response){
+     getRun();
+     runSubmit();
   });
 };
 
@@ -88,6 +91,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     runSubmit,
     getRun,
     thisRun,
+    deleteRun,
     runView
 
   }
