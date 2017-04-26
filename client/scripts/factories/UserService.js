@@ -56,7 +56,12 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   the run history.  Also, the page redirects to the "/home" view.
   */
   let addRun = (run) => {
-    let obj = run
+    let obj = {
+      date: run.date,
+      distance: run.distance.miles + run.distance.partialMiles,
+      time: run.time.hours + ':' + run.time.minutes + ':' + run.time.seconds
+    };
+
     console.log(obj);
     $http.post('/runlog/addRun', obj).then(function(response){
       getRun();
