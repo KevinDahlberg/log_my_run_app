@@ -52,12 +52,16 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   Posts a run to the DB.  After the run posts, getRun function is called to get
   the run history.  Also, the page redirects to the "/home" view.
   */
-  let addRun = (run, username) => {
-    let obj = {user : username, run : run}
+  let addRun = (run) => {
+    let obj = run
     console.log(obj);
     $http.post('/runlog/addRun', obj).then(function(response){
       getRun();
     });
+  };
+
+  let runSubmit = () => {
+    $location.path('/home');
   };
 
   return {
@@ -67,6 +71,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     runArray,
     userName,
     addRun,
+    runSubmit,
     getRun
 
   }

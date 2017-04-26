@@ -13,16 +13,11 @@ myApp.factory('RunService', [ '$location', function($location){
     $location.path('/runView');
   };
 
-  let runSubmit = () => {
-    $location.path('/home');
-  };
-  
   console.log(thisRun);
 
   return {
     enterNewRun,
     runView,
     thisRun,
-    runSubmit
   };
 }]);

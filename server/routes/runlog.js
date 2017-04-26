@@ -29,10 +29,10 @@ router.post('/addRun', function(req,res){
   console.log(req.body);
   var run = new Run({
     userID: req.user._id,
-    date : req.body.run.date,
-    distance : req.body.run.distance,
-    time : req.body.run.time,
-    notes : req.body.run.notes,
+    date : req.body.date,
+    distance : req.body.distance,
+    time : req.body.time,
+    notes : req.body.notes,
   });
   run.save(function(err, saveRun){
     if(err){

@@ -113,3 +113,7 @@ up on the docket first today is to have the app pull user specific information f
 I'm going to need to make sure to do minimal work on the client side.  Get the login authenticated with a nice little user.  Then I'm going to take that user and do a call to the DB with that user.  I'll save that information in the factory, just so I'm not having to get it every time I authenticate.  When I log out (or if authentication fails), then I'm going to need to have the information wipe off the factory.
 
 So the way that passport works is that every time it makes a request to the server it has the user id and a bunch of other information attached to the request.  All that I had to do was to access that data and attach the user data to the post request of the encrypted ID to the username.  love it.
+
+I'm getting the Data back from the server and DB the I want it.  Now I just need to make it appear on the DOM.  Nothing to see here kids.
+
+Data is coming back authenticated properly and showing up on the DOM.  Next step is to get rid of the crap code I've written to make this stuff "work".  
