@@ -3,9 +3,9 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let runArray = [];
   let userName= [];
   let thisRun = [];
-
   let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
   let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
+  
   /*
   Checks to see if there is a user logged in.  If there is, then it runs the
   function to fetRun get the information for that USER from the DB.  This
@@ -87,13 +87,12 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   });
 };
 
-  let editRun = (object) => {
+  let editRun = (run) => {
     let updatedRun = {
       _id : thisRun[0]._id,
-      date : object.date,
-      distance : object.distance,
-      time : object.time,
-      notes : object.notes
+      date: run.date,
+      distance: run.distance.miles + run.distance.partialMiles,
+      time: run.time.hours + ':' + run.time.minutes + ':' + run.time.seconds
     };
     console.log(updatedRun);
 

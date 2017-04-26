@@ -8,30 +8,20 @@
   <option value="4/25/2017">4/25/2017</option>
   </select>
 
-  <label for="distance"> Distance: </label><br>
-  <select name="distanceSelect" ng-model="updatedRun.distance">
-  <option value="{{editRun.thisRun[0].distance}}">{{editRun.thisRun[0].distance}}</option>
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
+  <p>Distance:</p>
+  <select ng-model="updatedRun.distance.miles" ng-options="mile for mile in editRun.dropdownMiles.miles">
+  </select>
+  <select ng-model="updatedRun.distance.partialMiles" ng-options="partial for partial in editRun.dropdownMiles.partialMiles">
   </select>
 
-  <label for="time"> Time: </label><br>
-  <select name="timeSelect" ng-model="updatedRun.time">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
+  <p>Time:</p>
+  <select ng-model="updatedRun.time.hours" ng-options="hour for hour in editRun.dropdownTime.hours">
   </select>
+  <select ng-model="updatedRun.time.minutes" ng-options="minute for minute in editRun.dropdownTime.minutes">
+  </select>
+  <select ng-model="updatedRun.time.seconds" ng-options="second for second in editRun.dropdownTime.seconds">
+  </select>
+
   <!-- <input type="text" ng-model="updatedRun.date" ng-value="{{editRun.thisRun[0].date}}">
   <input type="text" ng-model="updatedRun.distance" ng-value="{{editRun.thisRun[0].distance}}">
   <input type="text" ng-model="updatedRun.time" ng-value="{{editRun.thisRun[0].time}}"> -->

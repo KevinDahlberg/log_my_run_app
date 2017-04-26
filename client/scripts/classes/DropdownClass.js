@@ -17,18 +17,27 @@ class Time {
 
   minutesPopulate (minute) {
     for (let i = 0; i <= minute; i++){
-      this.minutes.push(i);
+      let item = i.toString();
+      if  (item.length === 1){
+        this.minutes.push("0" + item)
+      } else {
+      this.minutes.push(item);
     }
   }
+}
 
   secondsPopulate (second) {
     for (let i=0; i <= second; i++){
-      this.seconds.push(i);
+      let item = i.toString();
+      if  (item.length === 1){
+        this.seconds.push("0" + item)
+      } else {
+      this.seconds.push(item);
+    }
+  }
     }
   }
 
-
-}
 
 class Distance {
 
