@@ -5,7 +5,12 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
       password: ''
     };
     login.message = '';
-
+    login.getRun = UserService.getRun;
+    /*
+    Step 1.  Login.  If the Login goes through, all of the data for that user gets stored in the factory with the
+    getRun function.
+    If the login doesn't go through, it errors out, and the user needs to either try again or register.
+    */
     login.login = () => {
       if(login.user.username === '' || login.user.password === '') {
         login.message = "Enter your username and password!";
@@ -15,6 +20,7 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
           if(response.data.username) {
             console.log('success: ', response.data);
             // location works with SPA (ng-route)
+            login.getRun();
             $location.path('/home');
           } else {
             console.log('failure: ', response);

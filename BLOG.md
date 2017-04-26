@@ -26,7 +26,7 @@ One thing that needs to be done is set up the POST route now.  Also need to sour
 2 hours into the project and I've already completed the MVP, which is awesome.  I need to take everything from the MVP and put it
 into it's own view and compartmentalize things a little bit before moving on, then take a quick break to reset before taking on the login view.
 
-* 3:13 - First break.  "class meeting"
+* 3:13 - First break.  "class meeting" - 2:00
 
 * 3:33 - Back to work.
 
@@ -59,7 +59,8 @@ probably a good thing.  Better to be organized at this point than try to get it 
 Created a Run class that creates runs as they come from the DB.  Next step is to have a button/function that allows
 the user to view each run individually.
 
-* 5:49 done for the day. ~4 hours of coding at Prime.
+* 5:49 done for the day. 2:16
+  - Day: 4:16
 
 ## 4/25/2017
 
@@ -92,7 +93,7 @@ Trying to decide whether to do a PUT statement for each run or if I do a post st
 I'm thinking that the best thing to do right now is to do a post statement with each user's name, and then filter them out on the GET statement.
 
 started creating user class.  
-* 2:51 end
+* 2:51 end (1:41)
 
 * 4:09 pm back at it
 
@@ -100,4 +101,15 @@ so now I have a new user that I create whenever the session is authenticated. Th
 
 able to get an item created in the DB now with the user name and run information attached to it.  Next up is pulling up the information based on the user.  What I would like is to have server side logic handle all of this, just so someone else's data isn't being sent.
 
-* 5:26 stop time
+* 5:26 stop time (1:17)
+* Total Time:
+  - Day: 2:58
+  - Total: 7:14
+
+## 4/26/2017
+* 9:35 am (hey we're starting before noon!)
+
+up on the docket first today is to have the app pull user specific information from the DB.
+I'm going to need to make sure to do minimal work on the client side.  Get the login authenticated with a nice little user.  Then I'm going to take that user and do a call to the DB with that user.  I'll save that information in the factory, just so I'm not having to get it every time I authenticate.  When I log out (or if authentication fails), then I'm going to need to have the information wipe off the factory.
+
+So the way that passport works is that every time it makes a request to the server it has the user id and a bunch of other information attached to the request.  All that I had to do was to access that data and attach the user data to the post request of the encrypted ID to the username.  love it.

@@ -3,5 +3,6 @@ myApp.controller('ShowRunsController', ['dbRoutes','UserService', 'RunService', 
   showRun.runArray = UserService.runArray;
   showRun.logout = UserService.logout;
   showRun.runView = RunService.runView;
+  showRun.userName = UserService.userName;
 
 }]);
