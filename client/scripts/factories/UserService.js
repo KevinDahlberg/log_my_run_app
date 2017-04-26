@@ -87,6 +87,11 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     })
   }
 
+  let runEdit = () => {
+    console.log('in runEdit path');
+    $location.path('/editRun');
+  };
+
 
   return {
 
@@ -99,7 +104,9 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     getRun,
     thisRun,
     deleteRun,
-    runView
+    runView,
+    editRun,
+    runEdit
 
   }
 

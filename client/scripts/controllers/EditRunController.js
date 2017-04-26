@@ -4,4 +4,5 @@ myApp.controller('EditRunController', ['UserService', function(UserService){
   editRun.thisRun = UserService.thisRun;
   editRun.deleteRun = UserService.deleteRun;
   editRun.editRun = UserService.editRun;
+  editRun.runEdit = UserService.runEdit;
 }]);

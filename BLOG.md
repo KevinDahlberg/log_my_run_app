@@ -123,3 +123,18 @@ Streamlined the way I send a post to the DB.
 View of the run that is clicked on is now showing up in the Run View.
 
 Moved the last of the routed into the UserService Factory.  Something I should have done in the start.  Reminder - it's better to start simple than start with a super complicated project.
+
+Up Next:
+  lets get the Delete and Edit routes figured out, just so that is DONE with.
+
+Delete run working.  Now to work on editing a run.
+
+Sucks to have to stop now.  When I come back I need to finish making connections and make my edit run page view work.
+
+* 11:50am stop - 2:15 / 2:15 / 9:29
+
+* 2:00 pm - Back at it.
+
+I need to finish adding my edit page.
+
+It's now going to the edit_run page.  Now I need to make things show up/connect.

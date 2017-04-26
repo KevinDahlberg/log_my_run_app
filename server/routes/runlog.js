@@ -43,6 +43,31 @@ router.post('/addRun', function(req,res){
   });
 });
 
+router.put("/editRun", function(req, res){
+  console.log(req.body);
+  var run = req.body;
+  Runs.findById(run.id, function(err, foundRun){
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    }
+    foundRun.date = req.body.date;
+    foundRun.distance = req.body.distance;
+    foundRun.time = req.body.time;
+    foundRun.notes = req.body.notes;
+    //emplyee params that need updating
+    // employee.thing = req.body.name
+
+    foundRun.save(function(err, savedRun){
+      if (err){
+        console.log(err);
+        res.sendStatus(500);
+      }
+      res.send(savedRun);
+    });
+
+  });
+});
 router.delete('/:date', function (req,res){
   console.log(req.params);
   Run.findByIdAndRemove((req.params.date), function (err, allRuns){
