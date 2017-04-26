@@ -138,3 +138,11 @@ Sucks to have to stop now.  When I come back I need to finish making connections
 I need to finish adding my edit page.
 
 It's now going to the edit_run page.  Now I need to make things show up/connect.
+
+I can't get it figured out how to edit information from a default value - and I don't know if I have to.
+Everything is going to be figured out with dropdown menus anyways.  time to build those out.  After making sure
+I can get the PUT statement to work.
+
+set up dropdown menus.  I'm sure there's an easier way to do it with angular.  just need to take a few minute break to refresh my head.  ng-repeat option in options?
+
+* 3:38 break - 1:38 / 3:53 / 11:07

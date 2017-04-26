@@ -46,7 +46,7 @@ router.post('/addRun', function(req,res){
 router.put("/editRun", function(req, res){
   console.log(req.body);
   var run = req.body;
-  Runs.findById(run.id, function(err, foundRun){
+  Run.findById(req.body._id, function(err, foundRun){
     if (err) {
       console.log(err);
       res.sendStatus(500);

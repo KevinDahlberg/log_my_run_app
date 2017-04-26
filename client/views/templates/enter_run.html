@@ -1,8 +1,37 @@
 <p>Enter New Run</p>
 <div>
   <a href="#home">Back</a>
-  <input type="text" ng-model="newRun.date" placeholder="Date">
-  <input type="text" ng-model="newRun.distance" placeholder="Distance">
-  <input type="text" ng-model="newRun.time" placeholder="Time">
+  <label for="date"> Date: </label><br>
+  <select name="dateSelect" ng-model="newRun.date">
+  <option value="4/24/2017">4/24/2017</option>
+  <option value="4/25/2017">4/25/2017</option>
+  </select>
+
+  <label for="distance"> Distance: </label><br>
+  <select name="distanceSelect" ng-model="newRun.distance">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  </select>
+
+  <label for="time"> Time: </label><br>
+  <select name="timeSelect" ng-model="newRun.time">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  </select>
+  <!-- <input type="text" ng-model="newRun.date" placeholder="Date"> -->
+  <!-- <input type="text" ng-model="newRun.distance" placeholder="Distance"> -->
+  <!-- <input type="text" ng-model="newRun.time" placeholder="Time"> -->
   <button ng-click="enterRun.addRun(newRun); enterRun.runSubmit()">Submit</button>
 </div>

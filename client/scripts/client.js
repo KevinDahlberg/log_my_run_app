@@ -53,7 +53,7 @@ myApp.config(['$routeProvider', '$locationProvider',
     })
     .when('/editRun', {
       templateUrl: '/views/templates/edit_run.html',
-      controller: 'EditRunController as EditRun',
+      controller: 'EditRunController as editRun',
       resolve: {
         getuser : ['UserService', function(UserService){
           return UserService.getuser();

@@ -81,11 +81,20 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
 };
 
   let editRun = (object) => {
-    $http.put('/runlog/editRun', object).then(function(response){
+    let updatedRun = {
+      _id : thisRun[0]._id,
+      date : object.date,
+      distance : object.distance,
+      time : object.time,
+      notes : object.notes
+    };
+    console.log(updatedRun);
+
+    $http.put('/runlog/editRun', updatedRun).then(function(response){
       getRun();
       runSubmit();
-    })
-  }
+    });
+  };
 
   let runEdit = () => {
     console.log('in runEdit path');
