@@ -117,3 +117,9 @@ So the way that passport works is that every time it makes a request to the serv
 I'm getting the Data back from the server and DB the I want it.  Now I just need to make it appear on the DOM.  Nothing to see here kids.
 
 Data is coming back authenticated properly and showing up on the DOM.  Next step is to get rid of the crap code I've written to make this stuff "work".  
+
+Streamlined the way I send a post to the DB.  
+
+View of the run that is clicked on is now showing up in the Run View.
+
+Moved the last of the routed into the UserService Factory.  Something I should have done in the start.  Reminder - it's better to start simple than start with a super complicated project.

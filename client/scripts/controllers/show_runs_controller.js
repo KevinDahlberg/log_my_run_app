@@ -1,4 +1,4 @@
-myApp.controller('ShowRunsController', ['dbRoutes','UserService', function(dbRoutes, UserService, RunService){
+myApp.controller('ShowRunsController', ['UserService', function(UserService, RunService){
   let showRun = this;
   showRun.runArray = UserService.runArray;
   showRun.logout = UserService.logout;

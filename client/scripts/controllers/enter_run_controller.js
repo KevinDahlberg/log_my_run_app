@@ -1,4 +1,4 @@
-myApp.controller('EnterRunController', ['dbRoutes', 'UserService', function(RunService, dbRoutes, UserService){
+myApp.controller('EnterRunController', ['UserService', function(UserService){
   let enterRun = this;
   this.runArray = UserService.runArray
   enterRun.addRun = UserService.addRun;

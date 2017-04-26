@@ -1,4 +1,4 @@
-myApp.controller('RunViewController', ['dbRoutes','UserService', function(dbRoutes, UserService){
+myApp.controller('RunViewController', ['UserService', function(UserService){
   let viewRun = this;
   viewRun.thisRun = UserService.thisRun;
 }]);

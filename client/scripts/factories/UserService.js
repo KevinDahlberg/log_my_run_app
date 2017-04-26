@@ -72,6 +72,11 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     $location.path('/runView');
   };
 
+  let deleteRun = () => {
+   $http.delete('/favorites/' + runtoDelete.date).then(function(response){
+  });
+};
+
 
   return {
 
