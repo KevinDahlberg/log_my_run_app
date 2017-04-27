@@ -192,3 +192,5 @@ things to do:
   2 way binding in NG-Model???
 
   * 4:20 - back at it
+
+  delete run back to working, runs are showing up on the run edit screen (gotta love double bindind... not!)

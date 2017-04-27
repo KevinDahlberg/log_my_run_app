@@ -24,7 +24,8 @@ class Run {
   parseDistance (distance){
     //takes the number or string, makes sure it is a string and splits it before [0] and after [1] the decimal
       this.parsedDistance.miles = distance.toString().split('.')[0];
-      this.parsedDistance.partialMiles = distance.toString().split('.')[1];
+      let pMi = distance.toString().split('.')[1];
+      this.parsedDistance.partialMiles = pMi
   }
 
   combineTime (time) {

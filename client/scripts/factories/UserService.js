@@ -75,7 +75,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     };
     console.log(obj);
     $http.post('/runlog/addRun', obj).then(function(response){
-      getRun();
+      runArray.length = 0;
     });
   };
 
@@ -87,7 +87,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     thisRun.length = 0;
     console.log('runview object ', object);
     let viewRun = {
-      id : object.id,
+      _id : object.id,
       date : object.date,
       miles : object.parsedDistance.miles,
       partialMiles : object.parsedDistance.partialMiles,
@@ -104,15 +104,17 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     console.log(object.id);
     $http.delete('/runlog/' + object.id).then(function(response){
       runSubmit();
+      runArray.length = 0;
     });
   };
 
   let editRun = (run) => {
+    console.log(thisRun[0]);
     let updatedRun = {
       _id : thisRun[0]._id,
       date: run.date,
-      distance: run.distance.miles + run.distance.partialMiles,
-      time: run.time.hours + ':' + run.time.minutes + ':' + run.time.seconds
+      distance: run.miles + run.partialMiles,
+      time: run.hours + ':' + run.minutes + ':' + run.seconds
     };
     console.log(updatedRun);
 

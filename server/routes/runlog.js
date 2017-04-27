@@ -68,9 +68,9 @@ router.put("/editRun", function(req, res){
 
   });
 });
-router.delete('/:date', function (req,res){
-  console.log(req.params);
-  Run.findByIdAndRemove((req.params.date), function (err, allRuns){
+router.delete('/:_id', function (req,res){
+  console.log(req.params._id);
+  Run.findByIdAndRemove((req.params._id), function (err, allRuns){
     if (err) {
       console.log("mongo error: ", err);
       sendStatus(500);

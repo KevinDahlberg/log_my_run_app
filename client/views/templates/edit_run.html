@@ -42,5 +42,5 @@
   <md-option ng-repeat="second in editRun.dropdownTime.seconds">{{second}}</md-option>
 </md-select>
 </md-input-container>
-  <button ng-click="editRun.editRun(updatedRun); editRun.runSubmit()">Submit</button>
+  <button ng-click="editRun.editRun(editRun.thisRun[0]); editRun.runSubmit()">Submit</button>
 </div>
