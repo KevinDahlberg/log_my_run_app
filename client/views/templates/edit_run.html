@@ -18,7 +18,7 @@
         </md-select>
       </md-input-container>
       <md-input-container>
-        <label>0{{editRun.thisRun[0].parsedDistance.partialMiles}}</label>
+        <label>.{{editRun.thisRun[0].parsedDistance.partialMiles}}</label>
         <md-select ng-model="updatedRun.distance.partialMiles">
           <md-option ng-repeat="partial in editRun.dropdownMiles.partialMiles" value="partial">{{partial}}</md-option>
         </md-select>

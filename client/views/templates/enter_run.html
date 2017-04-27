@@ -1,21 +1,27 @@
 <md-content>
+  <div>
   <p>Enter New Run</p>
-    <a href="#home">Back</a>
-  <div layout-gt-xs="row">
-  <div flex-gt-xs>
-    <md-datepicker ng-model="newRun.date" md-placeholder="Enter date"></md-datepicker>
-  </div>
-  </div>
-  <md-input-container style="margin-right: 10px;">
+  <a href="#home">Back</a>
+</div>
+  <md-input-container>
+  <!-- <div layout-gt-xs="row">
+  <div flex-gt-xs> -->
+  <label>Enter Date</label>
+  <md-datepicker ng-model="newRun.date" ng-selected="true">{{date}}</md-datepicker>
+</md-input-container>
+  <br>
+  <!-- </div>
+  </div> -->
+      <md-input-container style="margin-right: 10px;">
         <label>Distance</label>
         <md-select ng-model="newRun.distance.miles">
           <md-option ng-repeat="mile in enterRun.dropdownMiles.miles" value="{{mile}}">{{mile}}</md-option>
         </md-select>
       </md-input-container>
       <md-input-container>
-        <label>.00</label>
+        <label>Distance</label>
         <md-select ng-model="newRun.distance.partialMiles">
-          <md-option ng-repeat="partial in enterRun.dropdownMiles.partialMiles" value="partial">{{partial}}</md-option>
+          <md-option ng-repeat="partial in enterRun.dropdownMiles.partialMiles" value="{{partial}}">{{partial}}</md-option>
         </md-select>
     </md-input-container>
   <br>
@@ -37,6 +43,6 @@
   <md-option ng-repeat="second in enterRun.dropdownTime.seconds" value="{{second}}">{{second}}</md-option>
 </md-select>
 </md-input-container>
-
 <button ng-click="enterRun.addRun(newRun); enterRun.runSubmit()">Submit</button>
 </md-content>
+<p>{{newRun.date}}</p>
