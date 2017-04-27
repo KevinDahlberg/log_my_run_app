@@ -1,9 +1,9 @@
 console.log('client.js sourced');
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngMessages']);
 
 /// Routes ///
-myApp.config(['$routeProvider', '$locationProvider',
-      function($routeProvider, $locationProvider) {
+myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
+      function($routeProvider, $locationProvider, $mdDateLocaleProvider) {
   $locationProvider.hashPrefix('');
 
   $routeProvider
@@ -60,8 +60,11 @@ myApp.config(['$routeProvider', '$locationProvider',
       }]
     }
     })
-
     .otherwise({
       redirectTo: 'login'
     });
+
+  $mdDateLocaleProvider.formatDate = function(date) {
+   return moment(date).format('MM-DD-YYYY');
+  };
 }]);

@@ -63,6 +63,24 @@ module.exports = function(grunt){
         src: ['**/*'],
         dest: 'server/public/vendors/angular-animate'
       },
+      angularMessages: {
+        expand: true,
+        cwd: 'node_modules/angular-messages/',
+        src: ['**/*'],
+        dest: 'server/public/vendors/angular-messages'
+      },
+      angularMoment: {
+        expand: true,
+        cwd: 'node_modules/angular-moment/',
+        src: ['angular-moment.js'],
+        dest: 'server/public/vendors/angular-moment'
+      },
+      moment: {
+        expand: true,
+        cwd: 'node_modules/moment',
+        src: ['moment.js'],
+        dest: 'server/public/vendors/moment'
+      },
       javascript: {
         expand: true,
         cwd: 'client/scripts/',

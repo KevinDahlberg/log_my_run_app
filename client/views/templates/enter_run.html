@@ -1,29 +1,35 @@
-<p>Enter New Run</p>
-<div>
-  <a href="#home">Back</a>
-  <label for="date"> Date: </label><br>
-  <select name="dateSelect" ng-model="newRun.date">
-  <option value="4/24/2017">4/24/2017</option>
-  <option value="4/25/2017">4/25/2017</option>
-  </select>
+<md-content>
+  <p>Enter New Run</p>
+    <a href="#home">Back</a>
+    <!-- <label for="date"> Date: </label><br>
+    <select name="dateSelect" ng-model="newRun.date">
+    <option value="4/24/2017">4/24/2017</option>
+    <option value="4/25/2017">4/25/2017</option>
+  </select> -->
+  <p>Date:</p>
+  <div layout-gt-xs="row">
+  <div flex-gt-xs>
+    <h4>Standard date-picker</h4>
+    <md-datepicker ng-model="newRun.date" md-placeholder="Enter date"></md-datepicker>
+  </div>
+  </div>
+<p>Distance:</p>
+<select ng-model="newRun.distance.miles" ng-options="mile for mile in enterRun.dropdownMiles.miles">
+</select>
+<select ng-model="newRun.distance.partialMiles" ng-options="partial for partial in enterRun.dropdownMiles.partialMiles">
+</select>
 
-  <p>Distance:</p>
-  <select ng-model="newRun.distance.miles" ng-options="mile for mile in enterRun.dropdownMiles.miles">
-  </select>
-  <select ng-model="newRun.distance.partialMiles" ng-options="partial for partial in enterRun.dropdownMiles.partialMiles">
-  </select>
+<p>Time:</p>
+<select ng-model="newRun.time.hours" ng-options="hour for hour in enterRun.dropdownTime.hours">
+</select>
+<select ng-model="newRun.time.minutes" ng-options="minute for minute in enterRun.dropdownTime.minutes">
+</select>
+<select ng-model="newRun.time.seconds" ng-options="second for second in enterRun.dropdownTime.seconds">
+</select>
 
-  <p>Time:</p>
-  <select ng-model="newRun.time.hours" ng-options="hour for hour in enterRun.dropdownTime.hours">
-  </select>
-  <select ng-model="newRun.time.minutes" ng-options="minute for minute in enterRun.dropdownTime.minutes">
-  </select>
-  <select ng-model="newRun.time.seconds" ng-options="second for second in enterRun.dropdownTime.seconds">
-  </select>
-
-  <!-- <select ng-model="newRun.time.hours" ng-options="hour in newRun.time.hours for hours in enterRun.dropdownTime.hours"></select> -->
-  <!-- <input type="text" ng-model="newRun.date" placeholder="Date"> -->
-  <!-- <input type="text" ng-model="newRun.distance" placeholder="Distance"> -->
-  <!-- <input type="text" ng-model="newRun.time" placeholder="Time"> -->
-  <button ng-click="enterRun.addRun(newRun); enterRun.runSubmit()">Submit</button>
-</div>
+<!-- <select ng-model="newRun.time.hours" ng-options="hour in newRun.time.hours for hours in enterRun.dropdownTime.hours"></select> -->
+<!-- <input type="text" ng-model="newRun.date" placeholder="Date"> -->
+<!-- <input type="text" ng-model="newRun.distance" placeholder="Distance"> -->
+<!-- <input type="text" ng-model="newRun.time" placeholder="Time"> -->
+<button ng-click="enterRun.addRun(newRun); enterRun.runSubmit()">Submit</button>
+</md-content>
