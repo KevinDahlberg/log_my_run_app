@@ -155,3 +155,6 @@ datepicker up and running.  Dropdown menus working.  Created a few classes, feel
 set up the app to check to see if the runs are stored on the client side, if not it goes and gets the stored runs.
 
 * 7:45 done for the day - 3:45 / 7:38 / 14:52
+
+9:30 - 10:00 - did some coding
+  got the styling for the inputs to look like angular material.  looks so freakin cool.
