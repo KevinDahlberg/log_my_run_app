@@ -2,29 +2,43 @@
 <div>
   <a href="#home">Back</a>
   <p>Run info: {{editRun.thisRun[0]}}</p>
-  <p>Date:</p>
+  <p>Date: {{editRun.thisRun[0].date}}</p>
+
   <div layout-gt-xs="row">
   <div flex-gt-xs>
-    <h4>Standard date-picker</h4>
-    <md-datepicker ng-model="updateRun.date" md-placeholder="Enter date"></md-datepicker>
+    <md-datepicker ng-model="updateRun.date" md-placeholder="{{editRun.thisRun[0].date}}"></md-datepicker>
   </div>
   </div>
-  <p>Distance:</p>
-  <select ng-model="updatedRun.distance.miles" ng-options="mile for mile in editRun.dropdownMiles.miles">
-  </select>
-  <select ng-model="updatedRun.distance.partialMiles" ng-options="partial for partial in editRun.dropdownMiles.partialMiles">
-  </select>
-
-  <p>Time:</p>
-  <select ng-model="updatedRun.time.hours" ng-options="hour for hour in editRun.dropdownTime.hours">
-  </select>
-  <select ng-model="updatedRun.time.minutes" ng-options="minute for minute in editRun.dropdownTime.minutes">
-  </select>
-  <select ng-model="updatedRun.time.seconds" ng-options="second for second in editRun.dropdownTime.seconds">
-  </select>
-
-  <!-- <input type="text" ng-model="updatedRun.date" ng-value="{{editRun.thisRun[0].date}}">
-  <input type="text" ng-model="updatedRun.distance" ng-value="{{editRun.thisRun[0].distance}}">
-  <input type="text" ng-model="updatedRun.time" ng-value="{{editRun.thisRun[0].time}}"> -->
+  <md-input-container style="margin-right: 10px;">
+        <label>Distance</label>
+        <md-select ng-model="updatedRun.distance.miles">
+          <md-option ng-repeat="mile in editRun.dropdownMiles.miles" value="{{mile}}">{{mile}}</md-option>
+        </md-select>
+      </md-input-container>
+      <md-input-container>
+        <label>.00</label>
+        <md-select ng-model="updatedRun.distance.partialMiles">
+          <md-option ng-repeat="partial in editRun.dropdownMiles.partialMiles" value="partial">{{partial}}</md-option>
+        </md-select>
+    </md-input-container>
+<br>
+  <md-input-container style="margin-right: 10px;">
+    <label>Hours</label>
+      <md-select ng-model="updatedRun.time.hours">
+        <md-option ng-repeat="hour in editRun.dropdownTime.hours" value="{{hour}}">{{hour}}</md-option>
+      </md-select>
+  </md-input-container>
+  <md-input-container>
+    <label>Minutes</label>
+  <md-select ng-model="updatedRun.time.minutes">
+    <md-option ng-repeat="minute in editRun.dropdownTime.minutes" value="{{minute}}">{{minute}}</md-option>
+  </md-select>
+</md-input-container>
+<md-input-container>
+  <label>Seconds</label>
+<md-select ng-model="updatedRun.time.seconds">
+  <md-option ng-repeat="second in editRun.dropdownTime.seconds" value="{{second}}">{{second}}</md-option>
+</md-select>
+</md-input-container>
   <button ng-click="editRun.editRun(updatedRun); editRun.runSubmit()">Submit</button>
 </div>

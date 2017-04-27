@@ -153,3 +153,5 @@ setting up constant variables, then going to loop through them for dropdown menu
 
 datepicker up and running.  Dropdown menus working.  Created a few classes, feeling good.
 set up the app to check to see if the runs are stored on the client side, if not it goes and gets the stored runs.
+
+* 7:45 done for the day - 3:45 / 7:38 / 14:52

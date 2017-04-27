@@ -1,19 +1,44 @@
 <md-content>
   <p>Enter New Run</p>
     <a href="#home">Back</a>
-    <!-- <label for="date"> Date: </label><br>
-    <select name="dateSelect" ng-model="newRun.date">
-    <option value="4/24/2017">4/24/2017</option>
-    <option value="4/25/2017">4/25/2017</option>
-  </select> -->
-  <p>Date:</p>
   <div layout-gt-xs="row">
   <div flex-gt-xs>
-    <h4>Standard date-picker</h4>
     <md-datepicker ng-model="newRun.date" md-placeholder="Enter date"></md-datepicker>
   </div>
   </div>
-<p>Distance:</p>
+  <md-input-container style="margin-right: 10px;">
+        <label>Distance</label>
+        <md-select ng-model="newRun.distance.miles">
+          <md-option ng-repeat="mile in enterRun.dropdownMiles.miles" value="{{mile}}">{{mile}}</md-option>
+        </md-select>
+      </md-input-container>
+      <md-input-container>
+        <label>.00</label>
+        <md-select ng-model="newRun.distance.partialMiles">
+          <md-option ng-repeat="partial in enterRun.dropdownMiles.partialMiles" value="partial">{{partial}}</md-option>
+        </md-select>
+    </md-input-container>
+  <br>
+  <md-input-container style="margin-right: 10px;">
+    <label>Hours</label>
+      <md-select ng-model="newRun.time.hours">
+        <md-option ng-repeat="hour in enterRun.dropdownTime.hours" value="{{hour}}">{{hour}}</md-option>
+      </md-select>
+  </md-input-container>
+  <md-input-container>
+    <label>Minutes</label>
+  <md-select ng-model="newRun.time.minutes">
+    <md-option ng-repeat="minute in enterRun.dropdownTime.minutes" value="{{minute}}">{{minute}}</md-option>
+  </md-select>
+</md-input-container>
+<md-input-container>
+  <label>Seconds</label>
+<md-select ng-model="newRun.time.seconds">
+  <md-option ng-repeat="second in enterRun.dropdownTime.seconds" value="{{second}}">{{second}}</md-option>
+</md-select>
+</md-input-container>
+
+<!-- <p>Distance:</p>
 <select ng-model="newRun.distance.miles" ng-options="mile for mile in enterRun.dropdownMiles.miles">
 </select>
 <select ng-model="newRun.distance.partialMiles" ng-options="partial for partial in enterRun.dropdownMiles.partialMiles">
@@ -25,7 +50,7 @@
 <select ng-model="newRun.time.minutes" ng-options="minute for minute in enterRun.dropdownTime.minutes">
 </select>
 <select ng-model="newRun.time.seconds" ng-options="second for second in enterRun.dropdownTime.seconds">
-</select>
+</select> -->
 
 <!-- <select ng-model="newRun.time.hours" ng-options="hour in newRun.time.hours for hours in enterRun.dropdownTime.hours"></select> -->
 <!-- <input type="text" ng-model="newRun.date" placeholder="Date"> -->
