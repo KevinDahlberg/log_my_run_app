@@ -51,7 +51,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
         runArray.push(run);
       }
     });
-    
+
   };
 
   // logout function that is triggered when logout is clicked
@@ -85,9 +85,17 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
 
   let runView = (object) => {
     thisRun.length = 0;
-    let viewRun = object;
+    console.log('runview object ', object);
+    let viewRun = {
+      id : object.id,
+      date : object.date,
+      miles : object.parsedDistance.miles,
+      partialMiles : object.parsedDistance.partialMiles,
+      hours : object.parsedTime.hours,
+      minutes : object.parsedTime.minutes,
+      seconds : object.parsedTime.seconds
+    };
     console.log(viewRun);
-    viewRun.parseDistance(viewRun.distance);
     thisRun.push(viewRun);
     $location.path('/runView');
   };

@@ -182,7 +182,13 @@ things to do:
   - [ ] create user class
   - [ ] get rid of errors on edit screen
 
-  12:18 - Taking a break for lunch 2:02 / 2:02 / 16:53
+  * 12:18 - Taking a break for lunch 2:02 / 2:02 / 16:53
 
-  1:59 - Back to work
+  * 1:59 - Back to work
   delete working again.  now it's doubling the runs received from the DB
+
+  * 2:59 - Break
+
+  2 way binding in NG-Model???
+
+  * 4:20 - back at it
