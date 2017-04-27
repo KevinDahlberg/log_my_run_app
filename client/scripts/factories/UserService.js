@@ -5,7 +5,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let thisRun = [];
   let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
   let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
-  
+
   /*
   Checks to see if there is a user logged in.  If there is, then it runs the
   function to fetRun get the information for that USER from the DB.  This
@@ -18,12 +18,22 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
         console.log('User Data: ', response.data.username);
         userName.length = 0;
         userName.push(response.data.username);
+        checkArray(runArray);
       } else {
         // user has no session, bounce them back to the login page
         $location.path("/login");
       }
     });
   }
+
+  /*
+  checks to see if there are runs on runArray, if there aren't it populates the Data.
+  */
+  let checkArray = (array) => {
+    if (array.length === 0) {
+      getRun();
+    }
+  };
 
   /*
   Step: 2

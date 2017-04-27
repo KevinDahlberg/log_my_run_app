@@ -150,3 +150,6 @@ set up dropdown menus.  I'm sure there's an easier way to do it with angular.  j
 * 4:00 back at it
 
 setting up constant variables, then going to loop through them for dropdown menus.
+
+datepicker up and running.  Dropdown menus working.  Created a few classes, feeling good.
+set up the app to check to see if the runs are stored on the client side, if not it goes and gets the stored runs.
