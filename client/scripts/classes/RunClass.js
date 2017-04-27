@@ -1,5 +1,6 @@
 class Run {
-  constructor (date, distance, time, notes){
+  constructor (id, date, distance, time, notes){
+    this.id = id
     this.date = date;
     this.distance = distance;
     this.time = time;

@@ -15,9 +15,9 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     $http.get('/user').then(function(response) {
       if(response.data.username) {
         // user has a curret session on the server
-        console.log('User Data: ', response.data.username);
         userName.length = 0;
         userName.push(response.data.username);
+        console.log('in getuser path');
         checkArray(runArray);
       } else {
         // user has no session, bounce them back to the login page
@@ -32,6 +32,8 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let checkArray = (array) => {
     if (array.length === 0) {
       getRun();
+    } else {
+      return;
     }
   };
 
@@ -45,13 +47,11 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     $http.get('/runlog/').then(function(response){
       let runObj = response.data;
       for (let item of runObj){
-        let run = new Run (item.date, item.distance, item.time);
+        let run = new Run (item._id, item.date, item.distance, item.time);
         runArray.push(run);
-    }
-  }).then(function(){
-    console.log(runArray);
-  });
-
+      }
+    });
+    
   };
 
   // logout function that is triggered when logout is clicked
@@ -73,7 +73,6 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
       distance: run.distance.miles + run.distance.partialMiles,
       time: run.time.hours + ':' + run.time.minutes + ':' + run.time.seconds
     };
-
     console.log(obj);
     $http.post('/runlog/addRun', obj).then(function(response){
       getRun();
@@ -94,12 +93,11 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   };
 
   let deleteRun = (object) => {
-    console.log(object._id);
-   $http.delete('/runlog/' + object._id).then(function(response){
-     getRun();
-     runSubmit();
-  });
-};
+    console.log(object.id);
+    $http.delete('/runlog/' + object.id).then(function(response){
+      runSubmit();
+    });
+  };
 
   let editRun = (run) => {
     let updatedRun = {

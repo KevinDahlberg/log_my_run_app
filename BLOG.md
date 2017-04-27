@@ -172,3 +172,17 @@ run objects are getting created and pushed into the runArray.  Now I need to tes
 decided to just create a new part of each run that has the parsed version of the time and distance.  This allows me to access it whenever I feel like it instead of having to create and replace it every time I decide to go back and forth.
 
 next up is to get the numbers to show up right in the edit view.
+the information is showing up on the edit screen, it's just throwing a ton of errors.  The other thing that isn't working right is the date is still messed up, also with all of these changes, add run isn't working right.
+aaaaand the Delete button isn't working either.
+
+things to do:
+  - [ ] Make date show up right
+  - [ ] Submitting new runs right
+  - [x] Make Delete button work again
+  - [ ] create user class
+  - [ ] get rid of errors on edit screen
+
+  12:18 - Taking a break for lunch 2:02 / 2:02 / 16:53
+
+  1:59 - Back to work
+  delete working again.  now it's doubling the runs received from the DB

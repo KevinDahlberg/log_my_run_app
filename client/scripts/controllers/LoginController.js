@@ -21,7 +21,6 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
           if(response.data.username) {
             console.log('success: ', response.data);
             // location works with SPA (ng-route)
-            login.getRun();
             $location.path('/home');
           } else {
             console.log('failure: ', response);
