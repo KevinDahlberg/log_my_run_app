@@ -43,13 +43,15 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let getRun = () => {
     runArray.length = 0;
     $http.get('/runlog/').then(function(response){
-      console.log(response);
       let runObj = response.data;
       for (let item of runObj){
-      runArray.push(item);
+        let run = new Run (item.date, item.distance, item.time);
+        runArray.push(run);
     }
-      // console.log(runArray);
-    });
+  }).then(function(){
+    console.log(runArray);
+  });
+
   };
 
   // logout function that is triggered when logout is clicked
@@ -85,6 +87,8 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let runView = (object) => {
     thisRun.length = 0;
     let viewRun = object;
+    console.log(viewRun);
+    viewRun.parseDistance(viewRun.distance);
     thisRun.push(viewRun);
     $location.path('/runView');
   };

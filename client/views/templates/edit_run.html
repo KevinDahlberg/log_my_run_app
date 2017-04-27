@@ -5,36 +5,39 @@
   <p>Date: {{editRun.thisRun[0].date}}</p>
   <div layout-gt-xs="row">
   <div flex-gt-xs>
-    <md-datepicker ng-model="updateRun.date" md-placeholder="{{editRun.thisRun[0].date}}"></md-datepicker>
+    <md-input-container>
+      <label>{{editRun.thisRun[0].date}}</label>
+      <md-datepicker ng-model="updateRun.date"></md-datepicker>
+    </md-input-container>
   </div>
   </div>
   <md-input-container style="margin-right: 10px;">
-        <label>Distance</label>
+        <label>{{editRun.thisRun[0].parsedDistance.miles}}</label>
         <md-select ng-model="updatedRun.distance.miles">
           <md-option ng-repeat="mile in editRun.dropdownMiles.miles" value="{{mile}}">{{mile}}</md-option>
         </md-select>
       </md-input-container>
       <md-input-container>
-        <label>.00</label>
+        <label>0{{editRun.thisRun[0].parsedDistance.partialMiles}}</label>
         <md-select ng-model="updatedRun.distance.partialMiles">
           <md-option ng-repeat="partial in editRun.dropdownMiles.partialMiles" value="partial">{{partial}}</md-option>
         </md-select>
     </md-input-container>
 <br>
   <md-input-container style="margin-right: 10px;">
-    <label>Hours</label>
+    <label>{{editRun.thisRun[0].parsedTime.hours}}</label>
       <md-select ng-model="updatedRun.time.hours">
         <md-option ng-repeat="hour in editRun.dropdownTime.hours" value="{{hour}}">{{hour}}</md-option>
       </md-select>
   </md-input-container>
   <md-input-container>
-    <label>Minutes</label>
+    <label>{{editRun.thisRun[0].parsedTime.minutes}}</label>
   <md-select ng-model="updatedRun.time.minutes">
     <md-option ng-repeat="minute in editRun.dropdownTime.minutes" value="{{minute}}">{{minute}}</md-option>
   </md-select>
 </md-input-container>
 <md-input-container>
-  <label>Seconds</label>
+  <label>{{editRun.thisRun[0].parsedTime.seconds}}</label>
 <md-select ng-model="updatedRun.time.seconds">
   <md-option ng-repeat="second in editRun.dropdownTime.seconds" value="{{second}}">{{second}}</md-option>
 </md-select>

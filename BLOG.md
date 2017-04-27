@@ -158,3 +158,17 @@ set up the app to check to see if the runs are stored on the client side, if not
 
 9:30 - 10:00 - did some coding
   got the styling for the inputs to look like angular material.  looks so freakin cool.
+
+10:30 - did about 10 minutes
+
+Next up - I need to set up a run class that has methods that seperate out and put together the information for display and sending.
+
+* 10:56 - back at it time to create some methods and classes.
+
+k, i've written a bunch of code within as a method within a class.  how the hell do i test it... I put in the console logs... time to go into UserService and write a couple tests
+
+run objects are getting created and pushed into the runArray.  Now I need to test the methods within the run.
+
+decided to just create a new part of each run that has the parsed version of the time and distance.  This allows me to access it whenever I feel like it instead of having to create and replace it every time I decide to go back and forth.
+
+next up is to get the numbers to show up right in the edit view.
