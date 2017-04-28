@@ -211,3 +211,5 @@ things to do:
   it just created the date with a few lines of code.
 
   Things are starting to look good.  The date field showed up with todays date, and "submitted" that.  Didn't submit anything else, but hey, it's a start.
+
+  i kept getting a problem with the way that scope was altering the value of the object.  I think I might have found a work around by changing the label?.  I'll see if I can get it to work for all of the default values.

@@ -4,5 +4,6 @@ myApp.controller('ShowRunsController', ['UserService', function(UserService, Run
   showRun.logout = UserService.logout;
   showRun.runView = UserService.runView;
   showRun.userName = UserService.userName;
+  showRun.enterView = UserService.enterView;
 
 }]);

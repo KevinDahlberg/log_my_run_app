@@ -5,7 +5,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let thisRun = [];
   let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
   let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
-  let newRun = new NewRun;
+  let newRun = new NewRun();
   console.log(newRun);
 
   /*
@@ -72,13 +72,9 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   * @return resets the runArray.length, and sends the user to the Home Page (show run view)
   * This  triggers the checkArray function, which triggers the getRun statement whent the User status is checked
   */
-  let addRun = (run) => {
-    let obj = {
-      date: run.date,
-      distance: run.distance.miles + run.distance.partialMiles,
-      time: run.time.hours + ':' + run.time.minutes + ':' + run.time.seconds
-    };
-    console.log(obj);
+  let addRun = (object) => {
+    let run = object;
+    console.log(run);
     $http.post('/runlog/addRun', obj).then(function(response){
       runArray.length = 0;
     });
@@ -103,6 +99,35 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     console.log(viewRun);
     thisRun.push(viewRun);
     $location.path('/runView');
+  };
+
+
+  /**
+  * ENTER VIEW FUNCTION
+  * @desc creates a new object with default properties that can be edited and by the Enter Run View
+  * @param takes in the values of newRun and creates a new object with them.
+  * @return pushes this new run into thisRun array and sends the user to the Enter Run View
+  */
+  let enterView = () => {
+    thisRun.length = 0;
+    let today = moment().format('MM/DD/YYYY');
+    let distance = '0.00';
+    let time = '0:00:00';
+    let notes = '';
+    let parsedDistance = {miles : '0', partialMiles : '0'};
+    let parsedTime = {hours : '0', minutes : '00', seconds : '00'};
+
+    let run = {
+        date : today,
+        distance : distance,
+        time : time,
+        notes : notes,
+        parsedDistance : parsedDistance,
+        parsedTime : parsedTime
+      };
+    console.log(run);
+    thisRun.push(run);
+    $location.path('/enterRun');
   };
 
   let deleteRun = (object) => {
@@ -150,7 +175,8 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     runView,
     editRun,
     runEdit,
-    newRun
+    newRun,
+    enterView
 
   }
 
