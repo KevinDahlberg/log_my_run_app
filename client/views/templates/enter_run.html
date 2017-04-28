@@ -13,14 +13,10 @@
   <a href="#home">Back</a>
 </div>
   <md-input-container>
-  <!-- <div layout-gt-xs="row">
-  <div flex-gt-xs> -->
   <label>Enter Date</label>
   <md-datepicker ng-model="enterRun.newRun.date" ng-selected="true">{{date}}</md-datepicker>
 </md-input-container>
   <br>
-  <!-- </div>
-  </div> -->
       <md-input-container style="margin-right: 10px;">
         <label>Distance</label>
         <md-select ng-model="enterRun.newRun.parsedDistance.miles">
@@ -55,6 +51,5 @@
   <label>Notes</label>
   <textarea ng-model="enterRun.newRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
 </md-input-container>
-<button ng-click="enterRun.addRun(enterRun.newRun); enterRun.runSubmit()">Submit</button>
+<button ng-click="enterRun.addRun(enterRun.newRun);">Submit</button>
 </md-content>
-<p>{{newRun.date}}</p>

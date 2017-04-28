@@ -245,3 +245,10 @@ things to do:
   - [x] get information to look the same between the edit run and enter run screens
 
   enter and edit views are looking right.  runs are being submitted to the database just fine.
+
+  - [x] notes functionality added
+  - [x] run history showing up on enter run submit
+    - it was an async issue, got fixed by moving the change in location.
+
+  - [ ] clean up code please.
+  - [ ] instead of pushing the run into an array, create new run when views change?

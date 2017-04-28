@@ -1,25 +1,20 @@
 class Run {
-  constructor (id, date, distance, time, notes, parsedDistance, parsedTime){
-    this.id = id;
-    this.date = date;
-    this.distance = distance;
-    this.time = time;
-    this.notes = notes;
-    this.parsedDistance = parsedDistance;
-    this.parsedTime = parsedTime;
-    this.showItems(parsedDistance, parsedTime);
-    this.combineDistance(parsedDistance);
-    this.combineTime(parsedTime);
 
-  }
+  constructor (run){
+    //id, date, distance, time, notes, parsedDistance, parsedTime
 
-  showItems (a, b){
-    console.log(a);
-    console.log(b);
+    this.id = run.id;
+    this.date = run.date;
+    this.distance = run.distance;
+    this.time = run.time;
+    this.notes = run.notes;
+    this.parsedDistance = run.parsedDistance;
+    this.parsedTime = run.parsedTime;
+    this.combineDistance(run.parsedDistance);
+    this.combineTime(run.parsedTime);
   }
 
   combineTime (time) {
-    console.log(time);
     time = time.hours + ':' + time.minutes + ':' + time.seconds;
       console.log('combine: ', time);
     this.time = time;
@@ -29,6 +24,25 @@ class Run {
      distance = distance.miles + distance.partialMiles;
      console.log('combine: ', distance);
      this.distance = distance;
+  }
+
+  // static createDefaultRun (){
+  //   let run = {
+  //     date : '',
+  //     distance : '',
+  //     time : '',
+  //     notes : '',
+  //     parsedDistance : {miles : '0', partialMiles : '.00'},
+  //     parsedTime : {hours : '0', minutes : '00', seconds : '00'}
+  //   };
+  //   let today = moment().format('MM/DD/YYYY');
+  //   run.date = today;
+  //   let defaultRun = new Run (run);
+  // }
+
+  createDate (){
+    let today = moment().format('MM/DD/YYYY');
+    this.date = today;
   }
 }
 
