@@ -13,7 +13,7 @@ myApp.controller('EnterRunController', ['UserService', function(UserService){
   enterRun.date = new Date();
   enterRun.isOpen = false;
 
-  enterRun.newRun = UserService.newRun;
+  enterRun.defaultRun = UserService.defaultRun;
   this.runArray = UserService.runArray;
   enterRun.addRun = UserService.addRun;
   enterRun.runSubmit = UserService.runSubmit;

@@ -14,42 +14,42 @@
 </div>
   <md-input-container>
   <label>Enter Date</label>
-  <md-datepicker ng-model="enterRun.newRun.date" ng-selected="true">{{date}}</md-datepicker>
+  <md-datepicker ng-model="enterRun.defaultRun.date" ng-selected="true">{{date}}</md-datepicker>
 </md-input-container>
   <br>
       <md-input-container style="margin-right: 10px;">
         <label>Distance</label>
-        <md-select ng-model="enterRun.newRun.parsedDistance.miles">
+        <md-select ng-model="enterRun.defaultRun.parsedDistance.miles">
           <md-option ng-repeat="mile in enterRun.dropdownMiles.miles" value="{{mile}}">{{mile}}</md-option>
         </md-select>
       </md-input-container>
       <md-input-container>
-        <md-select ng-model="enterRun.newRun.parsedDistance.partialMiles">
+        <md-select ng-model="enterRun.defaultRun.parsedDistance.partialMiles">
           <md-option ng-repeat="partial in enterRun.dropdownMiles.partialMiles" value={{partial}}>{{partial}}</md-option>
         </md-select>
     </md-input-container>
   <br>
   <md-input-container style="margin-right: 10px;">
     <label>Hours</label>
-      <md-select ng-model="enterRun.newRun.parsedTime.hours">
+      <md-select ng-model="enterRun.defaultRun.parsedTime.hours">
         <md-option ng-repeat="hour in enterRun.dropdownTime.hours" value="{{hour}}">{{hour}}</md-option>
       </md-select>
   </md-input-container>
   <md-input-container>
     <label>Minutes</label>
-  <md-select ng-model="enterRun.newRun.parsedTime.minutes">
+  <md-select ng-model="enterRun.defaultRun.parsedTime.minutes">
     <md-option ng-repeat="minute in enterRun.dropdownTime.minutes" value="{{minute}}">{{minute}}</md-option>
   </md-select>
 </md-input-container>
 <md-input-container>
   <label>Seconds</label>
-<md-select ng-model="enterRun.newRun.parsedTime.seconds">
+<md-select ng-model="enterRun.defaultRun.parsedTime.seconds">
   <md-option ng-repeat="second in enterRun.dropdownTime.seconds" value="{{second}}">{{second}}</md-option>
 </md-select>
 </md-input-container>
 <md-input-container class="md-block">
   <label>Notes</label>
-  <textarea ng-model="enterRun.newRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
+  <textarea ng-model="enterRun.defaultRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
 </md-input-container>
-<button ng-click="enterRun.addRun(enterRun.newRun);">Submit</button>
+<button ng-click="enterRun.addRun(enterRun.defaultRun);">Submit</button>
 </md-content>
