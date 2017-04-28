@@ -5,6 +5,8 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let thisRun = [];
   let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
   let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
+  let newRun = new NewRun;
+  console.log(newRun);
 
   /*
   Checks to see if there is a user logged in.  If there is, then it runs the
@@ -68,7 +70,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   * @desc posts the created run into the database
   * @param the run that is created on the addRun view
   * @return resets the runArray.length, and sends the user to the Home Page (show run view)
-  * This  triggers the checkArray function, which triggers the getRun statement whent the User status is checked 
+  * This  triggers the checkArray function, which triggers the getRun statement whent the User status is checked
   */
   let addRun = (run) => {
     let obj = {
@@ -147,7 +149,8 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     deleteRun,
     runView,
     editRun,
-    runEdit
+    runEdit,
+    newRun
 
   }
 

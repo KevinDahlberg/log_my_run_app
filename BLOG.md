@@ -206,3 +206,8 @@ things to do:
   I'm thinking that I need to create a new run class with default values.  The "add run" will
   then edit those values the same way the edit run does, with the updated object being sent to the DB
   as a "New" object.
+
+  Using Moment.js to get the date may be the coolest thing every.  Instead of doing a bunch of complicated shit,
+  it just created the date with a few lines of code.
+
+  Things are starting to look good.  The date field showed up with todays date, and "submitted" that.  Didn't submit anything else, but hey, it's a start.

@@ -28,12 +28,15 @@ class NewRun {
   * be extrapolated from it.  Then it sets the value of this.date
   */
   createDate (){
-    let today = Date.now();
-    let year = today.getFullYear();
-    let month = today.getMonth();
-    let day = today.getDay();
-    let todayDate = (month + '/' + day + '/' + year);
-    this.date = todayDate;
+    let today = moment().format('MM/DD/YYYY');
+    // let today = moment().year(year).month(month).date(day);
+
+    // let year = today.getFullYear();
+    // let month = today.getMonth();
+    // let day = today.getDate();
+    // let todayDate = (month + '/' + day + '/' + year);
+
+    this.date = today;
   }
 
 }
