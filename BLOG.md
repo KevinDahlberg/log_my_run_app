@@ -242,4 +242,6 @@ things to do:
 
   first thing I tried for was to move the NewRun into the Run class... didn't work so well.  so much for DRY (will try later though).
 
-  - [ ] get information to look the same between the edit run and enter run screens
+  - [x] get information to look the same between the edit run and enter run screens
+
+  enter and edit views are looking right.  runs are being submitted to the database just fine.

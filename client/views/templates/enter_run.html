@@ -51,6 +51,10 @@
   <md-option ng-repeat="second in enterRun.dropdownTime.seconds" value="{{second}}">{{second}}</md-option>
 </md-select>
 </md-input-container>
+<md-input-container class="md-block">
+  <label>Notes</label>
+  <textarea ng-model="enterRun.newRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
+</md-input-container>
 <button ng-click="enterRun.addRun(enterRun.newRun); enterRun.runSubmit()">Submit</button>
 </md-content>
 <p>{{newRun.date}}</p>

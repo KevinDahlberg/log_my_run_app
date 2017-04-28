@@ -89,7 +89,7 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
       - [ ] Add notes functionality
 
   * Homepage that displays the information from the Database and shows the weekly, monthly, and yearly summary
-    - [ ] Make sure flow is set up correctly, and that all the views are set up with ways to navigate
+    - [x] Make sure flow is set up correctly, and that all the views are set up with ways to navigate
     - [x] create function to take home from enter run page on click of submit
     - [x] Figure out how to access the date in Angular
     - [ ] Logic to figure out weekly totals
