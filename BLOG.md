@@ -187,7 +187,7 @@ things to do:
   * 1:59 - Back to work
   delete working again.  now it's doubling the runs received from the DB
 
-  * 2:59 - Break
+  * 2:59 - Break 1:00 / 3:02 / 17:53
 
   2 way binding in NG-Model???
 
@@ -197,7 +197,7 @@ things to do:
 
   trying to make parsed Miles show up right.  I don't think that should be the answer though... if the miles showed up right from the first place, it should be good across the board.
 
-  * 5:20 - stop at school
+  * 5:20 - stop at school 1:00 / 4:02 / 18:53
 
   ## 4/28/2017
 
@@ -213,3 +213,9 @@ things to do:
   Things are starting to look good.  The date field showed up with todays date, and "submitted" that.  Didn't submit anything else, but hey, it's a start.
 
   i kept getting a problem with the way that scope was altering the value of the object.  I think I might have found a work around by changing the label?.  I'll see if I can get it to work for all of the default values.
+
+  * 12:33 - Lunch 2:18 / 2:18 / 21:11
+
+  * 1:15 - back at it
+
+  Finally got the default values to show up and be changeable.  I wasn't bringing in the information correctly, go figure.

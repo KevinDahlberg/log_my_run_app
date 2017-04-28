@@ -10,8 +10,8 @@
 myApp.controller('EnterRunController', ['UserService', function(UserService){
   let enterRun = this;
 
-  this.date = new Date();
-  this.isOpen = false;
+  enterRun.date = new Date();
+  enterRun.isOpen = false;
 
   enterRun.newRun = UserService.newRun;
   this.runArray = UserService.runArray;
@@ -20,4 +20,5 @@ myApp.controller('EnterRunController', ['UserService', function(UserService){
   enterRun.dropdownTime = UserService.dropdownTime;
   enterRun.dropdownMiles = UserService.dropdownMiles;
   enterRun.thisRun = UserService.thisRun;
+
 }]);
