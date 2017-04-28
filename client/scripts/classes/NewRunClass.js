@@ -7,12 +7,11 @@ class NewRun {
   constructor (date, distance, time, notes, parsedDistance, parsedTime){
     this.date = '';
     this.createDate ();
-    this.distance = '';
-    this.time = '';
+    this.distance = '0.00';
+    this.time = '0:00:00';
     this.notes = '';
-    this.parsedDistance = {};
-    this.parsedTime = {};
-    this.setValues ();
+    this.parsedDistance = {miles : '0', partialMiles : '.00'};
+    this.parsedTime = {hours : '0', minutes : '00', seconds : '00'};
   }
 
   /**
@@ -24,13 +23,5 @@ class NewRun {
   createDate (){
     let today = moment().format('MM/DD/YYYY');
     this.date = today;
-  }
-
-  setValues (){
-    this.distance = '0.00';
-    this.time = '0:00:00';
-    this.notes = '';
-    this.parsedDistance = {miles : '0', partialMiles : '0'};
-    this.parsedTime = {hours : '0', minutes : '00', seconds : '00'};
   }
 }

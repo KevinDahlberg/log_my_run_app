@@ -39,10 +39,11 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     }
   };
 
-  /*
-  Step: 2
-  User logs in, and if the login is a success, then the getRun function is called.
-  After the function is called, the response is saved in this factory as runArray.
+  /**
+  * Step: 2 GET RUN FUNCTION
+  * @desc function called after the user logs in to GET all of the runs
+  * @param parameters that are sent in the GET include information from the user session.
+  * @return an array of Run objects is created when the items come back from the DB
   */
   let getRun = () => {
     runArray.length = 0;
@@ -75,7 +76,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let addRun = (object) => {
     let run = object;
     console.log(run);
-    $http.post('/runlog/addRun', obj).then(function(response){
+    $http.post('/runlog/addRun', run).then(function(response){
       runArray.length = 0;
     });
   };
@@ -104,29 +105,12 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
 
   /**
   * ENTER VIEW FUNCTION
-  * @desc creates a new object with default properties that can be edited and by the Enter Run View
+  * @desc transfers the view to the Enter Run View.
   * @param takes in the values of newRun and creates a new object with them.
   * @return pushes this new run into thisRun array and sends the user to the Enter Run View
   */
   let enterView = () => {
     thisRun.length = 0;
-    let today = moment().format('MM/DD/YYYY');
-    let distance = '0.00';
-    let time = '0:00:00';
-    let notes = '';
-    let parsedDistance = {miles : '0', partialMiles : '0'};
-    let parsedTime = {hours : '0', minutes : '00', seconds : '00'};
-
-    let run = {
-        date : today,
-        distance : distance,
-        time : time,
-        notes : notes,
-        parsedDistance : parsedDistance,
-        parsedTime : parsedTime
-      };
-    console.log(run);
-    thisRun.push(run);
     $location.path('/enterRun');
   };
 

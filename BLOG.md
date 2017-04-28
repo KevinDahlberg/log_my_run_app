@@ -218,4 +218,8 @@ things to do:
 
   * 1:15 - back at it
 
-  Finally got the default values to show up and be changeable.  I wasn't bringing in the information correctly, go figure.
+  Finally got the default values to show up and be changeable.  I wasn't bringing in the information correctly, go figure.  I'd like to see if I can put that into a class.
+
+  Looks like I don't even need to push things into a thisRun array when creating a new run.  I can just edit it from the enter run view.
+
+  The information is being Posted to the DB from the addRun function.  I need to make it all pretty and stuff, but it's a start.

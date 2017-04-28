@@ -8,7 +8,9 @@ var runSchema = mongoose.Schema({
   date : String,
   distance : String,
   time : String,
-  notes : String
+  notes : String,
+  parsedDistance : String,
+  parsedTime : String
 });
 
 var Run = mongoose.model('run', runSchema, 'runs');
@@ -33,6 +35,8 @@ router.post('/addRun', function(req,res){
     distance : req.body.distance,
     time : req.body.time,
     notes : req.body.notes,
+    parsedDistance : req.body.parsedDistance,
+    parsedTime : req.body.parsedTime
   });
   run.save(function(err, saveRun){
     if(err){
@@ -55,8 +59,8 @@ router.put("/editRun", function(req, res){
     foundRun.distance = req.body.distance;
     foundRun.time = req.body.time;
     foundRun.notes = req.body.notes;
-    //emplyee params that need updating
-    // employee.thing = req.body.name
+    foundRun.parsedDistance = req.body.parsedDistance;
+    foundRun.parsedTime = req.body.parsedTime;
 
     foundRun.save(function(err, savedRun){
       if (err){
