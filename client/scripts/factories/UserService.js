@@ -50,9 +50,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     $http.get('/runlog/').then(function(response){
       let runObj = response.data;
       for (let item of runObj){
-        console.log(item.parsedDistance);
         let run = new Run (item._id, item.date, item.distance, item.time, item.notes, item.parsedDistance, item.parsedTime);
-        console.log(run);
         runArray.push(run);
       }
     });
@@ -122,19 +120,12 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   };
 
   let editRun = (run) => {
-    console.log(thisRun[0]);
-    // let updatedRun = {
-    //   _id : thisRun[0]._id,
-    //   date: run.date,
-    //   distance: run.miles + run.partialMiles,
-    //   time: run.hours + ':' + run.minutes + ':' + run.seconds
-    // };
-    // console.log(updatedRun);
-    //
-    // $http.put('/runlog/editRun', updatedRun).then(function(response){
-    //   getRun();
-    //   runSubmit();
-    // });
+    console.log(run);
+
+    $http.put('/runlog/editRun', run).then(function(response){
+      getRun();
+      runSubmit();
+    });
   };
 
   let runEdit = () => {
