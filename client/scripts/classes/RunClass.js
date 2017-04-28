@@ -1,14 +1,19 @@
 class Run {
   constructor (id, date, distance, time, notes, parsedDistance, parsedTime){
-    this.id = id
+    this.id = id;
     this.date = date;
     this.distance = distance;
     this.time = time;
     this.notes = notes;
     this.parsedDistance = parsedDistance;
+    this.parseShow(parsedDistance, parsedTime);
     this.parsedTime = parsedTime;
   }
 
+  parseShow (parsedDistance, parsedTime){
+    console.log(parsedDistance, parsedTime);
+  }
+  
   parseTime (time) {
     this.parsedTime.hours = time.toString().split(':')[0];
     this.parsedTime.minutes = time.toString().split(':')[1];

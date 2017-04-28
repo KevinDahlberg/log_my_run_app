@@ -49,9 +49,10 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     runArray.length = 0;
     $http.get('/runlog/').then(function(response){
       let runObj = response.data;
-      console.log(runObj);
       for (let item of runObj){
+        console.log(item.parsedDistance);
         let run = new Run (item._id, item.date, item.distance, item.time, item.notes, item.parsedDistance, item.parsedTime);
+        console.log(run);
         runArray.push(run);
       }
     });
@@ -86,18 +87,16 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     $location.path('/home');
   };
 
+  /**
+  * RUN VIEW FUNCTION
+  * @desc changes to the runView with the information from the item that was clicked
+  * @param takes in the value of the Run that is clicked on
+  * @return pushes the run into thisRun and changes the location to runView
+  */
   let runView = (object) => {
     thisRun.length = 0;
     console.log('runview object ', object);
-    let viewRun = {
-      _id : object.id,
-      date : object.date,
-      miles : object.parsedDistance.miles,
-      partialMiles : object.parsedDistance.partialMiles,
-      hours : object.parsedTime.hours,
-      minutes : object.parsedTime.minutes,
-      seconds : object.parsedTime.seconds
-    };
+    let viewRun = object
     console.log(viewRun);
     thisRun.push(viewRun);
     $location.path('/runView');
@@ -111,7 +110,6 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   * @return pushes this new run into thisRun array and sends the user to the Enter Run View
   */
   let enterView = () => {
-    thisRun.length = 0;
     $location.path('/enterRun');
   };
 
@@ -125,18 +123,18 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
 
   let editRun = (run) => {
     console.log(thisRun[0]);
-    let updatedRun = {
-      _id : thisRun[0]._id,
-      date: run.date,
-      distance: run.miles + run.partialMiles,
-      time: run.hours + ':' + run.minutes + ':' + run.seconds
-    };
-    console.log(updatedRun);
-
-    $http.put('/runlog/editRun', updatedRun).then(function(response){
-      getRun();
-      runSubmit();
-    });
+    // let updatedRun = {
+    //   _id : thisRun[0]._id,
+    //   date: run.date,
+    //   distance: run.miles + run.partialMiles,
+    //   time: run.hours + ':' + run.minutes + ':' + run.seconds
+    // };
+    // console.log(updatedRun);
+    //
+    // $http.put('/runlog/editRun', updatedRun).then(function(response){
+    //   getRun();
+    //   runSubmit();
+    // });
   };
 
   let runEdit = () => {

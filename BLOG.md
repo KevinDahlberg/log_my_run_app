@@ -225,3 +225,11 @@ things to do:
   The information is being Posted to the DB from the addRun function.  I need to make it all pretty and stuff, but it's a start.
 
   Runs coming back from DB and displaying.  Next up is to fix the edit stuff.
+
+  Got through to the runView view just fine.  Able to get a run to populate.  Now I just have to have a run edit properly.
+
+  I also have to make the parsed items and the combined items show up properly.
+
+  Problems with views got fixed as soon as I got rid of all of the old data.
+
+  
