@@ -49,8 +49,9 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     runArray.length = 0;
     $http.get('/runlog/').then(function(response){
       let runObj = response.data;
+      console.log(runObj);
       for (let item of runObj){
-        let run = new Run (item._id, item.date, item.distance, item.time);
+        let run = new Run (item._id, item.date, item.distance, item.time, item.notes, item.parsedDistance, item.parsedTime);
         runArray.push(run);
       }
     });

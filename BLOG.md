@@ -223,3 +223,5 @@ things to do:
   Looks like I don't even need to push things into a thisRun array when creating a new run.  I can just edit it from the enter run view.
 
   The information is being Posted to the DB from the addRun function.  I need to make it all pretty and stuff, but it's a start.
+
+  Runs coming back from DB and displaying.  Next up is to fix the edit stuff.

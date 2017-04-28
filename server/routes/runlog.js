@@ -9,8 +9,8 @@ var runSchema = mongoose.Schema({
   distance : String,
   time : String,
   notes : String,
-  parsedDistance : String,
-  parsedTime : String
+  parsedDistance : Object,
+  parsedTime : Object
 });
 
 var Run = mongoose.model('run', runSchema, 'runs');

@@ -1,14 +1,12 @@
 class Run {
-  constructor (id, date, distance, time, notes){
+  constructor (id, date, distance, time, notes, parsedDistance, parsedTime){
     this.id = id
     this.date = date;
     this.distance = distance;
     this.time = time;
     this.notes = notes;
-    this.parsedDistance = {};
-    this.parseDistance(distance);
-    this.parsedTime = {};
-    this.parseTime(time);
+    this.parsedDistance = parsedDistance;
+    this.parsedTime = parsedTime;
   }
 
   parseTime (time) {
