@@ -63,9 +63,12 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     });
   };
 
-  /*
-  Posts a run to the DB.  After the run posts, getRun function is called to get
-  the run history.  Also, the page redirects to the "/home" view.
+  /**
+  * ENTER RUN VIEW STEP 1
+  * @desc posts the created run into the database
+  * @param the run that is created on the addRun view
+  * @return resets the runArray.length, and sends the user to the Home Page (show run view)
+  * This  triggers the checkArray function, which triggers the getRun statement whent the User status is checked 
   */
   let addRun = (run) => {
     let obj = {

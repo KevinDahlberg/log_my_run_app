@@ -99,7 +99,7 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
   * View of all the week’s runs on homepage with the ability to select a different week from a calendar
   * View/Edit/Delete run view with all of the dropdown and select date features of the add run screen
     - [x] Create views
-    - [ ] Populate form with options from previous run on edit screen
+    - [x] Populate form with options from previous run on edit screen
     - [x] Put and Delete functions in the DB
   * Style CSS
       - [ ] Set up login failed alerts

@@ -194,3 +194,15 @@ things to do:
   * 4:20 - back at it
 
   delete run back to working, runs are showing up on the run edit screen (gotta love double bindind... not!)
+
+  trying to make parsed Miles show up right.  I don't think that should be the answer though... if the miles showed up right from the first place, it should be good across the board.
+
+  * 5:20 - stop at school
+
+  ## 4/28/2017
+
+  * 10:15 - And we're back... back again...
+
+  I'm thinking that I need to create a new run class with default values.  The "add run" will
+  then edit those values the same way the edit run does, with the updated object being sent to the DB
+  as a "New" object.
