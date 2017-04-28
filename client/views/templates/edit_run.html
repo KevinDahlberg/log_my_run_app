@@ -12,33 +12,33 @@
   </div>
   </div>
   <md-input-container style="margin-right: 10px;">
-        <label>{{editRun.thisRun[0].miles}}</label>
-        <md-select ng-model="editRun.thisRun[0].miles">
+        <label>{{editRun.thisRun[0].parsedDistance.miles}}</label>
+        <md-select ng-model="editRun.thisRun[0].parsedDistance.miles">
           <md-option ng-repeat="mile in editRun.dropdownMiles.miles">{{mile}}</md-option>
         </md-select>
       </md-input-container>
       <md-input-container>
-        <label>{{editRun.thisRun[0].partialMiles}}</label>
-        <md-select ng-model="editRun.thisRun[0].partialMiles">
+        <label>{{editRun.thisRun[0].parsedDistance.partialMiles}}</label>
+        <md-select ng-model="editRun.thisRun[0].parsedDistance.partialMiles">
           <md-option ng-repeat="partial in editRun.dropdownMiles.partialMiles">{{partial}}</md-option>
         </md-select>
     </md-input-container>
 <br>
   <md-input-container style="margin-right: 10px;">
-    <label>{{editRun.thisRun[0].hours}}</label>
-      <md-select ng-model="editRun.thisRun[0].hours">
+    <label>{{editRun.thisRun[0].parsedTime.hours}}</label>
+      <md-select ng-model="editRun.thisRun[0].parsedTime.hours">
         <md-option ng-repeat="hour in editRun.dropdownTime.hours">{{hour}}</md-option>
       </md-select>
   </md-input-container>
   <md-input-container>
-    <label>{{editRun.thisRun[0].minutes}}</label>
-  <md-select ng-model="editRun.thisRun[0].minutes">
+    <label>{{editRun.thisRun[0].parsedTime.minutes}}</label>
+  <md-select ng-model="editRun.thisRun[0].parsedTime.minutes">
     <md-option ng-repeat="minute in editRun.dropdownTime.minutes">{{minute}}</md-option>
   </md-select>
 </md-input-container>
 <md-input-container>
-  <label>{{editRun.thisRun[0].seconds}}</label>
-<md-select ng-model="editRun.thisRun[0].seconds">
+  <label>{{editRun.thisRun[0].parsedTime.seconds}}</label>
+<md-select ng-model="editRun.thisRun[0].parsedTime.seconds">
   <md-option ng-repeat="second in editRun.dropdownTime.seconds">{{second}}</md-option>
 </md-select>
 </md-input-container>

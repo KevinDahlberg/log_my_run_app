@@ -232,4 +232,6 @@ things to do:
 
   Problems with views got fixed as soon as I got rid of all of the old data.
 
-  
+  everything is showing up on the edit run screen just fine now.
+
+  - [ ] create method that takes the parsed information and combines it.
