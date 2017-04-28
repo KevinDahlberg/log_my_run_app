@@ -6,7 +6,6 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
   let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
   let newRun = new NewRun();
-  console.log(newRun);
 
   /*
   Checks to see if there is a user logged in.  If there is, then it runs the
@@ -26,7 +25,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
         $location.path("/login");
       }
     });
-  }
+  };
 
   /*
   checks to see if there are runs on runArray, if there aren't it populates the Data.

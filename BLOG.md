@@ -234,6 +234,12 @@ things to do:
 
   everything is showing up on the edit run screen just fine now.
 
-  - [ ] create method that takes the parsed information and combines it.
+  - [x] create method that takes the parsed information and combines it.
 
   * 2:56 break
+
+  4:15 back at it
+
+  first thing I tried for was to move the NewRun into the Run class... didn't work so well.  so much for DRY (will try later though).
+
+  - [ ] get information to look the same between the edit run and enter run screens
