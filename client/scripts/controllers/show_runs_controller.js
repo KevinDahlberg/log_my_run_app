@@ -1,9 +1,10 @@
-myApp.controller('ShowRunsController', ['UserService', function(UserService, RunService){
+myApp.controller('ShowRunsController', ['UserService', 'UserAuthService',
+function(UserService, UserAuthService){
   let showRun = this;
   showRun.runArray = UserService.runArray;
-  showRun.logout = UserService.logout;
   showRun.userName = UserService.userName;
   showRun.saveRun = UserService.saveRun;
   showRun.enterView = UserService.enterView;
-
+  showRun.user = UserService.user;
+  showRun.logout = UserAuthService.logout;
 }]);

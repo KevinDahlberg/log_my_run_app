@@ -264,7 +264,7 @@ things to do:
   NEW PROBLEM - when I alter the default run in the enter run screen, the changes stay.  so the default run isn't always default...
 
   - [x] fix default run
-  - [ ] create user class
+  - [x] create user class
   - [x] get rid of errors on edit screen
 
   - for tomorrow, come up with the logic to display the days of week and other things, look at Date functionality with moments.  If you have time, start styling shit.
@@ -294,3 +294,7 @@ things to do:
   something funny is happening where different users are getting that aren't theres.  I need to look into that
 
   - [ ] Make sure runs are user specific
+
+  I'm thinking that I will also want to abstract out the getUser function... maybe.
+
+  

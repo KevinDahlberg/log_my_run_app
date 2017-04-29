@@ -3,7 +3,7 @@
   <h1 id="welcome" class="lead">Welcome, {{showRun.userName[0]}}!</h1>
   <button class="btn-default" ng-click="showRun.enterView()">Enter Run</a>
   <button class="btn btn-default" ng-click="showRun.logout()">Log Out</button>
-  <div ng-repeat="run in showRun.runArray">
+  <div ng-repeat="run in showRun.user.runArray">
     <div ng-click="showRun.saveRun(run);">
     <p>Date: {{run.date}}</p>
     <p>Distance: {{run.distance}}</p>

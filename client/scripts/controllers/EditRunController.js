@@ -8,4 +8,5 @@ myApp.controller('EditRunController', ['UserService', function(UserService){
   editRun.editRun = UserService.editRun;
   editRun.dropdownTime = UserService.dropdownTime;
   editRun.dropdownMiles = UserService.dropdownMiles;
+  editRun.user = UserService.user;
 }]);

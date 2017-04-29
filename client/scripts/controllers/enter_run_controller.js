@@ -17,5 +17,6 @@ myApp.controller('EnterRunController', ['UserService', function(UserService){
   enterRun.addRun = UserService.addRun;
   enterRun.dropdownTime = UserService.dropdownTime;
   enterRun.dropdownMiles = UserService.dropdownMiles;
+  enterRun.user = UserService.user;
 
 }]);

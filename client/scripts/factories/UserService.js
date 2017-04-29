@@ -6,7 +6,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
   let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
   let defaultRun = new Run(DEFAULT_RUN);
-  let user = new User ($http, $location);
+  let user = new User ();
   let savedRun = {};
 
   /**
@@ -51,25 +51,13 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   * @return an array of Run objects is created when the items come back from the DB
   */
   let getRun = () => {
-    runArray.length = 0;
+    user.runArray.length = 0;
     $http.get('/runlog/').then(function(response){
       let runObj = response.data;
       for (let item of runObj){
         let run = new Run (item);
-        runArray.push(run);
+        user.runArray.push(run);
       }
-    });
-
-  };
-
-  /**
-  @function logout function that is triggered when logout is clicked
-  */
-  let logout =() => {
-    $http.get('/user/logout').then(function(response) {
-      userName.length = 0;
-      console.log('logged out');
-      $location.path("/login");
     });
   };
 
@@ -168,7 +156,6 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     user,
     dropdownTime, //
     dropdownMiles, //
-    logout, //
     runArray, //
     userName, //
     addRun, //
