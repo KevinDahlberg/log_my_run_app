@@ -6,6 +6,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
   let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
   let defaultRun = new Run(DEFAULT_RUN);
+  let user = new User ($http, $location);
   let savedRun = {};
 
   /**
@@ -164,6 +165,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   };
 
   return {
+    user,
     dropdownTime, //
     dropdownMiles, //
     logout, //

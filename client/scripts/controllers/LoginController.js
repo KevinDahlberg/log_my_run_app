@@ -4,10 +4,10 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
       username: '',
       password: ''
     };
-    
+
     login.message = '';
     login.getRun = UserService.getRun;
-
+    login.user = UserService.user;
     /*
     Step 1.  Login.  If the Login goes through, all of the data for that user gets stored in the factory with the
     getRun function.

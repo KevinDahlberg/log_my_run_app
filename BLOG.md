@@ -265,7 +265,7 @@ things to do:
 
   - [x] fix default run
   - [ ] create user class
-  - [ ] get rid of errors on edit screen
+  - [x] get rid of errors on edit screen
 
   - for tomorrow, come up with the logic to display the days of week and other things, look at Date functionality with moments.  If you have time, start styling shit.
 
@@ -273,7 +273,24 @@ things to do:
 
 ## Saturday April 29, 2017
 
+ - 3:30
+
   I'm thinking that I can use angular copy to fix the issues with the default run.
 
   Yup, angular copy did it.  Now there's an issue getting to the edit screen when the edit run button is clicked.
-  
+
+  Errors were showing up because of an issue with aria label when there was no label on the partial distance box.
+
+  project could start, dropdown menus created, default run is created, user is created after login, when user is created the runs for that user are put in the array associated with that user.  Utilities type class could be created with all of the routes listed as static options.
+
+  Login and logout could be parts of the User class.
+
+- 4:30 break
+
+- 4:50 back
+
+  user class might just have the login, logout, and register functions (all things you can do with a user).  If I can get the getRun function to work right, I might do that as well, still not sure yet though.
+
+  something funny is happening where different users are getting that aren't theres.  I need to look into that
+
+  - [ ] Make sure runs are user specific

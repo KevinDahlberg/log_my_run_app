@@ -1,14 +1,14 @@
 <div class="container">
   <h1 class="lead">Login</h1>
     <h1 class="lead alert alert-danger" role="alert" ng-if="login.message != ''">{{message}}</h2>
-    <form ng-submit="login.login()">
+    <form ng-submit="login.user.login(newUser)">
       <div>
           <label for="username">Username:</label>
-          <input type="text" ng-model="login.user.username" />
+          <input type="text" ng-model="newUser.username" />
       </div>
       <div>
           <label for="password">Password:</label>
-          <input type="password" ng-model="login.user.password" />
+          <input type="password" ng-model="newUser.password" />
       </div>
       <div>
           <input class="btn btn-default" type="submit" name="submit" value="Log In" />
