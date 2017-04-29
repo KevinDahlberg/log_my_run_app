@@ -143,6 +143,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   * @desc transfers the view to the Enter Run View.
   */
   let enterView = () => {
+    angular.copy(defaultRun, savedRun);
     $location.path('/enterRun');
   };
 

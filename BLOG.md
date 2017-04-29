@@ -263,10 +263,17 @@ things to do:
 
   NEW PROBLEM - when I alter the default run in the enter run screen, the changes stay.  so the default run isn't always default...
 
-  - [ ] fix default run
+  - [x] fix default run
   - [ ] create user class
   - [ ] get rid of errors on edit screen
 
   - for tomorrow, come up with the logic to display the days of week and other things, look at Date functionality with moments.  If you have time, start styling shit.
 
   7:30 - done for the day (friday) 3:15 / 7:14 / 28:25
+
+## Saturday April 29, 2017
+
+  I'm thinking that I can use angular copy to fix the issues with the default run.
+
+  Yup, angular copy did it.  Now there's an issue getting to the edit screen when the edit run button is clicked.
+  

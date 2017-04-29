@@ -4,6 +4,7 @@ myApp.controller('LoginController', ['$http', '$location', 'UserService', functi
       username: '',
       password: ''
     };
+    
     login.message = '';
     login.getRun = UserService.getRun;
 

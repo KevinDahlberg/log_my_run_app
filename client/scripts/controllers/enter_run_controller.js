@@ -13,7 +13,7 @@ myApp.controller('EnterRunController', ['UserService', function(UserService){
   enterRun.date = new Date();
   enterRun.isOpen = false;
 
-  enterRun.defaultRun = UserService.defaultRun;
+  enterRun.savedRun = UserService.savedRun;
   enterRun.addRun = UserService.addRun;
   enterRun.dropdownTime = UserService.dropdownTime;
   enterRun.dropdownMiles = UserService.dropdownMiles;
