@@ -2,8 +2,8 @@ myApp.controller('ShowRunsController', ['UserService', function(UserService, Run
   let showRun = this;
   showRun.runArray = UserService.runArray;
   showRun.logout = UserService.logout;
-  showRun.runView = UserService.runView;
   showRun.userName = UserService.userName;
+  showRun.saveRun = UserService.saveRun;
   showRun.enterView = UserService.enterView;
 
 }]);

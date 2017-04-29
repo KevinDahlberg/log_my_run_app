@@ -14,11 +14,8 @@ myApp.controller('EnterRunController', ['UserService', function(UserService){
   enterRun.isOpen = false;
 
   enterRun.defaultRun = UserService.defaultRun;
-  this.runArray = UserService.runArray;
   enterRun.addRun = UserService.addRun;
-  enterRun.runSubmit = UserService.runSubmit;
   enterRun.dropdownTime = UserService.dropdownTime;
   enterRun.dropdownMiles = UserService.dropdownMiles;
-  enterRun.thisRun = UserService.thisRun;
 
 }]);

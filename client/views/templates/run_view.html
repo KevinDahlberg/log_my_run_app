@@ -1,10 +1,9 @@
-<div ng-repeat="run in runView.thisRun">
-<p> Date: {{run.date}}</p>
-<p> Distance: {{run.distance}}</p>
-<p> Time: {{run.time}}</p>
+<p> Date: {{runView.savedRun.date}}</p>
+<p> Distance: {{runView.savedRun.distance}}</p>
+<p> Time: {{runView.savedRun.time}}</p>
 <p>Notes:</p>
-<p>{{run.notes}}</p>
-<button ng-click="runView.deleteRun(runView.thisRun[0])">Delete</button>
+<p>{{runView.savedRun.notes}}</p>
+<button ng-click="runView.deleteRun(runView.savedRun)">Delete</button>
 <button ng-click="runView.runEdit()">Edit</button>
 </div>
 <a href="#home">Back</a>

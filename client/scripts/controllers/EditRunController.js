@@ -4,11 +4,8 @@ myApp.controller('EditRunController', ['UserService', function(UserService){
   this.myDate = new Date();
   this.isOpen = false;
 
-  editRun.runSubmit = UserService.runSubmit;
-  editRun.thisRun = UserService.thisRun;
-  editRun.deleteRun = UserService.deleteRun;
+  editRun.savedRun = UserService.savedRun;
   editRun.editRun = UserService.editRun;
-  editRun.runEdit = UserService.runEdit;
   editRun.dropdownTime = UserService.dropdownTime;
   editRun.dropdownMiles = UserService.dropdownMiles;
 }]);

@@ -6,7 +6,8 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
   let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
   let defaultRun = new Run(DEFAULT_RUN);
-  console.log(defaultRun);
+  let savedRun = {};
+
   /**
   * @function GET USER FUNCTION - ON VIEW LOAD THIS FUNCTION RUNS
   * @desc Checks to see if there is a user session.
@@ -14,7 +15,7 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   * @return function brings back the user name info, if there is then it runs the checkArray function to see if the
   * run data needs to be repopulated from the DB.  If not, then it sends the user back to the login screen.
   */
-  let getuser = () => {
+  let getUser = () => {
     $http.get('/user').then(function(response) {
       if(response.data.username) {
         // user has a curret session on the server
@@ -53,7 +54,6 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     $http.get('/runlog/').then(function(response){
       let runObj = response.data;
       for (let item of runObj){
-        console.log(item);
         let run = new Run (item);
         runArray.push(run);
       }
@@ -93,11 +93,11 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   * @param takes in the value of the Run that is clicked on
   * @return pushes the run into thisRun and changes the location to runView
   */
-  let runView = (object) => {
+  let saveRun = (object) => {
     thisRun.length = 0;
-    let viewRun = object
-    thisRun.push(viewRun);
-    $location.path('/runView');
+    console.log(object);
+    angular.copy(object, savedRun);
+    runView();
   };
 
   /**
@@ -147,6 +147,14 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   };
 
   /**
+  * @function RUN VIEW FUNCTION
+  * @desc transfers the view to the run view view.
+  */
+  let runView = () => {
+    $location.path('/runView');
+  };
+
+  /**
   * @function RUN SUBMIT FUNCTION
   * @desc catchall function that takes the user the the homepage.
   */
@@ -155,22 +163,21 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   };
 
   return {
-    dropdownTime,
-    dropdownMiles,
-    getuser,
-    logout,
-    runArray,
-    userName,
-    addRun,
-    runSubmit,
-    getRun,
-    thisRun,
-    deleteRun,
-    runView,
-    editRun,
-    runEdit,
-    defaultRun,
-    enterView
+    dropdownTime, //
+    dropdownMiles, //
+    logout, //
+    runArray, //
+    userName, //
+    addRun, //
+    deleteRun, //
+    editRun, //
+    runEdit, //
+    defaultRun, //
+    enterView, //
+    savedRun, //
+    saveRun,
+    getUser,
+    getRun //
 
   }
 

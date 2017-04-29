@@ -20,7 +20,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       controller: 'ShowRunsController as showRun',
       resolve: {
         getuser : ['UserService', function(UserService){
-          return UserService.getuser();
+          return UserService.getUser();
         }]
       }
     })
@@ -29,7 +29,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       controller: 'InfoController',
       resolve: {
         getuser : ['UserService', function(UserService){
-          return UserService.getuser();
+          return UserService.getUser();
         }]
       }
     })
@@ -38,7 +38,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       controller: 'EnterRunController as enterRun',
       resolve: {
         getuser : ['UserService', function(UserService){
-          return UserService.getuser();
+          return UserService.getUser();
         }]
       }
     })
@@ -47,7 +47,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       controller: 'RunViewController as runView',
       resolve: {
         getuser : ['UserService', function(UserService){
-          return UserService.getuser();
+          return UserService.getUser();
       }]
     }
     })

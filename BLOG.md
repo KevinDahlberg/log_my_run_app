@@ -176,11 +176,9 @@ the information is showing up on the edit screen, it's just throwing a ton of er
 aaaaand the Delete button isn't working either.
 
 things to do:
-  - [ ] Make date show up right
-  - [ ] Submitting new runs right
+  - [x] Make date show up right
+  - [x] Submitting new runs right
   - [x] Make Delete button work again
-  - [ ] create user class
-  - [ ] get rid of errors on edit screen
 
   * 12:18 - Taking a break for lunch 2:02 / 2:02 / 16:53
 
@@ -251,4 +249,20 @@ things to do:
     - it was an async issue, got fixed by moving the change in location.
 
   - [ ] clean up code please.
-  - [ ] instead of pushing the run into an array, create new run when views change?
+  - [x] instead of pushing the run into an array, create new run when views change?
+
+  with help from nate I was able to figure out what to do with the redundant classes.
+  I created a "constant" of a default run.  That way, when I start the app, the default run is created by
+  putting that information in as a new Run, which I don't have to worry about the parameters of it being different.
+  I also changed the way the run class worked by having it bring in the whole object and then doing stuff with it,
+  instead of pulling the individual params out of it right away.
+
+  One thing I would like to do is have the edit run screen alter an existing run and not have to push the run into an array.
+
+  changed the way it saved the runs from being a part of an array to an object.
+
+  NEW PROBLEM - when I alter the default run in the enter run screen, the changes stay.  so the default run isn't always default...
+
+  - [ ] fix default run
+  - [ ] create user class
+  - [ ] get rid of errors on edit screen

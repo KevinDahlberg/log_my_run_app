@@ -5,43 +5,43 @@
   <div flex-gt-xs>
     <md-input-container>
       <label>Date</label>
-      <md-datepicker ng-model="editRun.thisRun[0].date"></md-datepicker>
+      <md-datepicker ng-model="editRun.savedRun.date"></md-datepicker>
     </md-input-container>
   </div>
   </div>
   <md-input-container style="margin-right: 10px;">
         <label>Distance</label>
-        <md-select ng-model="editRun.thisRun[0].parsedDistance.miles">
+        <md-select ng-model="editRun.savedRun.parsedDistance.miles">
           <md-option ng-repeat="mile in editRun.dropdownMiles.miles" value={{mile}}>{{mile}}</md-option>
         </md-select>
       </md-input-container>
       <md-input-container>
-        <md-select ng-model="editRun.thisRun[0].parsedDistance.partialMiles">
+        <md-select ng-model="editRun.savedRun.parsedDistance.partialMiles">
           <md-option ng-repeat="partial in editRun.dropdownMiles.partialMiles" value={{partial}}>{{partial}}</md-option>
         </md-select>
     </md-input-container>
 <br>
   <md-input-container style="margin-right: 10px;">
     <label>Hours</label>
-      <md-select ng-model="editRun.thisRun[0].parsedTime.hours">
+      <md-select ng-model="editRun.savedRun.parsedTime.hours">
         <md-option ng-repeat="hour in editRun.dropdownTime.hours" value={{hour}}>{{hour}}</md-option>
       </md-select>
   </md-input-container>
   <md-input-container>
     <label>Minutes</label>
-  <md-select ng-model="editRun.thisRun[0].parsedTime.minutes">
+  <md-select ng-model="editRun.savedRun.parsedTime.minutes">
     <md-option ng-repeat="minute in editRun.dropdownTime.minutes" value={{minute}}>{{minute}}</md-option>
   </md-select>
 </md-input-container>
 <md-input-container>
   <label>Seconds</label>
-<md-select ng-model="editRun.thisRun[0].parsedTime.seconds">
+<md-select ng-model="editRun.savedRun.parsedTime.seconds">
   <md-option ng-repeat="second in editRun.dropdownTime.seconds" value={{second}}>{{second}}</md-option>
 </md-select>
 </md-input-container>
 <md-input-container class="md-block">
   <label>Notes</label>
-  <textarea ng-model="editRun.thisRun[0].notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
+  <textarea ng-model="editRun.savedRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
 </md-input-container>
-  <button ng-click="editRun.editRun(editRun.thisRun[0]); editRun.runSubmit()">Submit</button>
+  <button ng-click="editRun.editRun(editRun.savedRun)">Submit</button>
 </div>

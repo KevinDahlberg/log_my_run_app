@@ -9,7 +9,7 @@
 class Run {
 
   constructor (run){
-    this.id = run.id;
+    this.id = run._id;
     this.date = run.date;
     this.distance = run.distance;
     this.time = run.time;
