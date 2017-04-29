@@ -234,7 +234,7 @@ things to do:
 
   - [x] create method that takes the parsed information and combines it.
 
-  * 2:56 break
+  * 2:56 break - 1:41 / 3:59 / 25:10
 
   4:15 back at it
 
@@ -266,3 +266,7 @@ things to do:
   - [ ] fix default run
   - [ ] create user class
   - [ ] get rid of errors on edit screen
+
+  - for tomorrow, come up with the logic to display the days of week and other things, look at Date functionality with moments.  If you have time, start styling shit.
+
+  7:30 - done for the day (friday) 3:15 / 7:14 / 28:25

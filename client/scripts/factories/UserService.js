@@ -88,10 +88,10 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
   };
 
   /**
-  * @function RUN VIEW FUNCTION
-  * @desc changes to the runView with the information from the item that was clicked
+  * @function SAVE RUN FUNCTION
+  * @desc copies the information from the object that was clicked to the savedRun object.
   * @param takes in the value of the Run that is clicked on
-  * @return pushes the run into thisRun and changes the location to runView
+  * @return copies that value to savedRun, transfers the view to run_view
   */
   let saveRun = (object) => {
     thisRun.length = 0;
