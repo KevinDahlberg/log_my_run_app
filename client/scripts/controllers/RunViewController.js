@@ -1,7 +1,8 @@
-myApp.controller('RunViewController', ['UserService', function(UserService){
+myApp.controller('RunViewController', ['UserService', 'DatabaseService',
+function(UserService, DatabaseService){
   let viewRun = this;
   viewRun.savedRun = UserService.savedRun;
-  viewRun.deleteRun = UserService.deleteRun;
+  viewRun.deleteRun = DatabaseService.deleteRun;
   viewRun.runEdit = UserService.runEdit;
-  viewRun.user = viewRun.user;
+  viewRun.user = UserService.user;
 }]);

@@ -16,25 +16,9 @@ myApp.factory('UserService', ['$http', '$location',
   * @return copies that value to savedRun, transfers the view to run_view
   */
   let saveRun = (object) => {
-    thisRun.length = 0;
     console.log(object);
     angular.copy(object, savedRun);
     runView();
-  };
-
-  /**
-  * @function DELETE RUN FUNCTION
-  * @desc deletes an item from the DB
-  * @param takes in an Object and sends the ID of the object to the server side
-  * @return upon completion the user is taken home with runSubmit, and the array length is
-  * deleted to trigger a repopulation from the DB.
-  */
-  let deleteRun = (object) => {
-    console.log(object.id);
-    $http.delete('/runlog/' + object.id).then(function(response){
-      runArray.length = 0;
-      runSubmit();
-    });
   };
 
   /**
@@ -89,7 +73,6 @@ myApp.factory('UserService', ['$http', '$location',
     user,
     dropdownTime, //
     dropdownMiles, //
-    deleteRun, //
     editRun, //
     runEdit, //
     defaultRun, //
