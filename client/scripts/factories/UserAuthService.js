@@ -1,8 +1,10 @@
-myApp.factory('UserAuthService', ['$http', '$location', 'UserService',
-function($http, $location, UserService){
+console.log('UserAuthService Loaded');
+myApp.factory('UserAuthService', ['$http', '$location', 'UserService', 'DatabaseService',
+function($http, $location, UserService, DatabaseService){
   let userAuth = this;
-
+  userAuth.getRun = DatabaseService.getRun;
   userAuth.user = UserService.user;
+  userAuth.checkArray = UserService.checkArray;
 
   /**
   * @function Login
@@ -71,9 +73,29 @@ function($http, $location, UserService){
     });
   }
 
+  /**
+  * @function GET USER FUNCTION - ON VIEW LOAD THIS FUNCTION RUNS
+  * @desc Checks to see if there is a user session.
+  * @param the request has a big chunk of something in it that has information on the user that the server side looks at.
+  * @return function brings back the user name info, if there is then it runs the checkArray function to see if the
+  * run data needs to be repopulated from the DB.  If there is no user info, then it sends the user back to the login screen.
+  */
+  let getUser = () => {
+    $http.get('/user').then(function(response) {
+      if(response.data.username === userAuth.user.userName) {
+        // user has a curret session on the server
+        userAuth.getRun();
+      } else {
+        // user has no session, bounce them back to the login page
+        $location.path("/login");
+      }
+    });
+  };
+
   return {
     login,
     logout,
-    registerUser
+    registerUser,
+    getUser
   }
 }]);

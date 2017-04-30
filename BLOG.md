@@ -297,4 +297,6 @@ things to do:
 
   I'm thinking that I will also want to abstract out the getUser function... maybe.
 
-  
+  UserAuth factory created to handle login, logout, and register.  Might want to add getUser to it.
+
+  now the runs are saving into the RunArray in the User when the page loads.

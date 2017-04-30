@@ -42,13 +42,11 @@ class User {
   * @param parameters that are sent in the GET include information from the user session.
   * @return an array of Run objects is created when the items come back from the DB
   */
-  getRun () {
-    this._$http.get('/runlog/').then((response)=>{
-      let runObj = response.data;
-      for (let item of runObj){
+  populateRuns (object) {
+      this.runArray.length = 0;
+      for (let item of object){
         let run = new Run (item);
         this.runArray.push(run);
       }
-    })
+    }
   }
-}

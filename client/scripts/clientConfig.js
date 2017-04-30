@@ -19,8 +19,8 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       templateUrl: '/views/templates/home.html',
       controller: 'ShowRunsController as showRun',
       resolve: {
-        getuser : ['UserService', function(UserService){
-          return UserService.getUser();
+        getuser : ['UserAuthService', function(UserAuthService){
+          return UserAuthService.getUser();
         }]
       }
     })
@@ -28,8 +28,8 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       templateUrl: '/views/templates/info.html',
       controller: 'InfoController',
       resolve: {
-        getuser : ['UserService', function(UserService){
-          return UserService.getUser();
+        getuser : ['UserAuthService', function(UserAuthService){
+          return UserAuthService.getUser();
         }]
       }
     })
@@ -37,8 +37,8 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       templateUrl: '/views/templates/enter_run.html',
       controller: 'EnterRunController as enterRun',
       resolve: {
-        getuser : ['UserService', function(UserService){
-          return UserService.getUser();
+        getuser : ['UserAuthService', function(UserAuthService){
+          return UserAuthService.getUser();
         }]
       }
     })
@@ -46,8 +46,8 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       templateUrl: '/views/templates/run_view.html',
       controller: 'RunViewController as runView',
       resolve: {
-        getuser : ['UserService', function(UserService){
-          return UserService.getUser();
+        getuser : ['UserAuthService', function(UserAuthService){
+          return UserAuthService.getUser();
       }]
     }
     })
@@ -55,8 +55,8 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       templateUrl: '/views/templates/edit_run.html',
       controller: 'EditRunController as editRun',
       resolve: {
-        getuser : ['UserService', function(UserService){
-          return UserService.getuser();
+        getuser : ['UserAuthService', function(UserAuthService){
+          return UserAuthService.getuser();
       }]
     }
     })

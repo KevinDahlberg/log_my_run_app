@@ -7,14 +7,15 @@
 * HOME view.
 */
 
-myApp.controller('EnterRunController', ['UserService', function(UserService){
+myApp.controller('EnterRunController', ['UserService', 'DatabaseService',
+(UserService, DatabaseService) => {
   let enterRun = this;
 
   enterRun.date = new Date();
   enterRun.isOpen = false;
 
   enterRun.savedRun = UserService.savedRun;
-  enterRun.addRun = UserService.addRun;
+  enterRun.addRun = DatabaseService.addRun;
   enterRun.dropdownTime = UserService.dropdownTime;
   enterRun.dropdownMiles = UserService.dropdownMiles;
   enterRun.user = UserService.user;

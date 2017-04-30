@@ -1,80 +1,13 @@
-myApp.factory('UserService', ['$http', '$location', function($http, $location){
-  console.log('User Service Loaded');
-  let runArray = [];
-  let userName= [];
-  let thisRun = [];
+myApp.factory('UserService', ['$http', '$location',
+($http, $location) => {
+  let runApp = this;
+
   let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
   let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
   let defaultRun = new Run(DEFAULT_RUN);
   let user = new User ();
   let savedRun = {};
 
-  /**
-  * @function GET USER FUNCTION - ON VIEW LOAD THIS FUNCTION RUNS
-  * @desc Checks to see if there is a user session.
-  * @param the request has a big chunk of something in it that has information on the user that the server side looks at.
-  * @return function brings back the user name info, if there is then it runs the checkArray function to see if the
-  * run data needs to be repopulated from the DB.  If not, then it sends the user back to the login screen.
-  */
-  let getUser = () => {
-    $http.get('/user').then(function(response) {
-      if(response.data.username) {
-        // user has a curret session on the server
-        userName.length = 0;
-        userName.push(response.data.username);
-        checkArray(runArray);
-      } else {
-        // user has no session, bounce them back to the login page
-        $location.path("/login");
-      }
-    });
-  };
-
-  /**
-  * @function CHECK ARRAY RUNS ON VIEW LOAD
-  * @desc checks to see if an array has anything in it, generally happens before getRun
-  * @param array
-  * @return if there isn't anything in the array, it runs the getRun function, otherwise it does nothing.
-  */
-  let checkArray = (array) => {
-    if (array.length === 0) {
-      getRun();
-    } else {
-      return;
-    }
-  };
-
-  /**
-  * @function Step: 2 GET RUN FUNCTION
-  * @desc function called after the user logs in to GET all of the runs
-  * @param parameters that are sent in the GET include information from the user session.
-  * @return an array of Run objects is created when the items come back from the DB
-  */
-  let getRun = () => {
-    user.runArray.length = 0;
-    $http.get('/runlog/').then(function(response){
-      let runObj = response.data;
-      for (let item of runObj){
-        let run = new Run (item);
-        user.runArray.push(run);
-      }
-    });
-  };
-
-  /**
-  * @function ENTER RUN VIEW STEP 1
-  * @desc posts the created run into the database
-  * @param the run that is created on the addRun view
-  * @return resets the runArray.length, and sends the user to the Home Page (show run view)
-  * This  triggers the checkArray function, which triggers the getRun statement whent the User status is checked
-  */
-  let addRun = (object) => {
-    let run = object;
-    $http.post('/runlog/addRun', run).then(function(response){
-      runArray.length = 0;
-      runSubmit();
-    });
-  };
 
   /**
   * @function SAVE RUN FUNCTION
@@ -156,9 +89,6 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     user,
     dropdownTime, //
     dropdownMiles, //
-    runArray, //
-    userName, //
-    addRun, //
     deleteRun, //
     editRun, //
     runEdit, //
@@ -166,8 +96,6 @@ myApp.factory('UserService', ['$http', '$location', function($http, $location){
     enterView, //
     savedRun, //
     saveRun,
-    getUser,
-    getRun //
 
   }
 
