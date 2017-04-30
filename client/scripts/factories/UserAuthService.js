@@ -17,16 +17,13 @@ function($http, $location, UserService, DatabaseService){
     if(_user.username === '' || _user.password === '') {
       alert("Enter your username and password!");
     } else {
-      console.log('sending to server...', _user);
       $http.post('/', _user)
       .then((response) => {
         if(response.data.username) {
-          console.log('success: ', response.data);
           _user = response.data;
           userAuth.user.populateUser(_user);
           $location.path('/home');
         } else {
-          console.log('failure: ', response);
           alert("Wrong!!");
         }
       });
@@ -45,14 +42,11 @@ function($http, $location, UserService, DatabaseService){
     if(_user.username === '' || _user.password === '') {
       alert("Choose a username and password!");
     } else {
-      console.log('sending to server...', _user);
       $http.post('/register', _user)
       .then((response) => {
-        console.log('success');
         login(_user)
       },
       function(response) {
-        console.log('error');
         alert("Please try again.");
       });
     }
@@ -65,7 +59,6 @@ function($http, $location, UserService, DatabaseService){
   let logout = () => {
     $http.get('/user/logout')
     .then((response) => {
-      console.log('logged out');
       userAuth.user.userId = '';
       userAuth.user.userName = '';
       userAuth.user.runArray = [];

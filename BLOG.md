@@ -293,10 +293,25 @@ things to do:
 
   something funny is happening where different users are getting that aren't theres.  I need to look into that
 
-  - [ ] Make sure runs are user specific
-
   I'm thinking that I will also want to abstract out the getUser function... maybe.
 
   UserAuth factory created to handle login, logout, and register.  Might want to add getUser to it.
 
   now the runs are saving into the RunArray in the User when the page loads.
+
+about 2 hours of coding.  2:00 / 2:00 / 30:25
+
+## Sunday April 30, 2017
+
+- 4:10
+
+  today's work involves getting my classes ironed out, making sure the app works right from front to end, and getting started on the weekly, monthly and yearly totals.  Along with the totals, I need to make the runs for the week show up.
+
+  - [ ] Finish ironing out classes
+  - [ ] Separate server calls into their own factory
+  - [ ] Rename files so the are consistent.
+  - [ ] Make sure app is working from front to back.
+  - [ ] Make sure runs are user specific
+  - [ ] Figure out how to display weekly, monthly, and yearly totals. probably going to be with the Date property
+
+- 5:45 break 1:35 / 1:35 / 31:50

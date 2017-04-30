@@ -29,7 +29,7 @@ function($http, $location, UserService){
   let addRun = (object) => {
     let run = object;
     $http.post('/runlog/addRun', run).then((response) => {
-    runSubmit();
+      runSubmit();
     });
   };
 
@@ -42,7 +42,7 @@ function($http, $location, UserService){
   let deleteRun = (object) => {
     console.log(object.id);
     $http.delete('/runlog/' + object.id).then(function(response){
-    runSubmit();
+      runSubmit();
     });
   };
 
@@ -68,7 +68,7 @@ function($http, $location, UserService){
     db.user.runArray.length = 0;
     getRun();
     $location.path('/home');
-  }
+  };
 
   return {
     getRun,
