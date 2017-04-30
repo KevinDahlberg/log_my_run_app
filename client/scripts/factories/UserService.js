@@ -22,20 +22,6 @@ myApp.factory('UserService', ['$http', '$location',
   };
 
   /**
-  * @function EDIT RUN function
-  * @desc PUT statement that edits a run in the DB
-  * @param run object that gets sent to the DB
-  * @return clears out runArray, runSubmit changes the view to the homepage, which triggers getUser,
-  * which will trigger checkArray, which will trigger getRun.
-  */
-  let editRun = (run) => {
-    $http.put('/runlog/editRun', run).then(function(response){
-      runArray.length = 0;
-      runSubmit();
-    });
-  };
-
-  /**
   * @function RUN EDIT FUNCTION
   * @desc catchall function that changes the view to /editRun
   */
@@ -73,12 +59,11 @@ myApp.factory('UserService', ['$http', '$location',
     user,
     dropdownTime, //
     dropdownMiles, //
-    editRun, //
     runEdit, //
     defaultRun, //
     enterView, //
     savedRun, //
-    saveRun,
+    saveRun
 
   }
 

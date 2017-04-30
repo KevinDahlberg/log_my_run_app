@@ -56,7 +56,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       controller: 'EditRunController as editRun',
       resolve: {
         getuser : ['UserAuthService', function(UserAuthService){
-          return UserAuthService.getuser();
+          return UserAuthService.getUser();
       }]
     }
     })

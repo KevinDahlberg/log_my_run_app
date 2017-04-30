@@ -24,15 +24,12 @@ function($http, $location, UserService){
   * @function ENTER RUN VIEW STEP 1
   * @desc posts the created run into the database
   * @param the run that is created on the Enter Run view
-  * @return resets the user.runArray.length, calls the getRun function, and sends
-  * the user back to the /home view.
+  * @return calls runSubmit function
   */
   let addRun = (object) => {
     let run = object;
     $http.post('/runlog/addRun', run).then((response) => {
-      db.user.runArray.length = 0;
-      getRun();
-      $location.path('/home');
+    runSubmit();
     });
   };
 
@@ -40,21 +37,43 @@ function($http, $location, UserService){
   * @function DELETE RUN FUNCTION
   * @desc deletes an item from the DB
   * @param takes in an Object and sends the ID of the object to the server side
-  * @return upon completion the user.runArray is reset, getRun is called, and the
-  * user is sent to the /home view.
+  * @return calls runSubmit function
   */
   let deleteRun = (object) => {
     console.log(object.id);
     $http.delete('/runlog/' + object.id).then(function(response){
-      db.user.runArray.length = 0;
-      getRun();
-      $location.path('/home');
+    runSubmit();
     });
   };
+
+  /**
+  * @function EDIT RUN function
+  * @desc PUT statement that edits a run in the DB
+  * @param run object that gets sent to the DB
+  * @return calls runSubmit function
+  */
+  let editRun = (run) => {
+    $http.put('/runlog/editRun', run).then(function(response){
+      runSubmit();
+    });
+  };
+
+  /**
+  * @function runSubmit
+  # @desc called after a change to the DB is submitted
+  * @return clears out the runArray, calls the getRun function, and takes the user
+  * to the /home view.
+  */
+  let runSubmit = () => {
+    db.user.runArray.length = 0;
+    getRun();
+    $location.path('/home');
+  }
 
   return {
     getRun,
     addRun,
-    deleteRun
+    deleteRun,
+    editRun
   }
 }]);
