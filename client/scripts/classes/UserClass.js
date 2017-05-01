@@ -12,6 +12,7 @@ class User {
     this.userId = '';
     this.runArray = [];
     this.summery = {weekSum : '', monthSum : '', yearSum : ''};
+    this.currentWeek = moment().format('ww');
   }
 
   /**

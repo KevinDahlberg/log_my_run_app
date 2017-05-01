@@ -357,7 +357,7 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
 
  week, month, and year summery are all populating.  Future goals will be to select the date from the calendar and then populate the runs for that week (dropdown menu with selectable dates from user.date.date)
 
- - [ ] display only the runs from this week on the DOM
+ - [x] display only the runs from this week on the DOM
  - [ ] create dropdown menu with remaining days
  - [ ] display week of the selected run from dropdown
  - [ ] update total of the week based on week selected

@@ -17,7 +17,6 @@ function($http, $location, UserService){
         db.user.populateSummery(db.user.runArray);
       });
     }
-    console.log(db.user);
   };
 
   /**

@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 
 var runSchema = mongoose.Schema({
   userID : String,
-  date : String,
+  date : Object,
   distance : String,
   time : String,
   notes : String,

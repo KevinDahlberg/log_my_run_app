@@ -38,12 +38,13 @@ class Run {
   }
 
   formatDate (date) {
-    let _date = moment(date).format('MM/DD/YYYY');
-    let dayOfWeek = moment(date).format('e');
-    let weekOfYear = moment(date).format('ww');
-    let dayOfYear = moment(date).format('DDDD');
-    let month = moment(date).format('MM');
-    let year =  moment(date).format('YYYY');
+    console.log('before conversion ', date);
+    let _date = moment(date.date).format('MM/DD/YYYY');
+    let dayOfWeek = moment(date.date).format('e');
+    let weekOfYear = moment(date.date).format('ww');
+    let dayOfYear = moment(date.date).format('DDDD');
+    let month = moment(date.date).format('MM');
+    let year =  moment(date.date).format('YYYY');
     this.date = {
       date : _date,
       dayOfWeek : dayOfWeek,

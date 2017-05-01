@@ -3,10 +3,8 @@
   <h1 id="welcome" class="lead">Welcome, {{showRun.user.userName}}!</h1>
   <button class="btn-default" ng-click="showRun.enterView()">Enter Run</a>
   <button class="btn btn-default" ng-click="showRun.logout()">Log Out</button>
-  <p>Current Week: {{showRun.currentWeek}}</p>
   <div ng-repeat="run in showRun.user.runArray | orderBy:'showRun.user.date.date'">
-    <!-- <div ng-if="run.date.weekOfYear === showRun.currentWeek"> -->
-    <p>Run Week: {{run.date.weekOfYear}}</p>
+    <div ng-if="run.date.weekOfYear === showRun.user.currentWeek">
     <div ng-click="showRun.saveRun(run);">
     <p>Date: {{run.date.date}}</p>
     <p>Distance: {{run.distance}}</p>
