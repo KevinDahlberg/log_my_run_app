@@ -5,8 +5,7 @@
   <button class="btn btn-default" ng-click="showRun.logout()">Log Out</button>
   <md-select ng-model="showRun.user">
     <label>Run History</label>
-    <md-option ng-repeat="run in showRun.user.runArray" value="{{run.date.dateRange}}" ng-if="run.date.dateRange !== showRun.user.currentDateRange">
-      {{run.date.dateRange}}
+    <md-option ng-repeat="run in showRun.user.runArray | unique" value="{{run}}">{{run}}
     </md-option>
   </md-select>
   <p>{{showRun.user.currentDateRange}}</p>

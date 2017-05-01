@@ -1,6 +1,19 @@
 console.log('client.js sourced');
 var myApp = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngMessages']);
 
+myApp.filter('unique', function() {
+  return function(obj) {
+    let dates = []
+      angular.forEach(obj, function(value, key){
+        if (dates.includes(value.date.dateRange)){
+        } else {
+        dates.push(value.date.dateRange);
+    }
+  });
+    return dates;
+  };
+});
+
 /// Routes ///
 myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
       function($routeProvider, $locationProvider, $mdDateLocaleProvider) {
