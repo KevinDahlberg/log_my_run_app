@@ -13,6 +13,7 @@ class User {
     this.runArray = [];
     this.summery = {weekSum : '', monthSum : '', yearSum : ''};
     this.currentWeek = moment().format('ww');
+    this.currentDateRange = moment().weekday(0).format('MM/DD/YYYY') + ' to ' + moment().weekday(6).format('MM/DD/YYYY');
   }
 
   /**
@@ -57,10 +58,10 @@ class User {
         yearArray.push(run.distance);
         if (run.date.month === moment().format('MM')){
           monthArray.push(run.distance);
-          if (run.date.weekOfYear === moment().format('ww')){
-              weekArray.push(run.distance);
-          }
         }
+      }
+      if (run.date.weekOfYear === moment().format('ww')){
+          weekArray.push(run.distance);
       }
     }
     this.summery.weekSum = this.arraySum(weekArray);

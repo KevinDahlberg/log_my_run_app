@@ -358,7 +358,20 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
  week, month, and year summery are all populating.  Future goals will be to select the date from the calendar and then populate the runs for that week (dropdown menu with selectable dates from user.date.date)
 
  - [x] display only the runs from this week on the DOM
- - [ ] create dropdown menu with remaining days
+ - [x] create dropdown menu with remaining days
+ - [ ] store week date range in object?
  - [ ] display week of the selected run from dropdown
  - [ ] update total of the week based on week selected
  - [ ] ability to select month and update total of month based on month selected. (this one might be a stretch goal).
+
+ current week and all of the information of that week is displaying.  It would be nice to display the range of dates for the week on the info/summery for the view.
+
+ changing the way things are formated halfway through a project sucks
+
+ week total is not displaying correctly when dealing with different months.  Problem fixed.
+
+ dropdown menu kinda showing up.  still need to make it do something when the item is clicked.
+
+ 3:40 - stop for a minute.
+
+ 4:05 - back to work

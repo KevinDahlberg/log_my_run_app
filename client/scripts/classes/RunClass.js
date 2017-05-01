@@ -38,20 +38,21 @@ class Run {
   }
 
   formatDate (date) {
-    console.log('before conversion ', date);
     let _date = moment(date.date).format('MM/DD/YYYY');
     let dayOfWeek = moment(date.date).format('e');
     let weekOfYear = moment(date.date).format('ww');
     let dayOfYear = moment(date.date).format('DDDD');
     let month = moment(date.date).format('MM');
     let year =  moment(date.date).format('YYYY');
+    let dateRange = moment(date.date).weekday(0).format('MM/DD/YYYY') + ' to ' + moment(date.date).weekday(6).format('MM/DD/YYYY');
     this.date = {
       date : _date,
       dayOfWeek : dayOfWeek,
       weekOfYear : weekOfYear,
       dayOfYear : dayOfYear,
       month : month,
-      year : year
+      year : year,
+      dateRange : dateRange
     };
   }
 }
