@@ -52,7 +52,6 @@ function($http, $location, UserService, DatabaseService){
     }
   };
 
-
   /**
   @function logout function that is triggered when logout is clicked
   */

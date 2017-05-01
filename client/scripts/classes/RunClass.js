@@ -18,6 +18,7 @@ class Run {
     this.parsedTime = run.parsedTime;
     this.combineDistance(run.parsedDistance);
     this.combineTime(run.parsedTime);
+    this.formatDate(run.date);
   }
 
   /**
@@ -34,5 +35,10 @@ class Run {
   combineDistance (distance) {
      distance = distance.miles + distance.partialMiles;
      this.distance = distance;
+  }
+
+  formatDate (date) {
+    let _date = moment(date).format('MM/DD/YYYY');
+    this.date = _date;
   }
 }

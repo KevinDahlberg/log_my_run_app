@@ -1,12 +1,12 @@
 class Time {
 
-  constructor (hours, minutes, seconds) {
+  constructor (time) {
     this.hours = [];
     this.minutes = [];
     this.seconds = [];
-    this.hoursPopulate(hours);
-    this.minutesPopulate(minutes);
-    this.secondsPopulate(seconds);
+    this.hoursPopulate(time.hours);
+    this.minutesPopulate(time.minutes);
+    this.secondsPopulate(time.seconds);
   }
 
   hoursPopulate (hour) {
@@ -41,11 +41,11 @@ class Time {
 
 class Distance {
 
-  constructor (miles, partialMiles) {
+  constructor (distance) {
     this.miles = [];
     this.partialMiles = [];
-    this.milesPopulate(miles);
-    this.partialMilesPopulate(partialMiles);
+    this.milesPopulate(distance.miles);
+    this.partialMilesPopulate(distance.partialMiles);
   }
 
   milesPopulate (mi) {

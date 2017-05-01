@@ -1,8 +1,8 @@
 myApp.factory('UserService', ['$http', '$location',
 ($http, $location) => {
 
-  let dropdownTime = new Time (HOURS, MINUTES, SECONDS);
-  let dropdownMiles = new Distance (MILES, MILES_PARTIAL);
+  let dropdownTime = new Time (TIME);
+  let dropdownMiles = new Distance (DISTANCE);
   let defaultRun = new Run(DEFAULT_RUN);
   let user = new User ();
   let savedRun = {};
@@ -15,7 +15,6 @@ myApp.factory('UserService', ['$http', '$location',
   * @return copies that value to savedRun, transfers the view to /runView
   */
   let saveRun = (object) => {
-    console.log(object);
     angular.copy(object, savedRun);
     $location.path('/runView');
   };
@@ -29,6 +28,10 @@ myApp.factory('UserService', ['$http', '$location',
     $location.path('/enterRun');
   };
 
+  let runEdit = () => {
+    $location.path('/editRun')
+  };
+
 
   return {
     user,
@@ -37,7 +40,8 @@ myApp.factory('UserService', ['$http', '$location',
     defaultRun, //
     enterView, //
     savedRun, //
-    saveRun
+    saveRun,
+    runEdit
 
   }
 

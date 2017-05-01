@@ -40,7 +40,6 @@ function($http, $location, UserService){
   * @return calls runSubmit function
   */
   let deleteRun = (object) => {
-    console.log(object.id);
     $http.delete('/runlog/' + object.id).then(function(response){
       runSubmit();
     });

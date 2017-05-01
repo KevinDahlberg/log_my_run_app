@@ -63,8 +63,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
     .otherwise({
       redirectTo: 'login'
     });
-
-  $mdDateLocaleProvider.formatDate = function(date) {
-   return moment(date).format('MM-DD-YYYY');
-  };
+    $mdDateLocaleProvider.formatDate = function(date) {
+     return date ? moment(date).format('MM/DD/YYYY') : '';
+    };
 }]);
