@@ -6,8 +6,10 @@ myApp.factory('UserService', ['$http', '$location',
   let defaultRun = new Run(DEFAULT_RUN);
   let user = new User ();
   let savedRun = {};
+  let currentWeek = moment().format('ww');
+  console.log(currentWeek);
 
-
+  console.log(defaultRun);
   /**
   * @function SAVE RUN FUNCTION
   * @desc copies the information from the object that was clicked to the savedRun object.
@@ -33,6 +35,9 @@ myApp.factory('UserService', ['$http', '$location',
   };
 
 
+
+
+
   return {
     user,
     dropdownTime, //
@@ -41,7 +46,8 @@ myApp.factory('UserService', ['$http', '$location',
     enterView, //
     savedRun, //
     saveRun,
-    runEdit
+    runEdit,
+    currentWeek
 
   }
 

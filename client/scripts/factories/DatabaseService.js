@@ -2,7 +2,7 @@ myApp.factory('DatabaseService', ['$http', '$location', 'UserService',
 function($http, $location, UserService){
   let db = this;
 
-  db.user = UserService.user
+  db.user = UserService.user;
   /**
   * @function GET RUN FUNCTION
   * @desc function called after the user logs in to GET all of the runs
@@ -14,10 +14,10 @@ function($http, $location, UserService){
       $http.get('/runlog/').then((response) => {
         let runObj = response.data;
         db.user.populateRuns(runObj);
+        db.user.populateSummery(db.user.runArray);
       });
-    } else {
-      return;
     }
+    console.log(db.user);
   };
 
   /**

@@ -92,9 +92,9 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
     - [x] Make sure flow is set up correctly, and that all the views are set up with ways to navigate
     - [x] create function to take home from enter run page on click of submit
     - [x] Figure out how to access the date in Angular
-    - [ ] Logic to figure out weekly totals
-    - [ ] Logic to figure out monthly summary
-    - [ ] Logic to figure out yearly summary
+    - [x] Logic to figure out weekly totals
+    - [x] Logic to figure out monthly summary
+    - [x] Logic to figure out yearly summary
 
   * View of all the week’s runs on homepage with the ability to select a different week from a calendar
   * View/Edit/Delete run view with all of the dropdown and select date features of the add run screen
@@ -105,6 +105,11 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
       - [ ] Set up login failed alerts
       - [ ] implement angular material
       - [ ] Set up different looks for desktop and mobile
+  * Week 2 left to Do
+      - [ ] View of all the week’s runs on homepage
+      - [ ] select a different week from a calendar
+      - [ ] Style the APP
+      - [x] weekly, monthly, and yearly summary
   * Post status to facebook (stretch)
   * Weather API to display the weather (stretch)
     (possible api: https://openweathermap.org/api)

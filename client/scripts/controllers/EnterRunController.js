@@ -11,7 +11,7 @@ myApp.controller('EnterRunController', ['UserService', 'DatabaseService',
 function(UserService, DatabaseService){
   let enterRun = this;
 
-  enterRun.date = moment();
+  enterRun.date = new Date ();
   enterRun.isOpen = false;
 
 

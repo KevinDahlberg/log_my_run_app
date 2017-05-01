@@ -315,7 +315,50 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
 - 5:45 break 1:35 / 1:35 / 31:50
 
 - 9:00
-    - [ ] Rename files so the are consistent.
-    - [ ] Make sure runs are user specific
-    - [ ] Figure out how to display weekly, monthly, and yearly totals. probably going to be with the Date property
-    - [ ] make selected dates show up right
+    - [x] Rename files so the are consistent.
+    - [x] Make sure runs are user specific
+    - [x] make selected dates show up right
+
+- 11:00 Done for the day 2:00 / 3:35 / 33:50
+
+## Monday May 1, 2017
+
+ - [x] Figure out how to display weekly, monthly, and yearly totals. probably going to be with the Date property
+
+ - 11:10 back to work
+
+ let's think this out for finding the totals for the week.  I can find all sorts of information from a specific date, including the week of the year and what year it is in.  If every run were to have that information in it, that would make figuring out the information for that week a piece of cake.  That seems like a hacky way of doing it... but not really?  I still need to get at that information anyway when I filter it out.
+
+ 11:29
+
+ 11:40
+
+ if week of year = currentWeekOfYear
+ then total up the information from day of week 0-6
+
+ if year = currentYear
+ then add up all of that info
+ if month = currentMonth
+ then add up all that info
+
+ add up that info - the info might have to be pushed into an array, and then all of the items of that array are added up
+
+ I'm able to collect the information for each day of the year and total them up now...
+
+ so I have information that I need stored... do I just put it into a new class.  I suppose that's what you do instead of creating an object.
+
+ I ended up putting all of the functionality for creating a summery in the user class.  Now it's just time to figure out how to make it all work the way it's supposed to.
+
+ 1:00 - lunch
+
+ 1:30 - back from lunch
+
+ The summery is not populating and is a part of the user class (not sure how that smells but whatever), next up is getting stuff to display on the dom.
+
+ week, month, and year summery are all populating.  Future goals will be to select the date from the calendar and then populate the runs for that week (dropdown menu with selectable dates from user.date.date)
+
+ - [ ] display only the runs from this week on the DOM
+ - [ ] create dropdown menu with remaining days
+ - [ ] display week of the selected run from dropdown
+ - [ ] update total of the week based on week selected
+ - [ ] ability to select month and update total of month based on month selected. (this one might be a stretch goal).
