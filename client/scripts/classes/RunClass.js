@@ -19,6 +19,8 @@ class Run {
     this.combineDistance(run.parsedDistance);
     this.combineTime(run.parsedTime);
     this.formatDate(run.date);
+    this.currentDateRange = moment().weekday(0).format('MM/DD/YYYY') + ' to ' + moment().weekday(6).format('MM/DD/YYYY');
+    this.weekSum = 0;
   }
 
   /**

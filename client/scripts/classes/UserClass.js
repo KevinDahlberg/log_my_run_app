@@ -11,7 +11,7 @@ class User {
     this.userName = '';
     this.userId = '';
     this.runArray = [];
-    this.summery = {weekSum : '', monthSum : '', yearSum : ''};
+    this.summery = [{weekSum : '', monthSum : '', yearSum : ''}];
     this.currentWeek = moment().format('ww');
     this.currentDateRange = moment().weekday(0).format('MM/DD/YYYY') + ' to ' + moment().weekday(6).format('MM/DD/YYYY');
   }
@@ -60,13 +60,42 @@ class User {
           monthArray.push(run.distance);
         }
       }
-      if (run.date.weekOfYear === moment().format('ww')){
+      if (run.date.dateRange === this.currentDateRange){
           weekArray.push(run.distance);
       }
     }
-    this.summery.weekSum = this.arraySum(weekArray);
-    this.summery.monthSum = this.arraySum(monthArray);
-    this.summery.yearSum = this.arraySum(yearArray);
+    this.summery[0].weekSum = this.arraySum(weekArray);
+    this.summery[0].monthSum = this.arraySum(monthArray);
+    this.summery[0].yearSum = this.arraySum(yearArray);
+    this.populateWeekSum(array);
+  }
+
+  populateWeekSum (array) {
+    // go through array of runs and populate array with date ranges : sum(0)
+    // go through array of runs, and compare it to first array, if items are the same, add to sum
+    let weekArray = []
+      angular.forEach(array, function(value, key){
+        if (weekArray.includes(value.date.dateRange)){
+        } else {
+        weekArray.push(value.date.dateRange);
+      }
+  });
+    this.figureWeekSum(this.runArray, weekArray);
+//   for (let run of array){
+//     if the date range is the same as the date range, add number to sum.
+// });
+  }
+
+  figureWeekSum(runArray, weekArray){
+
+    for (let run of runArray){
+      for (let week of weekArray){
+        if (run.date.dateRange === week){
+          run.weekSum += run.distance;
+        }
+      }
+    }
+    console.log(runArray);
   }
 
   arraySum (array) {

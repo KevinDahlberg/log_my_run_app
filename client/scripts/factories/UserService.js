@@ -33,7 +33,6 @@ myApp.factory('UserService', ['$http', '$location',
 
 
 
-
   return {
     user,
     dropdownTime, //

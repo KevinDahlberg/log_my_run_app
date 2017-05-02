@@ -329,9 +329,9 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
 
  let's think this out for finding the totals for the week.  I can find all sorts of information from a specific date, including the week of the year and what year it is in.  If every run were to have that information in it, that would make figuring out the information for that week a piece of cake.  That seems like a hacky way of doing it... but not really?  I still need to get at that information anyway when I filter it out.
 
- 11:29
+ 11:29 break. 0:19 / 0:19 / 34:09
 
- 11:40
+ 11:40 Back
 
  if week of year = currentWeekOfYear
  then total up the information from day of week 0-6
@@ -349,7 +349,7 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
 
  I ended up putting all of the functionality for creating a summery in the user class.  Now it's just time to figure out how to make it all work the way it's supposed to.
 
- 1:00 - lunch
+ 1:00 - lunch 1:20 / 1:39 / 35:29
 
  1:30 - back from lunch
 
@@ -359,10 +359,7 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
 
  - [x] display only the runs from this week on the DOM
  - [x] create dropdown menu with remaining days
- - [ ] store week date range in object?
- - [ ] display week of the selected run from dropdown
- - [ ] update total of the week based on week selected
- - [ ] ability to select month and update total of month based on month selected. (this one might be a stretch goal).
+ - [x] store week date range in object
 
  current week and all of the information of that week is displaying.  It would be nice to display the range of dates for the week on the info/summery for the view.
 
@@ -372,6 +369,21 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
 
  dropdown menu kinda showing up.  still need to make it do something when the item is clicked.
 
- 3:40 - stop for a minute.
+ 3:40 - stop for a minute. 2:10 / 3:49 / 37:39
 
  4:05 - back to work
+
+ dropdown menu is now populating without repeating items.  
+ up next is figuring out how to make different things show up when an item in the dropdown is clicked.
+
+ 6:05 - done for the day. 2:00 / 5:39 / 39:44
+
+## May 2, 2017
+11:10 am starting
+ - [x] display week of the selected run from dropdown
+ - [ ] update total of the week based on week selected
+ - [ ] ability to select month and update total of month based on month selected. (this one might be a stretch goal).
+ - [ ] Correct information displayed on edit run screen
+ - [ ] Order by displaying correctly on home screen
+
+ A lot of crap this morning trying to get things to figure out with the add numbers.  I think I might have figured out how to do it with ng-change... maybe.  we'll see?
