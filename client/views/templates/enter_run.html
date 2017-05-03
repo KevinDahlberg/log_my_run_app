@@ -7,15 +7,17 @@
 * HOME view.
 -->
 
-<md-content>
-  <div>
-  <p>Enter New Run</p>
-  <a href="#home">Back</a>
-</div>
+<md-content layout="column" layout-align="center center">
+  <div class="row">
+    <div class="column">
+    <div layout-gt-xs="row">
+    <div flex-gt-xs>
   <md-input-container>
   <label>Enter Date</label>
   <md-datepicker ng-model="enterRun.savedRun.date.date" ng-selected="true">{{date}}</md-datepicker>
 </md-input-container>
+</div>
+</div>
   <br>
       <md-input-container style="margin-right: 10px;">
         <label>Distance</label>
@@ -51,5 +53,10 @@
   <label>Notes</label>
   <textarea ng-model="enterRun.savedRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
 </md-input-container>
-<button ng-click="enterRun.addRun(enterRun.savedRun);">Submit</button>
+<!-- <button ng-click="enterRun.addRun(enterRun.savedRun);">Submit</button> -->
+<md-button class="md-fab md-primary md-hue-1" aria-label="Submit Run" ng-click="enterRun.addRun(enterRun.savedRun)">
+ <i class="material-icons" id="addButton">add</i>
+</md-button>
+</div>
+</div>
 </md-content>
