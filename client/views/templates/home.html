@@ -27,9 +27,13 @@
   <p>{{showRun.user.currentMonth}} Total: {{showRun.user.summery.monthSum}} miles</p>
   <p>{{showRun.user.currentYear}} Total: {{showRun.user.summery.yearSum}} miles</p>
 </div>
+<div layout = "column">
+    <md-button ng-class="{ visible: selectedTab==0}" class="md-fab md-fab-bottom-right md-primary md-hue-1" aria-label="Add Location" ng-click="showRun.enterView()">
+     <i class="material-icons" id="addButton">add</i>
+   </md-button>
+</div>
 </div>
 <div layout = "row">
-  <md-button class="md-raised md-primary md-hue-1" ng-click="showRun.enterView()">Enter Run</md-button>
   <md-button class="md-raised md-primary md-hue-1" ng-click="showRun.logout()">Log Out</md-button>
 </div>
 </md-content>
