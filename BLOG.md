@@ -399,13 +399,25 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
  4:09 back
  Time to learn me some angular material.  
 
-  - [ ] Order by displaying correctly on home screen
+  5:22 Break 1:13 / 4:16 / 46:00
 
+## May 3 2017
+
+  - 10:30 Start
+
+  - [ ] Order by displaying correctly on home screen
+  - stretch
+    - [ ] Miles and KM
+    - [ ] convert mi and km for distance calculation
+    - [ ] Month total based on month selected
+    - [ ] Year total based on year selected
   Design To Do
   App:
   - [ ] Font
   - [ ] header
-  - [ ] back button
+  - [x] back button
+  - [ ] Get rid of ability to enter the date with keyboard on calendar
+  - [ ] Logout in hamburger
 
   Login:
   - [ ] Text size corrected
@@ -421,8 +433,12 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
   - [ ] button size
 
   View Run:
-  - [ ] Back Button
+  - [x] Back Button
+  - [ ] Text Spacing and size (like home)
+  - [ ] icons instead of buttons
+  - [ ] Alert showing up to confirm delete
+  Edit Run:
+  - [x] Done
 
-  5:22 Break 1:13 / 4:16 / 46:00
-
-## May 3 2017
+  Enter Run:
+  - [x] Done
