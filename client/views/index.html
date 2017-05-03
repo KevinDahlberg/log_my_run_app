@@ -46,7 +46,12 @@
 
   </head>
   <body>
-    <div ng-include="'./views/partials/header.html'"></div>
+
+    <div ng-controller="ShowRunsController as showRun">
+
+     <ng-include src="'./views/partials/header.html'"></ng-include>
+
+   </div>
     <main ng-view></main>
 
   </body>

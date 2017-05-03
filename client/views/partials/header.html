@@ -1,16 +1,16 @@
 <header>
   <md-toolbar layout="row" layout-align="center center" class="md-primary md-hue-1">
-    <md-button class="md-icon-button large" href="#home">
+    <md-button layout="column" layout-align="left left" class="md-icon-button large" href="#home">
       <i class="material-icons" id="addButton">navigate_before</i>
     </md-button>
-    <h1>Log My Run</h1>
-    <div class="fixed-action-btn horizontal click-to-toggle">
-    <md-button class="md-icon-button large">
-      <i class="material-icons" id="addButton">view_headline</i>
-    </md-button>
-    <ul>
-      <li><a ng-click="showRun.logout()">Logout</a></li>
-    </ul>
-  </div>
+    <h1 layout="column">Log My Run</h1>
+    <md-menu layout="column" layout-align="right right">
+      <md-button aria-label="Open menu with custom trigger" class="md-icon-button large" ng-mouseenter="$mdMenu.open()">
+        <i class="material-icons" id="addButton">view_headline</i>
+      </md-button>
+      <md-menu-content ng-mouseleave="$mdMenu.close()">
+        <md-menu-item ng-click="showRun.logout()">Logout</md-menu-item>
+      </md-menu-item>
+    </md-menu>
   </md-toolbar>
 </header>

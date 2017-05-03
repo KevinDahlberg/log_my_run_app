@@ -442,3 +442,8 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
 
   Enter Run:
   - [x] Done
+
+- 11:54 break for toastmasters 1:24 / 1:24 / 47:24
+
+- 30 min after toastmasters
+  - menu showing up on header, just needs to format positioning right
