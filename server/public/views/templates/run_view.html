@@ -1,0 +1,22 @@
+<md-content layout="column" layout-align="center center">
+<div layout = "row">
+<div layout = "column"<p> Date: {{runView.savedRun.date.date}}</p>
+<p> Distance: {{runView.savedRun.distance}}</p>
+<p> Time: {{runView.savedRun.time}}</p>
+<p>Notes:</p>
+<p>{{runView.savedRun.notes}}</p>
+</div>
+</div>
+<div layout = "row">
+  <div layout = "column">
+    <md-button class="md-fab md-primary md-hue-1" aria-label="Submit Run" ng-click="runView.deleteRun(runView.savedRun)">
+     <i class="material-icons" id="addButton">delete</i>
+    </md-button>
+</div>
+  <div layout = "column">
+    <md-button class="md-fab md-primary md-hue-1" aria-label="Submit Run" ng-click="runView.runEdit()">
+     <i class="material-icons" id="addButton">mode_edit</i>
+    </md-button>
+</div>
+</div>
+</md-content>

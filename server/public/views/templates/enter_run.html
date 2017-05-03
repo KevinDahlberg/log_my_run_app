@@ -1,0 +1,73 @@
+<!--
+* ENTER RUN VIEW
+* @desc controls the view for entering the run.
+* @param acceses the newRun that is created on load (which creates default values for the run)
+*  and alters it
+* @return the altered run gets submitted to the DB, and on submit the view goes back to the
+* HOME view.
+-->
+
+<md-content layout="column" layout-align="center center">
+  <div layout="column" layout-align="space-around start">
+    <div layout="row" layout-align="start center">
+      <div>
+        <md-input-container>
+          <md-datepicker ng-model="enterRun.savedRun.date.date" ng-selected="true" aria-label="enter date" md-open-on-focus>{{date}}</md-datepicker>
+        </md-input-container>
+      </div>
+    </div>
+      <div layout="row" layout-align="start center">
+        <div>
+          <md-input-container>
+            <label>Distance</label>
+            <md-select ng-model="enterRun.savedRun.parsedDistance.miles">
+              <md-option ng-repeat="mile in enterRun.dropdownMiles.miles" value="{{mile}}">{{mile}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+        <div>
+          <md-input-container aria-label="partial distance">
+            <md-select ng-model="enterRun.savedRun.parsedDistance.partialMiles" aria-label="partial distance">
+              <md-option ng-repeat="partial in enterRun.dropdownMiles.partialMiles" value={{partial}}>{{partial}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+      </div>
+      <div layout="row" layout-align="start center">
+        <div>
+          <md-input-container>
+            <label>Hours</label>
+            <md-select ng-model="enterRun.savedRun.parsedTime.hours">
+              <md-option ng-repeat="hour in enterRun.dropdownTime.hours" value="{{hour}}">{{hour}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+        <div>
+          <md-input-container>
+            <label>Minutes</label>
+            <md-select ng-model="enterRun.savedRun.parsedTime.minutes">
+              <md-option ng-repeat="minute in enterRun.dropdownTime.minutes" value="{{minute}}">{{minute}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+        <div>
+          <md-input-container>
+            <label>Seconds</label>
+            <md-select ng-model="enterRun.savedRun.parsedTime.seconds">
+              <md-option ng-repeat="second in enterRun.dropdownTime.seconds" value="{{second}}">{{second}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+      </div>
+        <div layout="row" layout-align="start center">
+          <md-input-container class="md-block">
+            <label>Notes</label>
+            <textarea ng-model="enterRun.savedRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
+          </md-input-container>
+        </div>
+        <!-- <button ng-click="enterRun.addRun(enterRun.savedRun);">Submit</button> -->
+        <md-button class="md-fab md-primary md-hue-1" aria-label="Submit Run" ng-click="enterRun.addRun(enterRun.savedRun)">
+          <i class="material-icons" id="addButton">done</i>
+        </md-button>
+      </div>
+</md-content>
