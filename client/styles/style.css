@@ -2,6 +2,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.card {
+  padding : 1em;
+}
 h1 {
   color : black;
   text-align: center;
@@ -22,4 +25,52 @@ header {
    width: 24px;
    min-height: 24px;
    min-width: 24px;
+}
+
+.run-date {
+  border-right-width: 1px;
+  border-right-color: lightgrey;
+  border-right-style: solid;
+  margin-right: 1em;
+  padding-right: 1em;
+}
+
+.run-history{
+  width: 100%;
+}
+
+.run-history:hover {
+  background-color: grey;
+}
+
+.summary {
+  width: 100%;
+}
+
+.summary-header {
+  width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-color: grey;
+  border-bottom-style: solid;
+  padding-bottom: 0.25em;
+}
+
+.summary-title {
+  padding: 1em;
+  width: 100%;
+}
+
+.summary-item {
+  width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-color: grey;
+  border-bottom-style: solid;
+  padding-bottom: 0.25em;
+}
+
+.vertical-divider {
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  height: 100%;
 }

@@ -1,7 +1,7 @@
-<md-content layout="column" layout-align="center center">
-  <div layout="row">
+<md-content layout="column" layout-align="start center">
+  <!-- <div layout="row">
     <h2 id="welcome" class="lead">Welcome, {{showRun.user.userName}}!</h2>
-  </div>
+  </div> -->
   <div layout="row">
   <md-select ng-model="showRun.user.currentDateRange" ng-change="showRun.user.populateSummery(showRun.user.runArray)" aria-label="run history">
     <label>Run History</label>
@@ -9,28 +9,31 @@
     </md-option>
   </md-select>
 </div>
-<div layout="row">
+<div layout="row" layout-align="start">
   <div layout="column">
-  <div ng-repeat="run in showRun.user.runArray">
-    <div ng-if="run.date.dateRange === showRun.user.currentDateRange">
+  <md-card class="md-3-line card run-history" ng-repeat="run in showRun.user.runArray" ng-if="run.date.dateRange === showRun.user.currentDateRange">
+      <md-card-title-text>
       <div ng-click="showRun.saveRun(run);">
-        <p>Date: {{run.date.date}} Distance: {{run.distance}}</p>
+        <span class="run-date">{{run.date.date}}</span><span>{{run.distance}} mi</span>
       </div>
-    </div>
-  </div>
+  </md-card-title-text>
+</md-card>
+<!-- </md-list-item> -->
+<!-- </md-list> -->
 </div>
 </div>
 <div layout = "row">
   <div layout = "column">
-  <h2>Summary</h2>
-  <p>Week: {{showRun.user.summery.weekSum}} miles</p>
-  <p>{{showRun.user.currentMonth}} Total: {{showRun.user.summery.monthSum}} miles</p>
-  <p>{{showRun.user.currentYear}} Total: {{showRun.user.summery.yearSum}} miles</p>
+  <md-card class="card summary">
+  <span class="md-headline summary-header">Summary</span>
+  <span class="md-subhead summary-title">Week: </span><span class="summary-item">{{showRun.user.summery.weekSum}} miles</span>
+  <span class="md-subhead summary-title">{{showRun.user.currentMonth}} Total: <span class="summary-item">{{showRun.user.summery.monthSum}} miles</span></span>
+  <span class="md-subhead summary-title">{{showRun.user.currentYear}} Total: <span class="summary-item">{{showRun.user.summery.yearSum}} miles</span></span>
+</md-card>
 </div>
-<div layout = "column">
+</div>
     <md-button class="md-fab md-primary md-hue-1" aria-label="Add Run" ng-click="showRun.enterView()">
      <i class="material-icons" id="addButton">add</i>
    </md-button>
-</div>
-</div>
+
 </md-content>
