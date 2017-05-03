@@ -2,7 +2,6 @@
 <p>Edit Run</p>
 <div class="row">
   <div class="column">
-  <a href="#home">Back</a>
   <div layout-gt-xs="row">
   <div flex-gt-xs>
     <md-input-container>
@@ -45,7 +44,9 @@
   <label>Notes</label>
   <textarea ng-model="editRun.savedRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
 </md-input-container>
-  <button ng-click="editRun.editRun(editRun.savedRun)">Submit</button>
+<md-button class="md-fab md-primary md-hue-1" aria-label="Submit Run" ng-click="editRun.editRun(editRun.savedRun)">
+ <i class="material-icons" id="addButton">add</i>
+</md-button>
 </div>
 </div>
 </md-content>
