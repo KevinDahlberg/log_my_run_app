@@ -9,12 +9,14 @@
     </md-option>
   </md-select>
 </div>
-<div layout="row" layout-align="start">
-  <div layout="column">
-  <md-card class="md-3-line card run-history" ng-repeat="run in showRun.user.runArray" ng-if="run.date.dateRange === showRun.user.currentDateRange">
+<div layout="column" layout-align="start">
+  <div layout="row">
+  <md-card class="card run-history" ng-repeat="run in showRun.user.runArray" ng-if="run.date.dateRange === showRun.user.currentDateRange">
       <md-card-title-text>
       <div ng-click="showRun.saveRun(run);">
-        <span class="run-date">{{run.date.date}}</span><span>{{run.distance}} mi</span>
+        <span class="md-subhead">{{run.date.date}}</span>
+        <br>
+        <span class="md-subhead">{{run.distance}} mi</span>
       </div>
   </md-card-title-text>
 </md-card>
@@ -26,7 +28,7 @@
   <div layout = "column">
   <md-card class="card summary">
   <span class="md-headline summary-header">Summary</span>
-  <span class="md-subhead summary-title">Week: </span><span class="summary-item">{{showRun.user.summery.weekSum}} miles</span>
+  <span class="md-subhead summary-title">Week: <span class="summary-item">{{showRun.user.summery.weekSum}} miles</span></span>
   <span class="md-subhead summary-title">{{showRun.user.currentMonth}} Total: <span class="summary-item">{{showRun.user.summery.monthSum}} miles</span></span>
   <span class="md-subhead summary-title">{{showRun.user.currentYear}} Total: <span class="summary-item">{{showRun.user.summery.yearSum}} miles</span></span>
 </md-card>
