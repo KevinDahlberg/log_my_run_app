@@ -403,47 +403,50 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
 
 ## May 3 2017
 
-  - 10:30 Start
-
-  - [ ] Order by displaying correctly on home screen
-  - stretch
-    - [ ] Miles and KM
-    - [ ] convert mi and km for distance calculation
-    - [ ] Month total based on month selected
-    - [ ] Year total based on year selected
-  Design To Do
-  App:
-  - [ ] Font
-  - [ ] header
-  - [x] back button
-  - [ ] Get rid of ability to enter the date with keyboard on calendar
-  - [ ] Logout in hamburger
-
-  Login:
-  - [ ] Text size corrected
-  - [ ] Text color
-  - [ ] primary color fixed
-  - [ ] inputs larger,
-  - [ ] buttons a better fit
-
-  Home/Show Run:
-  - [ ] Text size
-  - [ ] Space between Text
-  - [ ] division between Text
-  - [ ] button size
-
-  View Run:
-  - [x] Back Button
-  - [ ] Text Spacing and size (like home)
-  - [ ] icons instead of buttons
-  - [ ] Alert showing up to confirm delete
-  Edit Run:
-  - [x] Done
-
-  Enter Run:
-  - [x] Done
+- 10:30 Start
 
 - 11:54 break for toastmasters 1:24 / 1:24 / 47:24
 
 - 30 min after toastmasters
+
   - menu showing up on header, just needs to format positioning right
+
+- 1:57 back to work
+
+- [ ] Order by displaying correctly on home screen
+- stretch
+  - [ ] Miles and KM
+  - [ ] convert mi and km for distance calculation
+  - [ ] Month total based on month selected
+  - [ ] Year total based on year selected
+Design To Do
+App:
+- [ ] Font
+- [ ] header - text align
+- [x] back button
+- [ ] Get rid of ability to enter the date with keyboard on calendar
+- [ ] Logout in hamburger
+
+Login:
+- [ ] Text size corrected
+- [ ] Text color
+- [ ] primary color fixed
+- [ ] inputs larger,
+- [ ] buttons a better fit
+
+Home/Show Run:
+- [ ] Text size
+- [ ] Space between Text
+- [ ] division between Text
+- [ ] button size
+
+View Run:
+- [x] Back Button
+- [ ] Text Spacing and size (like home)
+- [ ] icons instead of buttons
+- [ ] Alert showing up to confirm delete
+Edit Run:
+- [x] Done
+
+Enter Run:
+- [x] Done
