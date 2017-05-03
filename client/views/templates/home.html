@@ -1,24 +1,35 @@
-<p>Run History</p>
-<div>
-  <!-- ng-change="run.currentDateRange" -->
-  <h1 id="welcome" class="lead">Welcome, {{showRun.user.userName}}!</h1>
-  <button class="btn-default" ng-click="showRun.enterView()">Enter Run</a>
-  <button class="btn btn-default" ng-click="showRun.logout()">Log Out</button>
+<md-content layout="column" layout-align="center center">
+  <div layout="row">
+    <h2 id="welcome" class="lead">Welcome, {{showRun.user.userName}}!</h2>
+  </div>
+  <div layout="row">
   <md-select ng-model="showRun.user.currentDateRange" ng-change="showRun.user.populateSummery(showRun.user.runArray)" aria-label="run history">
     <label>Run History</label>
     <md-option ng-repeat="run in showRun.user.runArray | unique" value="{{run}}">{{run}}
     </md-option>
   </md-select>
+</div>
+<div layout="row">
+  <div layout="column">
   <div ng-repeat="run in showRun.user.runArray">
     <div ng-if="run.date.dateRange === showRun.user.currentDateRange">
-    <div ng-click="showRun.saveRun(run);">
-    <p>Date: {{run.date.date}} Distance: {{run.distance}}</p>
-  </div>
+      <div ng-click="showRun.saveRun(run);">
+        <p>Date: {{run.date.date}} Distance: {{run.distance}}</p>
+      </div>
+    </div>
   </div>
 </div>
-  <h2>Summery</h2>
-    <p>Current Date Range: {{showRun.user.currentDateRange}}</p>
-    <p>Week: {{showRun.user.summery[0].weekSum}}</p>
-    <p>Month: {{showRun.user.summery[0].monthSum}}</p>
-    <p>Year: {{showRun.user.summery[0].yearSum}}</p>
 </div>
+<div layout = "row">
+  <div layout = "column">
+  <h2>Summary</h2>
+  <p>Week: {{showRun.user.summery.weekSum}} miles</p>
+  <p>{{showRun.user.currentMonth}} Total: {{showRun.user.summery.monthSum}} miles</p>
+  <p>{{showRun.user.currentYear}} Total: {{showRun.user.summery.yearSum}} miles</p>
+</div>
+</div>
+<div layout = "row">
+  <md-button class="md-raised md-primary md-hue-1" ng-click="showRun.enterView()">Enter Run</md-button>
+  <md-button class="md-raised md-primary md-hue-1" ng-click="showRun.logout()">Log Out</md-button>
+</div>
+</md-content>

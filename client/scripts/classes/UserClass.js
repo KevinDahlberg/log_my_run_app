@@ -11,9 +11,11 @@ class User {
     this.userName = '';
     this.userId = '';
     this.runArray = [];
-    this.summery = [{weekSum : '', monthSum : '', yearSum : ''}];
+    this.summery = {weekSum : '', monthSum : '', yearSum : ''};
     this.currentWeek = moment().format('ww');
     this.currentDateRange = moment().weekday(0).format('MM/DD/YYYY') + ' to ' + moment().weekday(6).format('MM/DD/YYYY');
+    this.currentMonth = moment().format('MMM');
+    this.currentYear = moment().format('YYYY');
   }
 
   /**
@@ -64,9 +66,9 @@ class User {
           weekArray.push(run.distance);
       }
     }
-    this.summery[0].weekSum = this.arraySum(weekArray);
-    this.summery[0].monthSum = this.arraySum(monthArray);
-    this.summery[0].yearSum = this.arraySum(yearArray);
+    this.summery.weekSum = this.arraySum(weekArray);
+    this.summery.monthSum = this.arraySum(monthArray);
+    this.summery.yearSum = this.arraySum(yearArray);
   }
 
   arraySum (array) {

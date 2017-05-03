@@ -14,31 +14,14 @@ myApp.filter('unique', function() {
   };
 });
 
-myApp.filter('weekTotal', function () {
-  return function (obj, user) {
-    console.log(obj);
-    console.log(user);
-    let weekTotal = [];
-    let sum = 0;
-      angular.forEach(obj, function(value, key){
-        console.log(value.date.dateRange);
-        console.log(this.user);
-        if (value.date.dateRange === this.currentDateRange){
-            weekTotal.push(value.distance);
-        }
-          for (let num of weekTotal){
-            sum += parseFloat (num);
-          }
-        });
-        // obj.summery.weekSum =
-        console.log(sum);
-      };
-});
-
 /// Routes ///
-myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider',
-      function($routeProvider, $locationProvider, $mdDateLocaleProvider) {
+myApp.config(['$routeProvider', '$locationProvider', '$mdDateLocaleProvider', '$mdThemingProvider',
+      function($routeProvider, $locationProvider, $mdDateLocaleProvider, $mdThemingProvider) {
   $locationProvider.hashPrefix('');
+  $mdThemingProvider.theme('default')
+      .primaryPalette('teal')
+      .accentPalette('grey')
+      .dark();
 
   $routeProvider
     .when('/login', {

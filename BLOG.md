@@ -383,14 +383,44 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
  - [x] display week of the selected run from dropdown
  - [x] update total of the week based on week selected
  - [ ] ability to select month and update total of month based on month selected. (this one might be a stretch goal).
- - [ ] Correct information displayed on edit run screen
- - [ ] Order by displaying correctly on home screen
+ - [x] Correct information displayed on edit run screen
 
  A lot of crap this morning trying to get things to figure out with the add numbers.  I think I might have figured out how to do it with ng-change... maybe.  we'll see?
 
- 1:20 stop for lunch
+ 1:20 stop for lunch 2:10 / 2:10 / 41:44
 
  2:07 back at it
 
  ng-Change worked right before lunch.  First I need to clean up my code and make sure everything is still working right.
  changing the month and the year are serious stretch goals at this point
+
+ 3:00 break :53 / 3:03 / 44:47
+
+ 4:09 back
+ Time to learn me some angular material.  
+
+  - [ ] Order by displaying correctly on home screen
+
+  Design To Do
+  App:
+  - [ ] Font
+  - [ ] header
+  - [ ] back button
+
+  Login:
+  - [ ] Text size corrected
+  - [ ] Text color
+  - [ ] primary color fixed
+  - [ ] inputs larger,
+  - [ ] buttons a better fit
+
+  Home/Show Run:
+  - [ ] Text size
+  - [ ] Space between Text
+  - [ ] division between Text
+  - [ ] button size
+
+  View Run:
+  - [ ] Back Button
+
+  5:22 Break 1:13 / 4:16 / 46:00

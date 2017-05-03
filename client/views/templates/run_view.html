@@ -1,9 +1,21 @@
-<p> Date: {{runView.savedRun.date}}</p>
+<md-content layout="column" layout-align="center center">
+<div layout = "row">
+<div layout = "column"<p> Date: {{runView.savedRun.date.date}}</p>
 <p> Distance: {{runView.savedRun.distance}}</p>
 <p> Time: {{runView.savedRun.time}}</p>
 <p>Notes:</p>
 <p>{{runView.savedRun.notes}}</p>
-<button ng-click="runView.deleteRun(runView.savedRun)">Delete</button>
-<button ng-click="runView.runEdit()">Edit</button>
 </div>
-<a href="#home">Back</a>
+</div>
+<div layout = "row">
+  <div layout = "column">
+  <md-button class="md-raised md-primary md-hue-1" ng-click="runView.deleteRun(runView.savedRun)">Delete</md-button>
+</div>
+  <div layout = "column">
+<md-button class="md-raised md-primary md-hue-1" ng-click="runView.runEdit()">Edit</md-button>
+</div>
+<div layout = "column">
+<md-button class="md-raised md-primary md-hue-1" a href="#home">Back</md-button></a>
+</div>
+</div>
+</md-content>
