@@ -40,7 +40,7 @@ class Run {
   }
 
   formatDate (date) {
-    let _date = moment(date.date).format('MM/DD/YYYY');
+    let _date = moment(date.date).format('MM/DD');
     let dayOfWeek = moment(date.date).format('e');
     let weekOfYear = moment(date.date).format('ww');
     let dayOfYear = moment(date.date).format('DDDD');
