@@ -5,23 +5,9 @@
       </md-option>
     </md-select>
   </div>
-      <md-card class="card">
-        <div layout = "row">
-        <div layout = "column">
-        <span class="md-subhead">Week: <span class="summary-item">{{showRun.user.summery.weekSum}} miles</span></span>
-        <span class="md-subhead">{{showRun.user.currentMonth}} Total: <span class="summary-item">{{showRun.user.summery.monthSum}} miles</span></span>
-        <span class="md-subhead">{{showRun.user.currentYear}} Total: <span class="summary-item">{{showRun.user.summery.yearSum}} miles</span></span>
-      </div>
-      <div layout = "column">
-        <md-button class="md-fab md-primary md-hue-1" aria-label="Add Run" ng-click="showRun.enterView()">
-          <i class="material-icons" id="addButton">add</i>
-        </md-button>
-      </div>
-      </div>
-    </md-card>
 
-
-  <div layout="row">
+<div layout = "row">
+  <div layout="column">
     <div layout="column" layout-align="center center">
       <md-card class="card run-history" ng-repeat="run in showRun.user.runArray" ng-if="run.date.dateRange === showRun.user.currentDateRange">
         <md-card-title-text>
@@ -35,4 +21,21 @@
       <!-- </md-list> -->
     </div>
   </div>
+  <div layout = "column" layout-align = "space-between center">
+    <div layout = "row">
+      <md-card class="card">
+        <span class="md-subhead">Week: <span class="summary-item">{{showRun.user.summery.weekSum}} miles</span></span>
+        <span class="md-subhead">{{showRun.user.currentMonth}}: <span class="summary-item">{{showRun.user.summery.monthSum}} miles</span></span>
+        <span class="md-subhead">{{showRun.user.currentYear}}: <span class="summary-item">{{showRun.user.summery.yearSum}} miles</span></span>
+    </md-card>
+    </div>
+  <div layout = "row">
+    <md-button class="md-fab md-primary md-hue-1" aria-label="Add Run" ng-click="showRun.enterView()">
+      <i class="material-icons" id="addButton">add</i>
+    </md-button>
+  </div>
+</div>
+</div>
 </md-content>
+
+<!-- md-fab-bottom-right -->

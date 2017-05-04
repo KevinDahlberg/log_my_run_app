@@ -407,7 +407,7 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
 
 - 11:54 break for toastmasters 1:24 / 1:24 / 47:24
 
-- 30 min after toastmasters
+- 30 min after toastmasters :30 / 1:54 / 47:54
 
   - menu showing up on header, just needs to format positioning right
 
@@ -421,27 +421,60 @@ about 2 hours of coding.  2:00 / 2:00 / 30:25
   - [ ] Year total based on year selected
 Design To Do
 App:
-- [ ] Font
-- [ ] header - text align
+- [x] Font
+- [x] header - text align
 - [x] back button
-- [ ] Get rid of ability to enter the date with keyboard on calendar
-- [ ] Logout in hamburger
+- [x] Get rid of ability to enter the date with keyboard on calendar
+- [x] Logout in hamburger
 
 Login:
-- [ ] Text size corrected
+- [x] Text size corrected
+
+- [x] inputs larger,
+- [x] buttons a better fit
+
+View Run:
+- [x] Back Button
+
+Edit Run:
+- [x] Done
+
+Enter Run:
+- [x] Done
+
+- 4:57 break 3:00 / 4:54 / 50:54
+
+6:00 back at it
+
+Posted to heroku today.  Figured out how things actually looked, and took steps to change the design based on that.  
+
+Tommorow I'm going to start the day by making the home screen 2 columns, with the total and add run on the right side.
+
+7:50 done for the day 1:50 / 5:44 / 51:44
+
+## May 4 2017
+
+- [ ] Order by displaying correctly on home screen
+- stretch
+  - [ ] Miles and KM
+  - [ ] convert mi and km for distance calculation
+  - [ ] Month total based on month selected
+  - [ ] Year total based on year selected
+Design To Do
+App:
+
+Login:
 - [ ] Text color
 - [ ] primary color fixed
-- [ ] inputs larger,
-- [ ] buttons a better fit
 
 Home/Show Run:
+- [ ] 2 column view
 - [ ] Text size
 - [ ] Space between Text
 - [ ] division between Text
 - [ ] button size
 
 View Run:
-- [x] Back Button
 - [ ] Text Spacing and size (like home)
 - [ ] icons instead of buttons
 - [ ] Alert showing up to confirm delete

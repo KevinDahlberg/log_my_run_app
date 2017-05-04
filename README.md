@@ -106,8 +106,8 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
       - [ ] implement angular material
       - [ ] Set up different looks for desktop and mobile
   * Week 2 left to Do
-      - [ ] View of all the week’s runs on homepage
-      - [ ] select a different week from a calendar
+      - [x] View of all the week’s runs on homepage
+      - [x] select a different week from a calendar
       - [ ] Style the APP
       - [x] weekly, monthly, and yearly summary
   * Post status to facebook (stretch)
