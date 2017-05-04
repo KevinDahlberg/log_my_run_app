@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width", initial-scale="1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Log My Run APP</title>
 
     <!-- Stylesheets -->
@@ -47,14 +48,18 @@
 
   </head>
   <body>
-
     <div ng-controller="ShowRunsController as showRun">
 
      <ng-include src="'./views/partials/header.html'"></ng-include>
 
    </div>
-   <div class="container" layout="column" layout-align="start center">
+   <div class="container">
+   <div layout="column" layout-align="start center">
     <main ng-view></main>
   </div>
+  </div>
+
+
+
   </body>
 </html>

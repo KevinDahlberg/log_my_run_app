@@ -103,12 +103,12 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
     - [x] Put and Delete functions in the DB
   * Style CSS
       - [ ] Set up login failed alerts
-      - [ ] implement angular material
+      - [x] implement angular material
       - [ ] Set up different looks for desktop and mobile
   * Week 2 left to Do
       - [x] View of all the week’s runs on homepage
       - [x] select a different week from a calendar
-      - [ ] Style the APP
+      - [x] Style the APP
       - [x] weekly, monthly, and yearly summary
   * Post status to facebook (stretch)
   * Weather API to display the weather (stretch)

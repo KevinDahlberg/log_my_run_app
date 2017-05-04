@@ -1,17 +1,15 @@
-<md-content layout="column" layout-align="start center">
+  <md-content class="container-input" layout="column" layout-align="start center">
+    <div layout="row">
+      <md-select  class="date-select" ng-model="showRun.user.currentDateRange" ng-change="showRun.user.populateSummery(showRun.user.runArray)" aria-label="run history">
+        <md-option aria-label="run history" ng-repeat="run in showRun.user.runArray | unique" value="{{run}}">{{run}}
+        </md-option>
+      </md-select>
+    </div>
   <div layout="row">
-    <md-select  class="date-select" ng-model="showRun.user.currentDateRange" ng-change="showRun.user.populateSummery(showRun.user.runArray)" aria-label="run history">
-      <md-option aria-label="run history" ng-repeat="run in showRun.user.runArray | unique" value="{{run}}">{{run}}
-      </md-option>
-    </md-select>
-  </div>
-
-<div class="container-home" layout = "row">
   <div layout="column" layout-align = "start">
       <md-card class="card run-history" ng-repeat="run in showRun.user.runArray" ng-if="run.date.dateRange === showRun.user.currentDateRange" ng-click="showRun.saveRun(run);">
         <md-card-title-text>
-            <span class="md-subhead run-date">{{run.date.shortDate}}</span>
-            <span class="md-subhead">{{run.distance}} mi</span>
+            <span class="md-subhead run-item"><span class="md-subhead run-date">{{run.date.shortDate}}</span>{{run.distance}} mi</span>
         </md-card-title-text>
       </md-card>
   </div>
@@ -24,11 +22,11 @@
         <span class="md-subhead summary-title">{{showRun.user.currentYear}}: <span class="summary-item">{{showRun.user.summery.yearSum}} miles</span></span>
     </md-card>
     </div>
-  <div layout = "row">
+  </div>
+</div>
+  <!-- <div layout = "row"> -->
     <md-button class="md-fab md-fab-bottom-right md-primary md-hue-1" aria-label="Add Run" ng-click="showRun.enterView()">
       <i class="material-icons" id="addButton">add</i>
     </md-button>
-  </div>
-</div>
-</div>
+  <!-- </div> -->
 </md-content>

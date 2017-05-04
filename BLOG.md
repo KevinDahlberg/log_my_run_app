@@ -493,3 +493,48 @@ Edit/Enter Run:
 - [x] Input placement and size
 - [x] Button placement
 - [x] Done
+
+12:30 break for lunch 3:00 / 3:00 / 54:44
+
+might want to mess with the underline on the run history
+
+1:16 (10min break) back at it
+
+- [ ] Order by displaying correctly on home screen
+- stretch
+  - [ ] Miles and KM
+  - [ ] convert mi and km for distance calculation
+  - [ ] Month total based on month selected
+  - [ ] Year total based on year selected
+  - [ ] Meta tags to make it show up as an app on mobile.
+  - [x] Change size format md-datepicker
+  - [ ] animation on background for desktop view (not gonna happen)
+
+Design To Do
+App:
+- [x] change hamburger
+- [x] md-datepicker
+- [ ] make buttons appear the same height between views.
+
+1. multi step animations
+
+2:56 break 1:40 / 4:40 / 55:24
+
+The animation idea is a much bigger problem than I want to cover right now.  If I had 6 months to work on cool css stuff, then I would totally be doing that, but with where I'm at, I'm good.  
+
+Definitely getting some different ideas for after Prime and the stuff that I want to work on.  I would love to go crazy and learn a bunch of cool stuff, but I think I want to focus on front end technologies (angular, react), wordpress theme dev and the wordpress API, and building my CSS and javascript chops.  
+
+For the remainder of this project, I want to figure out the minor details that I haven't wanted to focus on:
+
+5:00 - back at it
+
+- [x] minor design issues (scaling on smaller than iphone 6 screens)
+- [x] buttons are all at the same height
+- [ ] rearrange code to make the month and year selected (this can go as deep as you want)
+- [ ] meta tags to get rid of the browser stuff in mobile view.
+- [ ] Login info not case sensitive
+- [ ] get rid of smelly code
+
+if I can get everything working right and looking pretty, then I will look into the possibility of posting to facebook
+
+did some playing around with media queries.  I wish I had thought of the iPhone SE screen from the beginning.  I have it set up to ideally work on an iphone 6 screen or higher.  I'm not going to dig into this any more.  

@@ -7,11 +7,11 @@
 * HOME view.
 -->
 
-<md-content class="container-input" layout="column" layout-align="start center">
+<md-content class="container-input container-xs" layout="column" layout-align="start center">
   <div layout="column" layout-align="space-around start">
     <div layout="row" layout-align="start center">
         <md-input-container>
-          <md-datepicker ng-model="enterRun.savedRun.date.date" ng-selected="true" aria-label="enter date" md-open-on-focus>
+          <md-datepicker md-hide-icons="calendar" ng-model="enterRun.savedRun.date.date" ng-selected="true" aria-label="enter date" md-open-on-focus>
             {{date}}
           </md-datepicker>
         </md-input-container>
