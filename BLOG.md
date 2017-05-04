@@ -462,12 +462,18 @@ Tommorow I'm going to start the day by making the home screen 2 columns, with th
   - [ ] Month total based on month selected
   - [ ] Year total based on year selected
   - [ ] Meta tags to make it show up as an app on mobile.
+  - [ ] Change size format md-datepicker
+  - [ ] animation on background for desktop view
 Design To Do
 App:
+- [ ] change hamburger
+- [ ] md-datepicker
+- [ ] make buttons appear the same height between views.
 
 Login:
-- [ ] Text color
-- [ ] primary color fixed
+- [x] Text color
+- [x] primary color fixed
+- [x] done
 
 Home/Show Run:
 - [x] 2 column view
@@ -475,13 +481,15 @@ Home/Show Run:
 - [x] Space between Text
 - [x] division between Text
 - [x] button size
+- [x] done
 
 View Run:
-- [ ] Text Spacing and size (like home)
-- [ ] icons instead of buttons
-- [ ] Alert showing up to confirm delete
-Edit Run:
-- [x] Done
+- [x] Text Spacing and size (like home)
+- [x] icons instead of buttons
+- [x] Alert showing up to confirm delete
 
-Enter Run:
+Edit/Enter Run:
+- [x] Text size
+- [x] Input placement and size
+- [x] Button placement
 - [x] Done

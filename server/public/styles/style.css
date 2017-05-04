@@ -110,3 +110,29 @@ header {
   border-bottom-style: solid;
   padding: 0;
 }
+
+.view-card {
+  width: 320px;
+  padding: 3em 3em;
+}
+
+.view-date, .view-title{
+  border-bottom: 1px solid teal;
+}
+
+.view-item {
+  font-size : 1.5em;
+  line-height: 2.0em;
+  margin-bottom: 0.5em;
+}
+
+.view-data {
+  padding-left : 0.5em;
+}
+
+.view-notes {
+  font-size : 1.0em;
+  line-height: 1.5em;
+  padding-bottom: 1em;
+  padding-left: .5em;
+}
