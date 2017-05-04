@@ -1,3 +1,19 @@
+/*Items in Alphabetical Order*/
+
+
+#addButton {
+   display: block;
+   margin: auto;
+   background-repeat: no-repeat;
+   display: inline-block;
+   vertical-align: middle;
+   fill: currentColor;
+   height: 24px;
+   width: 24px;
+   min-height: 24px;
+   min-width: 24px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
@@ -17,6 +33,11 @@ body {
   width: 370px;
 }
 
+.container-input {
+  height: 575px;
+  width : 375px;
+}
+
 .date-select {
   font-size : 1.5em;
 }
@@ -27,7 +48,6 @@ body {
   line-height : 2em;
 }
 
-
 h1 {
   color : black;
   text-align: center;
@@ -36,19 +56,6 @@ h1 {
 header {
   margin-bottom : 1em;
   width: 100%;
-}
-
-#addButton {
-   display: block;
-   margin: auto;
-   background-repeat: no-repeat;
-   display: inline-block;
-   vertical-align: middle;
-   fill: currentColor;
-   height: 24px;
-   width: 24px;
-   min-height: 24px;
-   min-width: 24px;
 }
 
 .run-date {
@@ -70,6 +77,11 @@ header {
 
 .run-history:active {
   background-color: teal;
+}
+
+.run-input{
+  font-size : 1.5em;
+  line-height : 2em;
 }
 
 .summary {

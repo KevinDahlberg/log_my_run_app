@@ -10,7 +10,7 @@
   <div layout="column" layout-align = "start">
       <md-card class="card run-history" ng-repeat="run in showRun.user.runArray" ng-if="run.date.dateRange === showRun.user.currentDateRange" ng-click="showRun.saveRun(run);">
         <md-card-title-text>
-            <span class="md-subhead run-date">{{run.date.date}}</span>
+            <span class="md-subhead run-date">{{run.date.shortDate}}</span>
             <span class="md-subhead">{{run.distance}} mi</span>
         </md-card-title-text>
       </md-card>

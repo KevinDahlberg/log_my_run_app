@@ -453,6 +453,7 @@ Tommorow I'm going to start the day by making the home screen 2 columns, with th
 7:50 done for the day 1:50 / 5:44 / 51:44
 
 ## May 4 2017
+- 9:30 start
 
 - [ ] Order by displaying correctly on home screen
 - stretch
@@ -460,6 +461,7 @@ Tommorow I'm going to start the day by making the home screen 2 columns, with th
   - [ ] convert mi and km for distance calculation
   - [ ] Month total based on month selected
   - [ ] Year total based on year selected
+  - [ ] Meta tags to make it show up as an app on mobile.
 Design To Do
 App:
 
@@ -468,11 +470,11 @@ Login:
 - [ ] primary color fixed
 
 Home/Show Run:
-- [ ] 2 column view
-- [ ] Text size
-- [ ] Space between Text
-- [ ] division between Text
-- [ ] button size
+- [x] 2 column view
+- [x] Text size
+- [x] Space between Text
+- [x] division between Text
+- [x] button size
 
 View Run:
 - [ ] Text Spacing and size (like home)

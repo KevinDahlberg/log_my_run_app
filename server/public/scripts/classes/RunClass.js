@@ -40,7 +40,8 @@ class Run {
   }
 
   formatDate (date) {
-    let _date = moment(date.date).format('MM/DD');
+    let _date = moment(date.date).format('MM/DD/YYYY');
+    let shortDate = moment(date.date).format('MM/DD')
     let dayOfWeek = moment(date.date).format('e');
     let weekOfYear = moment(date.date).format('ww');
     let dayOfYear = moment(date.date).format('DDDD');
@@ -49,6 +50,7 @@ class Run {
     let dateRange = moment(date.date).weekday(0).format('MM/DD/YYYY') + ' to ' + moment(date.date).weekday(6).format('MM/DD/YYYY');
     this.date = {
       date : _date,
+      shortDate : shortDate,
       dayOfWeek : dayOfWeek,
       weekOfYear : weekOfYear,
       dayOfYear : dayOfYear,

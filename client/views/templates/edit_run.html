@@ -1,4 +1,4 @@
-<md-content layout="column" layout-align="center center">
+<md-content class="container-input" layout="column" layout-align="start center">
   <div layout="column" layout-align="space-around start">
     <div layout="row">
       <div>
@@ -11,14 +11,14 @@
       <div>
         <md-input-container>
           <label>Distance</label>
-          <md-select ng-model="editRun.savedRun.parsedDistance.miles">
+          <md-select ng-model="editRun.savedRun.parsedDistance.miles" class="run-input">
             <md-option ng-repeat="mile in editRun.dropdownMiles.miles" value={{mile}}>{{mile}}</md-option>
           </md-select>
         </md-input-container>
       </div>
       <div>
         <md-input-container>
-          <md-select ng-model="editRun.savedRun.parsedDistance.partialMiles" aria-label="partial miles">
+          <md-select ng-model="editRun.savedRun.parsedDistance.partialMiles" aria-label="partial miles" class="run-input">
             <md-option ng-repeat="partial in editRun.dropdownMiles.partialMiles" value={{partial}}>{{partial}}</md-option>
           </md-select>
         </md-input-container>
@@ -28,7 +28,7 @@
       <div>
         <md-input-container>
           <label>Hours</label>
-          <md-select ng-model="editRun.savedRun.parsedTime.hours">
+          <md-select ng-model="editRun.savedRun.parsedTime.hours" class="run-input">
             <md-option ng-repeat="hour in editRun.dropdownTime.hours" value={{hour}}>{{hour}}</md-option>
           </md-select>
         </md-input-container>
@@ -36,7 +36,7 @@
       <div>
         <md-input-container>
           <label>Minutes</label>
-          <md-select ng-model="editRun.savedRun.parsedTime.minutes">
+          <md-select ng-model="editRun.savedRun.parsedTime.minutes" class="run-input">
             <md-option ng-repeat="minute in editRun.dropdownTime.minutes" value={{minute}}>{{minute}}</md-option>
           </md-select>
         </md-input-container>
@@ -44,7 +44,7 @@
       <div>
         <md-input-container>
           <label>Seconds</label>
-          <md-select ng-model="editRun.savedRun.parsedTime.seconds">
+          <md-select ng-model="editRun.savedRun.parsedTime.seconds" class="run-input">
             <md-option ng-repeat="second in editRun.dropdownTime.seconds" value={{second}}>{{second}}</md-option>
           </md-select>
         </md-input-container>
@@ -53,10 +53,12 @@
     <div layout="row" layout-align="start center">
       <md-input-container class="md-block">
         <label>Notes</label>
-        <textarea ng-model="editRun.savedRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}}>{{note}}</textarea>
+        <textarea ng-model="editRun.savedRun.notes" md-maxlength="150" rows="5" md-select-on-focus value={{note}} class="run-input">
+          {{note}}
+        </textarea>
       </md-input-container>
     </div>
-    <md-button class="md-fab md-primary md-hue-1" aria-label="Submit Run" ng-click="editRun.editRun(editRun.savedRun)">
+    <md-button class="md-fab md-fab-bottom-right md-primary md-hue-1" aria-label="Submit Run" ng-click="editRun.editRun(editRun.savedRun)">
       <i class="material-icons" id="addButton">done</i>
     </md-button>
   </div>
