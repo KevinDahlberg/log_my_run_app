@@ -1,24 +1,29 @@
-/*Items in Alphabetical Order*/
+/**
+* CSS Stylesheet
+* These styles override any styles defined by other CSS files in project
+* Items (in alphabetical order):
+** 1. Type selectors
+** 2. Class selectors
+** 3. ID selectors
+*/
 
-
-#addButton {
-   display: block;
-   margin: auto;
-   background-repeat: no-repeat;
-   display: inline-block;
-   vertical-align: middle;
-   fill: currentColor;
-   height: 24px;
-   width: 24px;
-   min-height: 24px;
-   min-width: 24px;
-}
-
+/*Type Selectors*/
 body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
 }
 
+h1 {
+  color : black;
+  text-align: center;
+}
+
+header {
+  margin-bottom : 1em;
+  width: 100%;
+}
+
+/*Class Selectors*/
 .card {
   padding : 1em;
 }
@@ -49,16 +54,6 @@ body {
   line-height : 2em;
 }
 
-h1 {
-  color : black;
-  text-align: center;
-}
-
-header {
-  margin-bottom : 1em;
-  width: 100%;
-}
-
 .md-datepicker-input {
   font-size : 1.5em;
 }
@@ -85,11 +80,6 @@ header {
 .run-input{
   font-size : 1.5em;
   line-height : 2em;
-}
-
-.run-item {
-  /*border-bottom: 1px solid dimgrey;
-  padding-bottom: 0.2em;*/
 }
 
 .summary {
@@ -141,4 +131,18 @@ header {
   line-height: 1.5em;
   padding-bottom: 1em;
   padding-left: .5em;
+}
+
+/*Id Selectors*/
+#addButton {
+   display: block;
+   margin: auto;
+   background-repeat: no-repeat;
+   display: inline-block;
+   vertical-align: middle;
+   fill: currentColor;
+   height: 24px;
+   width: 24px;
+   min-height: 24px;
+   min-width: 24px;
 }

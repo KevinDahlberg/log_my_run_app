@@ -36,12 +36,12 @@ class User {
   * @return an array of Run objects is created when the items come back from the DB
   */
   populateRuns (object) {
-      this.runArray.length = 0;
-      for (let item of object){
-        let run = new Run (item);
-        this.runArray.push(run);
-      }
+    this.runArray.length = 0;
+    for (let item of object){
+      let run = new Run (item);
+      this.runArray.push(run);
     }
+  }
 
   /**
   * @method populateSummary
@@ -63,7 +63,7 @@ class User {
         }
       }
       if (run.date.dateRange === this.currentDateRange){
-          weekArray.push(run.distance);
+        weekArray.push(run.distance);
       }
     }
     this.summery.weekSum = this.arraySum(weekArray);
@@ -71,6 +71,12 @@ class User {
     this.summery.yearSum = this.arraySum(yearArray);
   }
 
+  /**
+  * @method array sum
+  * @desc adds up the numbers of an array
+  * @param an array of numbers
+  * @return the sum of the numbers of the array
+  */
   arraySum (array) {
     let sum = 0;
     for (let num of array){

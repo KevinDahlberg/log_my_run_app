@@ -530,11 +530,23 @@ For the remainder of this project, I want to figure out the minor details that I
 
 - [x] minor design issues (scaling on smaller than iphone 6 screens)
 - [x] buttons are all at the same height
-- [ ] rearrange code to make the month and year selected (this can go as deep as you want)
-- [ ] meta tags to get rid of the browser stuff in mobile view.
-- [ ] Login info not case sensitive
-- [ ] get rid of smelly code
+- [x] meta tags to get rid of the browser stuff in mobile view.
+- [x] Login info not case sensitive
+
 
 if I can get everything working right and looking pretty, then I will look into the possibility of posting to facebook
 
-did some playing around with media queries.  I wish I had thought of the iPhone SE screen from the beginning.  I have it set up to ideally work on an iphone 6 screen or higher.  I'm not going to dig into this any more.  
+did some playing around with media queries.  I wish I had thought of the iPhone SE screen from the beginning.  I have it set up to ideally work on an iphone 6 screen or higher.  I'm not going to dig into this any more.
+
+5:40 - done for the day :40 / 5:20 / 56:04
+
+## May 5 2015
+
+ - [ ] get rid of smelly code
+ - [ ] rearrange code to make the month and year selected (this can go as deep as you want)
+ - [ ] comment code
+ - [ ] README
+ - [ ] CSS order
+
+ Stretch:
+ - [ ] Optimize better for mobile.

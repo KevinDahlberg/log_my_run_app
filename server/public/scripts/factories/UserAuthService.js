@@ -13,7 +13,8 @@ function($http, $location, UserService, DatabaseService){
   * If the login doesn't go through, it errors out, and the user needs to either try again or register.
   */
   let login = (object) => {
-    let _user = {username : object.username, password : object.password};
+    let _username = object.username.toLowerCase()
+    let _user = {username : _username, password : object.password};
     if(_user.username === '' || _user.password === '') {
       alert("Enter your username and password!");
     } else {
@@ -38,7 +39,8 @@ function($http, $location, UserService, DatabaseService){
   * again.
   */
   let registerUser = (object) => {
-    let _user = {username: object.username, password : object.password};
+    let _username = object.username.toLowerCase()
+    let _user = {username: _username, password : object.password};
     if(_user.username === '' || _user.password === '') {
       alert("Choose a username and password!");
     } else {

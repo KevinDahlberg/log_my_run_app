@@ -1,8 +1,28 @@
 # Log My Run App - Prime Academy Solo Project
 
+* project deployed to:
+https://murmuring-wave-78849.herokuapp.com (5/5/2017)
+
+* Getting Started (if you want to play with this code on your own system):
+  1. Download code.
+  2. NPM install to download all of the dependencies.
+  3. As of 5/5/2017 the app is hooked up to my personal MLab account.  If you want to play with it, the DB setup is in server/modules/db.js
+  4. 'Grunt' makes sure everything is copied right.
+  5. NPM start runs it.
+  6. Or, if you want to see this code in action without all the work, you can find it at:
+  https://murmuring-wave-78849.herokuapp.com
+
 ## Application Overview
 
-Log My Run is a full-stack web application that provides a simple, user-friendly, way for users to track their runs and document their workout progress.  This app is different from similar apps because it has fewer features, which reduces the learning curve and increases the chances of the app getting continued use.
+Log My Run is a full-stack web application that provides a simple, user-friendly, way for users to track their runs and document their daily runs.  This app is different from similar apps because it has fewer features, which reduces the learning curve and increases the chances of the app getting continued use.
+
+## Problem
+
+Over the years I have used different ways to record my runs, including pen and paper, and the disaster known as excel.  I also wanted something that was NOT feature rich (too much bloat), and was easy to use on my phone.
+
+## Solution
+
+Log My Run App is my solution.  It's simple, easy to use, and looks great (in my biased opinion), on mobile.  What it sacrifices in features (you mean I can't map out my whole run?!), it makes up for in simplicity and usability.
 
 ## Assumptions
 
@@ -13,13 +33,13 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
 ## Technologies
 - Node
 - Express
-- Angular
-- Facebook API
+- AngularJS
 - MongoDB
 - Mongoose
 - HTML
 - CSS
 - Angular material
+- moment.js
 
 
 ## Application features
@@ -36,13 +56,13 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
 
   - The second page after login shows the information of the run if the user clicks on that day.  The user can edit or delete that run.
 
-3. Enter your run
+3. Enter your run / Edit Your Run
 
   - When the user clicks the button to add a run, they are taken to the log run screen.
 
   - On the screen there is a:
     - dropdown to choose the date
-    - dropdown items to select the distance run and whether it’s in miles or kilometers
+    - dropdown items to select the distance
     - dropdown menus for time, allowing the user to select hours, minutes, and seconds
     - a place for the user to enter notes on the run.
 
@@ -104,12 +124,14 @@ Log My Run is a full-stack web application that provides a simple, user-friendly
   * Style CSS
       - [ ] Set up login failed alerts
       - [x] implement angular material
-      - [ ] Set up different looks for desktop and mobile
   * Week 2 left to Do
       - [x] View of all the week’s runs on homepage
       - [x] select a different week from a calendar
       - [x] Style the APP
       - [x] weekly, monthly, and yearly summary
+
+## Future Features
+  * Set up different looks for desktop and mobile (stretch)
   * Post status to facebook (stretch)
   * Weather API to display the weather (stretch)
     (possible api: https://openweathermap.org/api)
