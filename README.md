@@ -41,6 +41,9 @@ Log My Run App is my solution.  It's simple, easy to use, and looks great (in my
 - Angular material
 - moment.js
 
+## Versions
+
+* Version 1.0
 
 ## Application features
 
@@ -136,3 +139,14 @@ Log My Run App is my solution.  It's simple, easy to use, and looks great (in my
   * Weather API to display the weather (stretch)
     (possible api: https://openweathermap.org/api)
   * Adding the ability to show different data and graphs(stretch)
+  
+## Authors
+
+* Kevin Dahlberg
+
+## Acknowledgments
+
+* Prime Digital Academy
+* Scott Bromander
+* Chris Black
+* My fellow Chi cohort-mates
