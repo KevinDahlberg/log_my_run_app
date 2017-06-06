@@ -1,9 +1,9 @@
 # Log My Run App - Prime Academy Solo Project
 
 * project deployed to:
-https://murmuring-wave-78849.herokuapp.com (5/5/2017)
+https://log-my-run-app.herokuapp.com/#/login
 
-* Getting Started (if you want to play with this code on your own system):
+## Getting Started (if you want to play with this code on your own system):
   1. Download code.
   2. NPM install to download all of the dependencies.
   3. As of 5/5/2017 the app is hooked up to my personal MLab account.  If you want to play with it, the DB setup is in server/modules/db.js
